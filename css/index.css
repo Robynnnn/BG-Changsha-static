@@ -1,0 +1,144 @@
+iframe {
+  display: block;
+  border: 0;
+}
+.carousel {
+  position: relative;
+  width: 1920px;
+  height: 876px;
+}
+.carousel-control {
+  position: absolute;
+  top: 348px;
+  width: 84px;
+  height: 84px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.left {
+  left: 28px;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before {
+  position: absolute;
+  top: 27%;
+  transform: translate(-50%, -50%);
+}
+.glyphicon-chevron-left:before {
+  left: 37%;
+  content: "<";
+}
+.glyphicon-chevron-right:before {
+  left: 75%;
+  content: ">";
+}
+.carousel-control.right {
+  right: 28px;
+}
+main {
+  position: relative;
+}
+main .productShow {
+  width: 1920px;
+  overflow: hidden;
+}
+main .productShow li {
+  float: left;
+  width: 942px;
+  height: 580px;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+main .products {
+  width: 1920px;
+  margin: 120px 0 50px 0;
+  padding-left: 210px;
+}
+main .productsContent {
+  width: 1494px;
+}
+main .productsContent .bestSlect {
+  text-align: center;
+  color: #333;
+  font: 36px "ArialMT", "SimSun";
+  margin-bottom: 60px;
+}
+main .productsShow {
+  overflow: hidden;
+}
+main .productsShow li {
+  float: left;
+  text-align: center;
+  width: 286px;
+  height: 360px;
+  border: 1px solid #f5f5f5;
+  margin-right: 19px;
+  margin-bottom: 50px;
+}
+main .productsShow li img {
+  width: 220px;
+  height: 220px;
+}
+main .productsShow a {
+  text-align: center;
+  color: #333;
+  font: 16px "ArialMT", "SimSun";
+}
+main .productsShow p {
+  margin-top: 64px;
+}
+main .hide {
+  display: none;
+}
+main .loadMoreBox {
+  width: 1920px;
+  padding-left: 880px;
+  margin-bottom: 140px;
+}
+main .loadMore {
+  width: 170px;
+  height: 38px;
+  padding-top: 14px;
+  cursor: pointer;
+  color: #262626;
+  text-align: center;
+  font: 14px "ArialMT", "SimSun";
+  border: 1px solid #333;
+}
+main .toUpArrows {
+  position: absolute;
+  bottom: 224px;
+  right: 158px;
+  width: 51px;
+  height: 50px;
+  background-color: #333;
+}
+main .toUpArrows a {
+  display: block;
+  text-align: center;
+  padding-top: 18px;
+}
+main .toUpArrows a img {
+  width: 20px;
+  height: 12px;
+}
+main .toUpArrows {
+  position: absolute;
+  /* display: none; */
+  bottom: 224px;
+  right: 158px;
+  /* right : 340px; */
+  width: 51px;
+  height: 50px;
+  background-color: #333;
+}
+main .toUpArrows a {
+  display: block;
+  text-align: center;
+  padding-top: 18px;
+}
+main .toUpArrows a img {
+  width: 20px;
+  height: 12px;
+}

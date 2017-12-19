@@ -1,0 +1,205 @@
+header {
+  width: 1920px;
+  background-color: black;
+  padding-top: 28px;
+  padding-left: 210px;
+  overflow: hidden;
+}
+header .logo {
+  float: left;
+  width: 222px;
+  height: 31px;
+  background: url("../img/icon.png") no-repeat 0 -294px;
+  margin-right: 70px;
+}
+header .nav {
+  float: left;
+  overflow: hidden;
+}
+header .contentDetails {
+  position: absolute;
+  display: none;
+  top: 78px;
+  left: 0px;
+  width: 1920px;
+  height: 320px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+header .up {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent pink transparent;
+  border-width: 6px;
+}
+header .nav li {
+  position: relative;
+  float: left;
+  margin-right: 62px;
+}
+header .nav li a {
+  color: #fff;
+  font: 14px "ArialMT", "SimSun";
+  padding-bottom: 4px;
+}
+header .nav li:hover a {
+  border-bottom: 1px solid #fff;
+}
+header .nav li:hover .contentDetails,
+header .nav li:hover .up {
+  display: block;
+}
+header .nav li:last-child {
+  margin-right: 588px;
+}
+header .search {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/search.svg") no-repeat center center;
+  background-size: 100%;
+  margin-right: 60px;
+  cursor: pointer;
+}
+header .loginBox {
+  float: left ;
+}
+header .login a,
+header .register a {
+  color: #fff;
+  font: 14px "AdobeHeitiStd-Regular", "SimSun";
+}
+header .login {
+  padding-right: 12px;
+}
+header .login a {
+  display: inline-block;
+  width: 50px;
+  border-right: 1px solid #282828;
+}
+footer {
+  width: 1920px;
+  height: 440px;
+  background-color: #262626;
+  padding-top: 114px;
+  padding-left: 212px;
+}
+footer section {
+  overflow: hidden;
+  margin-bottom: 68px;
+}
+footer .subscribeContent {
+  float: left;
+  width: 400px;
+  margin-right: 686px;
+}
+footer .subscribe {
+  display: block;
+  color: #fff;
+  font: 12px "ArialMT", "SimSun";
+}
+footer .warning {
+  color: #999;
+  font: 12px "ArialMT", "SimSun";
+}
+footer input {
+  display: inline-block;
+  width: 285px;
+  height: 32px;
+  background-color: #333;
+  outline-style: none;
+  border-color: transparent;
+  color: rgba(221, 221, 221, 0.5);
+  font: 13px "ArialMT", "SimSun";
+}
+footer .subscribeA {
+  display: inline-block;
+  width: 100px;
+  height: 32px;
+  padding-top: 10px;
+  font: 12px "ArialMT", "SimSun";
+  color: #fff;
+  text-align: center;
+  background-color: #666;
+}
+footer .inputContent {
+  margin-bottom: 26px;
+}
+footer .websiteLink {
+  overflow: hidden;
+}
+footer .websiteLink li {
+  float: left;
+  width: 28px;
+  height: 28px;
+  background-color: #999;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-bottom: 25px;
+  background: url("../img/icon.png") no-repeat -2px -9px;
+}
+footer .websiteLink li:nth-child(2) {
+  background-position: -2px -49px;
+}
+footer .websiteLink li:nth-child(3) {
+  background-position: -2px -90px;
+}
+footer .websiteLink li:nth-child(4) {
+  background-position: -2px -132px;
+}
+footer .websiteLink li:nth-child(5) {
+  background-position: -2px -172px;
+}
+footer .websiteLink li:nth-child(6) {
+  background-position: -2px -214px;
+}
+footer .websiteLink li:nth-child(7) {
+  background-position: -2px -254px;
+}
+footer a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+footer .email {
+  display: block;
+  height: 0px;
+  margin-bottom: 18px;
+}
+footer .email,
+footer .tel {
+  color: #999;
+  font: 12px "ArialMT", "SimSun";
+}
+footer .about,
+footer support {
+  float: left;
+  color: #fff;
+  font: 12px "ArialMT", "SimSun";
+  margin-right: 106px;
+}
+footer .about li,
+footer support li {
+  height: 0px;
+  margin-bottom: 18px;
+}
+footer .about li:nth-child(1),
+footer support li:nth-child(1) {
+  height: 0px;
+  margin-bottom: 26px;
+}
+footer .about a,
+footer support a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #999;
+}
+footer p {
+  text-align: center;
+  color: #515151;
+  font: 12px "ArialMT", "SimSun";
+}
