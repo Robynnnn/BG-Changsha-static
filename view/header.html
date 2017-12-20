@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,52 @@
   <title>Document</title>
   <!-- 引入重置样式 -->
   <link rel="stylesheet" href="../css/basic.css">
-
   <link rel="stylesheet" href="../css/common.css">
 </head>
-<body>
-  <header>
-    <span class="logo"></span>
-    <ul class="nav">
-      <li><a href="#">Products</a>
-        <div class="contentDetails">
 
-          </div>
-      </li>
-      <li><a href="#">Promotion</a></li>
-      <li><a href="#">Community</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
-    
+<body>
+  <div class="header">
+    <span class="logo"></span>
+    <div id="nav">
+      <ul class="nav-in">
+        <li id="li01">
+          <a href="#">Products</a>
+
+        </li>
+        <li id="li02">
+          <a href="#">Promotion</a>
+        </li>
+        <li id="li03">
+          <a href="#">Community</a>
+        </li>
+        <li id="li04">
+          <a href="#">Support</a>
+        </li>
+      </ul>
+    </div>
+
+
 
 
     <div class="loginBox">
       <div class="search"></div>
-      <span class="login"><a href="#">Login</a></span>
-    <span class="register"><a href="#">Register</a></span>
+      <span class="login">
+        <a href="#">Login</a>
+      </span>
+      <span class="register">
+        <a href="#">Register</a>
+      </span>
     </div>
-    
-  </header>
+
+  </div>
+  <div id="div01" class="detailBox">
+
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <!-- 公共js -->
+    <script src="../js/header.js"></script>
 </body>
+
 </html>
