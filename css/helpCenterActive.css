@@ -1,0 +1,39 @@
+.proShow {
+  width: 1920px;
+  height: 320px;
+  background-color: skyblue;
+}
+.content {
+  width: 1920px;
+  height: 524px;
+  background-color: #fff;
+  padding: 59px 0px 0px 208px;
+}
+.content .contentShow {
+  width: 1500px;
+  height: 306px;
+  border: 1px solid #ddd;
+  padding: 36px 0px 0px 24px;
+  color: #666;
+  font: 14px "ArialMT";
+  overflow: hidden;
+}
+.content .contentShow .left {
+  width: 820px;
+  float: left;
+}
+.content .contentShow .tit {
+  color: #333;
+  font: 14px "Arial-BoldMT";
+  margin-bottom: 24px;
+}
+.content .contentShow .right {
+  width: 244px;
+  height: 244px;
+  float: left;
+  border-left: 1px solid #f0f0f0;
+  padding-left: 78px;
+}
+.content .contentShow .right p {
+  margin-bottom: 20px;
+}
