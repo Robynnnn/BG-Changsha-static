@@ -1,84 +1,98 @@
-header {
+.header {
   width: 1920px;
-  background-color: black;
+  height: 80px;
+  background-color: #fff;
   padding-top: 28px;
   padding-left: 210px;
   overflow: hidden;
+  position: relative;
 }
-header .logo {
+.header .logo {
   float: left;
   width: 222px;
   height: 31px;
-  background: url("../img/icon.png") no-repeat 0 -294px;
+  background: url("../img/logo.png") no-repeat;
+  background-size: 100%;
   margin-right: 70px;
 }
-header .nav {
+.header #nav {
   float: left;
   overflow: hidden;
+  width: 1064px;
 }
-header .contentDetails {
-  position: absolute;
-  display: none;
-  top: 78px;
-  left: 0px;
-  width: 1920px;
-  height: 320px;
-  background-color: rgba(255, 255, 255, 0.9);
+.header .nav-in {
+  overflow: hidden;
 }
-header .up {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent pink transparent;
-  border-width: 6px;
-}
-header .nav li {
-  position: relative;
+.header .nav-in li {
   float: left;
   margin-right: 62px;
+  width: 76px;
+  height: 80px;
 }
-header .nav li a {
-  color: #fff;
+.header .nav-in li a {
+  color: #000;
   font: 14px "ArialMT", "SimSun";
   padding-bottom: 4px;
 }
-header .nav li:hover a {
+.header .nav-in li a:hover {
+  text-decoration: none;
   border-bottom: 1px solid #fff;
 }
-header .nav li:hover .contentDetails,
-header .nav li:hover .up {
+.header .search {
+  float: left;
   display: block;
-}
-header .nav li:last-child {
-  margin-right: 588px;
-}
-header .search {
-  display: inline-block;
   width: 24px;
   height: 24px;
-  background: url("../img/search.svg") no-repeat center center;
+  background: url("../img/search02.png") no-repeat center center;
   background-size: 100%;
   margin-right: 60px;
   cursor: pointer;
 }
-header .loginBox {
+.header .loginBox {
   float: left ;
 }
-header .login a,
-header .register a {
-  color: #fff;
+.header .login a,
+.header .register a {
+  color: #000;
   font: 14px "AdobeHeitiStd-Regular", "SimSun";
 }
-header .login {
+.header .login {
   padding-right: 12px;
 }
-header .login a {
+.header .login a {
   display: inline-block;
   width: 50px;
-  border-right: 1px solid #282828;
+  border-right: 1px solid #eee;
+}
+.detailBox1,
+.detailBox2,
+.detailBox3,
+.detailBox4 {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 96px;
+  left: 0;
+  width: 1920px;
+  height: 320px;
+  background-color: yellowgreen;
+}
+.detailBox2 {
+  background-color: pink;
+}
+.detailBox3 {
+  background-color: skyblue;
+}
+.detailBox4 {
+  background-color: orange;
+}
+.test {
+  width: 76px;
+  height: 10px;
+  background-color: red;
+}
+.selected {
+  display: block;
 }
 footer {
   width: 1920px;

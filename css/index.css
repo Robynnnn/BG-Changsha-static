@@ -1,3 +1,97 @@
+.header {
+  width: 1920px;
+  height: 80px;
+  background-color: black;
+  padding-top: 28px;
+  padding-left: 210px;
+  overflow: hidden;
+  position: relative;
+}
+.header .logo {
+  float: left;
+  width: 222px;
+  height: 31px;
+  background: url("../img/icon.png") no-repeat 0 -294px;
+  margin-right: 70px;
+}
+.header #nav {
+  float: left;
+  overflow: hidden;
+  width: 1064px;
+}
+.header .nav-in {
+  overflow: hidden;
+}
+.header .nav-in li {
+  float: left;
+  margin-right: 62px;
+  width: 76px;
+  height: 80px;
+}
+.header .nav-in li a {
+  color: #fff;
+  font: 14px "ArialMT", "SimSun";
+  padding-bottom: 4px;
+}
+.header .nav-in li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+.header .search {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/search.svg") no-repeat center center;
+  background-size: 100%;
+  margin-right: 60px;
+  cursor: pointer;
+}
+.header .loginBox {
+  float: left ;
+}
+.header .login a,
+.header .register a {
+  color: #fff;
+  font: 14px "AdobeHeitiStd-Regular", "SimSun";
+}
+.header .login {
+  padding-right: 12px;
+}
+.header .login a {
+  display: inline-block;
+  width: 50px;
+  border-right: 1px solid #282828;
+}
+.detailBox1,
+.detailBox2,
+.detailBox3,
+.detailBox4 {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 96px;
+  left: 0;
+  width: 1920px;
+  height: 320px;
+  background-color: yellowgreen;
+}
+.detailBox2 {
+  background-color: pink;
+}
+.detailBox3 {
+  background-color: skyblue;
+}
+.detailBox4 {
+  background-color: orange;
+}
+.test {
+  width: 76px;
+  height: 10px;
+  background-color: red;
+}
+.selected {
+  display: block;
+}
 iframe {
   display: block;
   border: 0;
@@ -125,10 +219,8 @@ main .toUpArrows a img {
 }
 main .toUpArrows {
   position: absolute;
-  /* display: none; */
   bottom: 224px;
   right: 158px;
-  /* right : 340px; */
   width: 51px;
   height: 50px;
   background-color: #333;

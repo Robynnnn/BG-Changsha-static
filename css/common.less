@@ -1,86 +1,68 @@
 // 头部样式
-header {
+
+.header {
   width: 1920px;
-  // height: 80px;
-  background-color: black;
+  height: 80px;
+  background-color: #fff;
   padding-top: 28px;
   padding-left: 210px;
   overflow: hidden;
-  // position: relative;
+  position: relative;
 
   // logo标签
   .logo {
     float : left;
     width: 222px;
     height: 31px;
-    background: url("../img/icon.png") no-repeat 0 -294px;
-    
+    background: url("../img/logo.png") no-repeat;
+    background-size: 100%;
     margin-right: 70px;
   }
 
   // 导航栏
-  .nav {
+  #nav {
     float: left;
+    overflow: hidden;
+    width: 1064px;
+  }
+
+  .nav-in {
     overflow: hidden;
   }
 
-  .contentDetails {
-    position: absolute;
-    display: none;
-    top : 78px;
-    left : 0px;
-    width: 1920px;
-    height: 320px;
-    background-color: rgba(255,255,255,0.9);
-  }
-
-  .up {
-    position : absolute;
-    top:0;
-    left:50%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent transparent pink transparent;
-    border-width: 6px;
-  }
-
-  .nav li {
-    position: relative;
+  .nav-in li {
     float: left;
     margin-right: 62px;
-
+    width: 76px;
+    height: 80px;
     a {
-      // display: block;
-      // width: 100%;
-      // height: 100%;
-      color:#fff;
+      color:#000;
       font:  14px "ArialMT","SimSun";
       padding-bottom: 4px;
     }
         
   }
-  .nav li:hover a {
-    // background-color: pink;
+  .active {
+    
+  }
+
+  .nav-in li a:hover {
+    text-decoration: none;
     border-bottom: 1px solid #fff;
   }
-  .nav li:hover .contentDetails,.nav li:hover .up {
-    display: block;
-  }
-  .nav li:last-child {
-      margin-right: 588px;
-    }
 
   .search {
-    display: inline-block;
+    float : left;
+    display: block;
     width: 24px;
     height: 24px;
-    background: url("../img/search.svg") no-repeat center center;
+    background: url("../img/search02.png") no-repeat center center;
     background-size : 100%;
     margin-right: 60px;
     cursor: pointer;
   }
 
+  
 
 
 
@@ -90,7 +72,7 @@ header {
 
   .login,.register {
     a {
-      color:#fff;
+      color:#000;
       font:  14px "AdobeHeitiStd-Regular","SimSun";
     }
   }
@@ -99,11 +81,43 @@ header {
     a {
       display: inline-block;
       width: 50px;
-      border-right: 1px solid #282828;
+      border-right: 1px solid #eee;
     }
     
   }
 }
+
+.detailBox1,.detailBox2,.detailBox3,.detailBox4 {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top : 96px;
+  left : 0;
+  width: 1920px;
+  height: 320px;
+  // background-color: rgba(255,255,255,.9);
+  background-color: yellowgreen;
+}
+.detailBox2 {
+  background-color: pink;
+}
+.detailBox3 {
+  background-color: skyblue;
+}
+.detailBox4 {
+  background-color: orange;
+}
+
+.test {
+  width: 76px;
+  height: 10px;
+  background-color: red;
+}
+
+.selected {
+  display : block;
+}
+
 
 // 底部样式
 footer {
