@@ -1,0 +1,165 @@
+.proShow {
+  width: 1920px;
+  height: 320px;
+}
+.art {
+  position: relative;
+  width: 1920px;
+  padding: 42px 0px 0px 210px;
+}
+.art .tab {
+  overflow: hidden;
+  color: #333;
+  font: 14px "ArialMT";
+  margin-bottom: 45px;
+}
+.art .tab li {
+  float: left;
+  width: 100px;
+  height: 20px;
+  margin-right: 48px;
+  cursor: pointer;
+  border-bottom: 3px solid #fff;
+  position: relative;
+  text-align: center;
+}
+.art .tab li span {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 5px;
+  background-color: #d53333;
+  display: none;
+}
+.art .tab li.active span {
+  display: block;
+}
+.art .tab li:nth-child(1) {
+  width: 36px;
+}
+.art .tab li:nth-child(1) span {
+  left: 0px;
+  transform: translateX(0%);
+}
+.art .products {
+  overflow: hidden;
+}
+.art .products .main {
+  float: left;
+  display: none;
+}
+.art .products .main ul {
+  overflow: hidden;
+}
+.art .products .main li {
+  position: relative;
+  float: left;
+  width: 286px;
+  height: 286px;
+  padding: 33px;
+  margin: 0 19px 19px 0;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+.art .products .main li img {
+  width: 220px;
+  height: 220px;
+}
+.art .products .main li .hideBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font: 14px "ArialMT";
+  padding: 70px 0 0 40px;
+  display: none;
+}
+.art .products .main li .hideBox .tit {
+  color: #fff;
+  font: 14px "Arial-BoldMT";
+  margin-bottom: 30px;
+}
+.art .products .main li .hideBox a {
+  display: block;
+  width: 210px;
+}
+.art .products .main li .hideBox a p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.art .products .main li .hideBox a:hover {
+  text-decoration: underline;
+}
+.art .products .main li:hover .hideBox {
+  display: block;
+}
+.art .products .main.selected {
+  display: block;
+}
+.art .main:nth-child(2) {
+  background-color: skyblue;
+}
+.art .main:nth-child(3) {
+  background-color: orange;
+}
+.art .main:nth-child(4) {
+  background-color: hotpink;
+}
+.art .main:nth-child(5) {
+  background-color: purple;
+}
+.art .demo {
+  width: 1710px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  text-align: center;
+  font: 36px "ArialMT";
+}
+.art .searchBox {
+  position: absolute;
+  top: 42px;
+  right: 210px;
+  width: 286px;
+  height: 28px;
+  border: 1px solid #e0e0e0;
+}
+.art .searchBox input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #d7d7d7;
+  font: 13px "ArialMT";
+}
+.art .searchBox .search {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/search03.svg") no-repeat;
+  background-size: 100%;
+}
+.art .loadMoreBox {
+  width: 1710px;
+  padding-top: 52px;
+  padding-left: 674px;
+  margin-bottom: 119px;
+}
+.art .loadMore {
+  width: 170px;
+  height: 38px;
+  padding-top: 14px;
+  cursor: pointer;
+  color: #262626;
+  text-align: center;
+  font: 14px "ArialMT", "SimSun";
+  border: 1px solid #333;
+}
