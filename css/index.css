@@ -30,7 +30,7 @@
 }
 .header .nav-in li a {
   color: #fff;
-  font: 14px "ArialMT", "SimSun";
+  font: 14px "arialMT";
   padding-bottom: 4px;
 }
 .header .nav-in li a:hover {
@@ -52,7 +52,7 @@
 .header .login a,
 .header .register a {
   color: #fff;
-  font: 14px "AdobeHeitiStd-Regular", "SimSun";
+  font: 14px "AdobeHeitiStd-Regular";
 }
 .header .login {
   padding-right: 12px;
@@ -155,7 +155,7 @@ main .productsContent {
 main .productsContent .bestSlect {
   text-align: center;
   color: #333;
-  font: 36px "ArialMT", "SimSun";
+  font: 36px "arialMT";
   margin-bottom: 60px;
 }
 main .productsShow {
@@ -177,7 +177,7 @@ main .productsShow li img {
 main .productsShow a {
   text-align: center;
   color: #333;
-  font: 16px "ArialMT", "SimSun";
+  font: 16px "arialMT";
 }
 main .productsShow p {
   margin-top: 64px;
@@ -197,7 +197,7 @@ main .loadMore {
   cursor: pointer;
   color: #262626;
   text-align: center;
-  font: 14px "ArialMT", "SimSun";
+  font: 14px "arialMT";
   border: 1px solid #333;
 }
 main .toUpArrows {
