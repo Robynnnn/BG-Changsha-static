@@ -33,6 +33,7 @@
 }
 .loginModule .loginArea .form-group:nth-child(3) {
   overflow: hidden;
+  margin-bottom: 16px;
 }
 .loginModule .loginArea .form-group:nth-child(3) input {
   float: left;
@@ -45,6 +46,21 @@
   height: 40px;
   cursor: pointer;
   background-color: hotpink;
+}
+.loginModule .loginArea .fogotBottom {
+  width: 500px;
+  color: #666;
+  font: 12px "arialMT";
+  margin-bottom: 26px;
+}
+.loginModule .loginArea .fogotBottom span {
+  margin-right: 275px;
+}
+.loginModule .loginArea .fogotBottom .check {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
 .loginModule .loginArea .sub,
 .loginModule .loginArea .sign {
@@ -72,7 +88,7 @@
   width: 500px;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 29px;
+  margin-bottom: 22px;
 }
 .loginModule .loginArea .head span {
   display: inline-block;
