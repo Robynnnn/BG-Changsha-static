@@ -19,7 +19,7 @@ main .resetBox .tit {
 main .resetBox .new,
 main .resetBox .confirmPwd {
   color: #999;
-  font: 14px "ArialMT";
+  font: 14px "arialMT";
   width: 500px;
   height: 38px;
   margin: 0 auto;
@@ -59,7 +59,7 @@ main .resetBox .confirmPwd {
 }
 main .resetBox .alertBox {
   color: #d53333;
-  font: 14px "ArialMT";
+  font: 14px "arialMT";
   text-align: center;
   margin-bottom: 20px;
 }
@@ -71,7 +71,7 @@ main .resetBox .sub {
   height: 38px;
   color: #f5f5f5;
   background-color: #d53333;
-  font: 14px "ArialMT";
+  font: 14px "arialMT";
   border-radius: 8px;
   border-color: 1px solid #d53333;
   -moz-appearance: none;
