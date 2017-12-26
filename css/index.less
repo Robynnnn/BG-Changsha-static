@@ -1,12 +1,26 @@
 // 头部样式--开始
 
+// 向左浮动
+.fl {
+  float: left;
+}
+
+// 清除浮动影响
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+  
+
 .header {
   width: 1920px;
   height: 80px;
+  line-height: 80px;
   background-color: black;
-  padding-top: 28px;
   padding-left: 210px;
-  overflow: hidden;
   position: relative;
 
   // logo标签
@@ -14,6 +28,7 @@
     float : left;
     width: 222px;
     height: 31px;
+    margin-top : 19px;
     background: url("../img/icon.png") no-repeat 0 -294px;
     margin-right: 70px;
   }
@@ -21,48 +36,159 @@
   // 导航栏
   #nav {
     float: left;
-    overflow: hidden;
-    width: 1064px;
   }
 
-  .nav-in {
-    overflow: hidden;
-  }
-
-  .nav-in li {
+  // 导航栏第一层li
+  .nav-in>li {
+    position: relative;
     float: left;
     margin-right: 62px;
-    width: 76px;
-    height: 80px;
     a {
       color:#fff;
       font:  14px "arialMT" ;
       padding-bottom: 4px;
     }
-        
+    // li下方的内容
+    .liMain {
+      display: none;
+      position: absolute;
+      top : 80px;
+      left : -502px;
+      z-index: 999;
+      width: 1920px;
+      // height: 320px;
+      background-color: rgba(255,255,255,0.9);  
+      padding : 30px 0 60px 504px;
+    }
   }
 
+  // 小三角
+  .liMainContent:nth-child(1) .guide {
+    position: absolute;
+    top : -12px;
+    left : 522px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255,255,255,0.9) transparent;
+    border-width: 6px;
+  }  
+
+  // 调整隐藏框内容，稍后删除
+  // .nav-in li:nth-child(1) .liMain {
+  //   display : block;
+  // }
+
+  // 小三角位移
+  .nav-in li:nth-child(2) .liMain {
+    left : -627px;
+    .guide {
+      left : 653px;
+    }
+  }
+
+  .nav-in li:nth-child(3) .liMain {
+    left : -762px;
+    .guide {
+      left : 795px;
+    }
+  }
+
+  .nav-in li:nth-child(4) .liMain {
+    left : -905px;
+    .guide {
+      left : 926px;
+    }
+  }
+
+  // 第一层最后一个li
+  .nav-in li:last-child {
+    margin-right: 588px;
+  }
+
+  // 第一层lihover事件
+  .nav-in li:hover .liMain {
+    display: block;
+  }
+
+  // 第一层li里面的a的hover事件
   .nav-in li a:hover {
     text-decoration: none;
     border-bottom: 1px solid #fff;
   }
 
+  // 隐藏框里面的内容区域开始
+  .firstdl {
+    margin-right: 88px;
+    dd {
+      height: 26px;
+      // margin-bottom: 13px;
+    }
+    dt:nth-child(6),dt:nth-child(5), {
+      // 原设计图要求的是28px，但是上面最后一个dd的高度是26了，减去高度14，还剩14
+      margin-top : 14px;
+      // background-color: orangered;
+    }
+    dd:last-child {
+      // background-color: yellowgreen;
+      height: 14px;
+    }
+
+    // dd:nth-child(2) {
+    //   background-color: hotpink;
+    // }
+
+    // dd:nth-child(3) {
+    //   background-color: skyblue;
+    // }
+    dd a {
+      color : #666;
+      font : 14px "arialMT";  
+    }
+
+    dd a:hover {
+      color : #d75656;
+      border-bottom : 1px solid #d75656;
+    }
+  }
+  .firstdl .titledt {
+    height: 23px;
+    // margin-bottom: 14px;
+    a {
+        // height: 14px;
+        // line-height: 14px;
+        color : #333;
+        font : bold 14px "arialMT";
+    }
+
+    a:hover {
+      text-decoration: none;
+      color : #d75656;
+      border-bottom : 1px solid #d75656;
+    }
+  }
+  // 隐藏框里面的内容区域结束
+
+  // 搜索图标
   .search {
     display: inline-block;
     width: 24px;
-    height: 24px;
-    background: url("../img/search.svg") no-repeat center center;
+    height: 80px;
+    background: url("../img/search.png") no-repeat center center;
     background-size : 100%;
     margin-right: 60px;
+    vertical-align: top;
     cursor: pointer;
   }
 
-  
+  // 登录和注册
   .loginBox {
     float : left ;
   }
 
   .login,.register {
+    display: inline-block;
+    // height: 80px;
     a {
       color:#fff;
       font:  14px "AdobeHeitiStd-Regular" ;
@@ -77,37 +203,6 @@
     }
     
   }
-}
-
-.detailBox1,.detailBox2,.detailBox3,.detailBox4 {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  top : 96px;
-  left : 0;
-  width: 1920px;
-  height: 320px;
-  // background-color: rgba(255,255,255,.9);
-  background-color: yellowgreen;
-}
-.detailBox2 {
-  background-color: pink;
-}
-.detailBox3 {
-  background-color: skyblue;
-}
-.detailBox4 {
-  background-color: orange;
-}
-
-.test {
-  width: 76px;
-  height: 10px;
-  background-color: red;
-}
-
-.selected {
-  display : block;
 }
 
 // 头部样式--结束
@@ -126,7 +221,7 @@ iframe {
 .carousel {
   position: relative;
   width: 1920px;
-  height: 876px;
+  height: 880px;
 }
 
 .carousel-control {
@@ -137,6 +232,13 @@ iframe {
   color : #fff;
   border-radius: 50%;
   background-color: rgba(255,255,255,.2);
+  .poa {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+  }
 }
 
 .left {
@@ -149,23 +251,37 @@ iframe {
   
 }
 .glyphicon-chevron-left:before {
-  left : 37%;
-  content : "<";
+  // left : 37%;
+  content : "";
 }
 .glyphicon-chevron-right:before {
-  left : 75%;
-  content : ">";
+  // left : 75%;
+  content : "";
 }
 .carousel-control.right {
   right : 28px;
 }
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border : 2px solid #fff;
+}
+
+.carousel-indicators .active {
+  // border : 2px solid #fff;
+  width: 14px;
+  height: 14px;
+
+}// 
 
 // 主要区域
 main {
   position: relative;
   .productShow {
     width: 1920px;
-    overflow: hidden;
+    // padding-top : 12px;
+    // overflow: hidden;
     li {
       float: left;
       width: 942px;
@@ -190,29 +306,36 @@ main {
       margin-bottom: 60px;
     }
   }
-  .productsShow {
-    overflow: hidden;
-  }
+  // .productsShow {
+  //   overflow: hidden;
+  // }
   .productsShow li {
+
     float: left;
     text-align: center;
-    width: 286px;
-    height: 360px;
+    width: 284px;
+    height: 359px;
     border : 1px solid #f5f5f5;
     margin-right: 19px;
     margin-bottom: 50px;
+    padding-top : 32px;
     img {
       width: 220px;
       height: 220px;
     }
   }
+  // .productsShow li:nth-child(1) {
+  //   padding-top : 32px;
+  //   background-color: yellowgreen;
+  // }
+
   .productsShow a {
     text-align: center;
     color : #333;
     font:  16px "arialMT";
   }
   .productsShow p {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 
   .hide {
@@ -227,7 +350,13 @@ main {
   .loadMore {
     width: 170px;
     height: 38px;
-    padding-top: 14px;
+    line-height: 38px;
+    .loadMoreC {
+      font : 14px "arialMT" ;
+      line-height: 38px;
+    }
+    
+    // padding-top: 14px;
     cursor: pointer;
     color : #262626;
     text-align: center;
@@ -235,25 +364,6 @@ main {
     border : 1px solid #333;
   }
 
- .toUpArrows {
-    position: absolute;
-    bottom: 224px;
-    right: 158px;
-    width: 51px;
-    height: 50px;
-    background-color: #333;
-  }
- .toUpArrows a {
-
-    display: block;
-    text-align: center;
-    padding-top: 18px;
-  }
- .toUpArrows a img {
-    width: 20px;
-    height: 12px;
-  }
-  
   .toUpArrows {
     position: absolute;
     bottom : 224px;
@@ -261,14 +371,16 @@ main {
     width: 51px;
     height: 50px;
     background-color: #333;
-    
+    cursor: pointer;
   }
   
   .toUpArrows a {
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
     display : block;
     text-align: center;
-    padding-top: 18px;
-    
   }
   
   .toUpArrows a img {
