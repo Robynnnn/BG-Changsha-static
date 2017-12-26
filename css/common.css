@@ -1,60 +1,144 @@
+.fl {
+  float: left;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 .header {
   width: 1920px;
   height: 80px;
+  line-height: 80px;
   background-color: #fff;
-  padding-top: 28px;
   padding-left: 210px;
-  overflow: hidden;
   position: relative;
 }
 .header .logo {
   float: left;
   width: 222px;
   height: 31px;
+  margin-top: 19px;
   background: url("../img/logo.png") no-repeat;
-  background-size: 100%;
   margin-right: 70px;
 }
 .header #nav {
   float: left;
-  overflow: hidden;
-  width: 1064px;
 }
-.header .nav-in {
-  overflow: hidden;
-}
-.header .nav-in li {
+.header .nav-in > li {
+  position: relative;
   float: left;
   margin-right: 62px;
-  width: 76px;
-  height: 80px;
 }
-.header .nav-in li a {
-  color: #000;
-  font: 14px "ArialMT", "SimSun";
+.header .nav-in > li a {
+  color: #333;
+  font: 14px "arialMT";
   padding-bottom: 4px;
+}
+.header .nav-in > li .liMain {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: -502px;
+  z-index: 999;
+  width: 1920px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 0 60px 504px;
+}
+.header .liMainContent:nth-child(1) .guide {
+  position: absolute;
+  top: -12px;
+  left: 522px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+  border-width: 6px;
+}
+.header .nav-in li:nth-child(2) .liMain {
+  left: -627px;
+}
+.header .nav-in li:nth-child(2) .liMain .guide {
+  left: 653px;
+}
+.header .nav-in li:nth-child(3) .liMain {
+  left: -762px;
+}
+.header .nav-in li:nth-child(3) .liMain .guide {
+  left: 795px;
+}
+.header .nav-in li:nth-child(4) .liMain {
+  left: -905px;
+}
+.header .nav-in li:nth-child(4) .liMain .guide {
+  left: 926px;
+}
+.header .nav-in li:last-child {
+  margin-right: 588px;
+}
+.header .nav-in li:hover .liMain {
+  display: block;
 }
 .header .nav-in li a:hover {
   text-decoration: none;
   border-bottom: 1px solid #fff;
 }
+.header .firstdl {
+  margin-right: 88px;
+}
+.header .firstdl dd {
+  height: 26px;
+}
+.header .firstdl dt:nth-child(6),
+.header .firstdl dt:nth-child(5) {
+  margin-top: 14px;
+}
+.header .firstdl dd:last-child {
+  height: 14px;
+}
+.header .firstdl dd a {
+  color: #666;
+  font: 14px "arialMT";
+}
+.header .firstdl dd a:hover {
+  color: #d75656;
+  border-bottom: 1px solid #d75656;
+}
+.header .firstdl .titledt {
+  height: 23px;
+}
+.header .firstdl .titledt a {
+  color: #333;
+  font: bold 14px "arialMT";
+}
+.header .firstdl .titledt a:hover {
+  text-decoration: none;
+  color: #d75656;
+  border-bottom: 1px solid #d75656;
+}
 .header .search {
-  float: left;
-  display: block;
+  display: inline-block;
   width: 24px;
-  height: 24px;
+  height: 80px;
   background: url("../img/search02.png") no-repeat center center;
   background-size: 100%;
   margin-right: 60px;
+  vertical-align: top;
   cursor: pointer;
 }
 .header .loginBox {
   float: left ;
 }
+.header .login,
+.header .register {
+  display: inline-block;
+}
 .header .login a,
 .header .register a {
   color: #000;
-  font: 14px "AdobeHeitiStd-Regular", "SimSun";
+  font: 14px "AdobeHeitiStd-Regular";
 }
 .header .login {
   padding-right: 12px;
@@ -63,36 +147,6 @@
   display: inline-block;
   width: 50px;
   border-right: 1px solid #eee;
-}
-.detailBox1,
-.detailBox2,
-.detailBox3,
-.detailBox4 {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  top: 96px;
-  left: 0;
-  width: 1920px;
-  height: 320px;
-  background-color: yellowgreen;
-}
-.detailBox2 {
-  background-color: pink;
-}
-.detailBox3 {
-  background-color: skyblue;
-}
-.detailBox4 {
-  background-color: orange;
-}
-.test {
-  width: 76px;
-  height: 10px;
-  background-color: red;
-}
-.selected {
-  display: block;
 }
 footer {
   width: 1920px;
