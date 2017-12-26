@@ -1,0 +1,256 @@
+// 向左浮动
+.fl {
+  float: left;
+}
+
+// 清除浮动影响
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+
+.proLisTypeModule {
+  // 标题路径
+  .titTop {
+    width: 1920px;
+    height: 60px;
+    border-top : 1px solid #ddd;
+    padding-left : 211px;
+    color : #666;
+    font : 14px "arialMT";
+    line-height: 60px;
+    .d53333 {
+      color : #d53333;
+    }
+    
+  }
+  // 主要产品展示区
+  .detailAll {
+    width: 1920px;
+    padding : 120px 0 0 211px;
+  }
+  // 大标题文字
+  .detailTit {
+    width: 1560px;
+    text-align: center;
+    color : #333;
+    font : 28px "arialMT";
+    margin-bottom: 58px;
+  }
+
+  // tab栏切换样式
+  .ProWrapper {
+    .por {
+      position: relative;
+    }
+    // 选择框的内容
+    .select-box {
+      position: absolute;
+      float: left;
+      top : 0;
+      right : 208px;
+    }
+
+    .select-header {
+      background-color: yellowgreen;
+      width: 102px;
+      height: 16px;
+      line-height: 16px;
+      color: #333;
+      font: 14px "arialMT";
+      background : url("../img/selectdown_03.png") no-repeat ;
+      background-position-x: 100%;
+      background-position-y: 50%;
+    }
+    /* ul */
+
+    .select-content {
+      position: absolute;
+      width: 102px;
+      height: 120px;
+      top: 16px;
+      left: 0;
+      z-index: 99;
+      display: none;
+      border : 1px solid #ddd;
+      background-color: #fcfcfc;
+      padding-top : 14px;
+    }
+    /* li */
+
+    .select-content li {
+      color: #666;
+      font: 12px "arialMT";
+      width: 102px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .lowPrice,.highPrice {
+      display: inline-block;
+      width: 6px;
+      height: 7px;
+     
+    }
+
+    .lowPrice {
+      margin-left : 4px;
+      background: url("../img/lowprice.png") no-repeat;
+    }
+
+    .highPrice {
+      margin-left : 1px;
+      background: url("../img/highprice.png") no-repeat;
+    }
+
+
+    .select-content li:hover {
+      color : #d53333;
+    }
+      
+    // 选择框的内容结束
+    // 第一层li的内容
+    .proTab .tab-list {
+      float: left;
+      color : #666;
+      font : 14px "arialMT";
+      margin-right: 66px;
+      margin-bottom: 40px;
+      cursor: pointer;
+
+    }
+
+    .proTab .tab-list:hover {
+      color : #333;
+      border-bottom: 2px solid #d53333;
+    }
+
+    // li下方的内容
+    .test {
+      width: 1708px;
+      height: 820px;
+      background-color: yellowgreen;
+    }
+
+    .test02 {
+      background-color: hotpink;
+    }
+
+    .productsShow {
+      float: left;
+      display: none;
+    }
+    .productsShow li {
+      // 测试区域颜色
+      // background-color: skyblue;
+
+      float: left;
+      text-align: center;
+      width: 286px;
+      height: 380px;
+      border : 1px solid #f5f5f5;
+      margin-right: 19px;
+      margin-bottom: 18px;
+      padding-top : 32px;
+      // 大图
+      img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 2px;
+      }
+      // 小图区域
+      .smallImg {
+        position: relative;
+        width: 100%;
+        height: 32px;       
+      }
+      .smallImgDetail {
+        position: absolute;
+        top : 0;
+        left : 50%;
+        transform: translateX(-50%);
+        width: 144px;
+        // 小图尺寸
+        .smallImage {
+          float: left;
+          width: 32px;
+          height: 32px;
+          border: 1px solid #ddd;
+          margin-right: 5px;
+        }
+        .smallImage:last-child {
+          margin-right: 0;
+        }
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      // 价格
+      .price {
+        float: left;
+        
+        color : #333;
+        font : 16px "arialMT";
+        margin-top : 24px;
+        // 水平居中
+        margin-left : 36%;
+
+      }
+    }
+
+    .proT {
+      position: relative;
+    }
+
+    .proT .selected {
+      display: block;
+    }
+
+    .productsShow a {
+      text-align: center;
+      color : #333;
+      font:  16px "arialMT";
+    }
+    .productsShow p {
+      
+      color : #333;
+      font : 16px "arialMT";
+      margin-top: 18px;
+    }
+  
+    .hide {
+      display: none;
+    }
+
+    // 返回顶部按钮
+    .toUpArrows {
+      position: absolute;
+      bottom : 50px;
+      right : 141px;
+      width: 51px;
+      height: 50px;
+      background-color: #333;
+      cursor: pointer;
+    }
+    
+    .toUpArrows a {
+      position: absolute;
+      top: 50%;
+      left : 50%;
+      transform: translate(-50%,-50%);
+      display : block;
+      text-align: center;
+    }
+    
+    .toUpArrows a img {
+      width: 20px;
+      height: 12px;
+    }
+  // 返回顶部按钮结束
+  }
+}
