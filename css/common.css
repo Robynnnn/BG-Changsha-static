@@ -1,177 +1,46 @@
-.fl {
-  float: left;
+.navbar {
+  margin: 0;
 }
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.navbar-collapse {
+  padding: 0;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #000;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #000;
 }
 .header {
-  width: 1920px;
-  height: 80px;
-  line-height: 80px;
   background-color: #fff;
-  padding-left: 210px;
-  position: relative;
-}
-.header .logo {
-  float: left;
-  width: 222px;
-  height: 31px;
-  margin-top: 19px;
-  background: url("../img/logo.png") no-repeat;
-  margin-right: 70px;
-}
-.header #nav {
-  float: left;
-}
-.header .nav-in > li {
-  position: relative;
-  float: left;
-  margin-right: 62px;
-}
-.header .nav-in > li a {
-  color: #333;
-  font: 14px "arialMT";
-  padding-bottom: 4px;
-}
-.header .nav-in > li .liMain {
-  display: none;
-  position: absolute;
-  top: 80px;
-  left: -502px;
-  z-index: 999;
-  width: 1920px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px 0 60px 504px;
-}
-.header .liMainContent:nth-child(1) .guide {
-  position: absolute;
-  top: -12px;
-  left: 522px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
-  border-width: 6px;
-}
-.header .nav-in li:nth-child(2) .liMain {
-  left: -627px;
-}
-.header .nav-in li:nth-child(2) .liMain .guide {
-  left: 653px;
-}
-.header .nav-in li:nth-child(3) .liMain {
-  left: -762px;
-}
-.header .nav-in li:nth-child(3) .liMain .guide {
-  left: 795px;
-}
-.header .nav-in li:nth-child(4) .liMain {
-  left: -905px;
-}
-.header .nav-in li:nth-child(4) .liMain .guide {
-  left: 926px;
-}
-.header .nav-in li:last-child {
-  margin-right: 588px;
-}
-.header .nav-in li:hover .liMain {
-  display: block;
-}
-.header .nav-in li a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-}
-.header .firstdl {
-  margin-right: 88px;
-}
-.header .firstdl dd {
-  height: 26px;
-}
-.header .firstdl dt:nth-child(6),
-.header .firstdl dt:nth-child(5) {
-  margin-top: 14px;
-}
-.header .firstdl dd:last-child {
-  height: 14px;
-}
-.header .firstdl dd a {
-  color: #666;
-  font: 14px "arialMT";
-}
-.header .firstdl dd a:hover {
-  color: #d75656;
-  border-bottom: 1px solid #d75656;
-}
-.header .firstdl .titledt {
-  height: 23px;
-}
-.header .firstdl .titledt a {
-  color: #333;
-  font: bold 14px "arialMT";
-}
-.header .firstdl .titledt a:hover {
-  text-decoration: none;
-  color: #d75656;
-  border-bottom: 1px solid #d75656;
-}
-.header .search {
-  display: inline-block;
-  width: 24px;
-  height: 80px;
-  background: url("../img/search02.png") no-repeat center center;
-  background-size: 100%;
-  margin-right: 60px;
-  vertical-align: top;
-  cursor: pointer;
-}
-.header .loginBox {
-  float: left ;
-}
-.header .login,
-.header .register {
-  display: inline-block;
-}
-.header .login a,
-.header .register a {
-  color: #000;
-  font: 14px "AdobeHeitiStd-Regular";
-}
-.header .login {
-  padding-right: 12px;
-}
-.header .login a {
-  display: inline-block;
-  width: 50px;
-  border-right: 1px solid #eee;
 }
 footer {
-  width: 1920px;
+  width: 100%;
   height: 440px;
   background-color: #262626;
   padding-top: 114px;
-  padding-left: 212px;
 }
 footer section {
+  width: 78%;
+  margin: 0 auto 68px;
   overflow: hidden;
-  margin-bottom: 68px;
 }
 footer .subscribeContent {
   float: left;
   width: 400px;
-  margin-right: 686px;
 }
 footer .subscribe {
   display: block;
   color: #fff;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
+  margin-bottom: 25px;
 }
 footer .warning {
   color: #999;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
 }
 footer input {
   display: inline-block;
@@ -182,13 +51,14 @@ footer input {
   border-color: transparent;
   color: rgba(221, 221, 221, 0.5);
   font: 13px "ArialMT", "SimSun";
+  vertical-align: top;
 }
 footer .subscribeA {
   display: inline-block;
   width: 100px;
   height: 32px;
   padding-top: 10px;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
   color: #fff;
   text-align: center;
   background-color: #666;
@@ -240,34 +110,248 @@ footer .email {
 footer .email,
 footer .tel {
   color: #999;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
 }
-footer .about,
-footer support {
-  float: left;
+footer .about {
+  float: right;
   color: #fff;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
   margin-right: 106px;
 }
-footer .about li,
-footer support li {
+footer .about li {
   height: 0px;
   margin-bottom: 18px;
 }
-footer .about li:nth-child(1),
-footer support li:nth-child(1) {
+footer .about li:nth-child(1) {
   height: 0px;
-  margin-bottom: 26px;
+  margin-bottom: 42px;
 }
-footer .about a,
-footer support a {
+footer .about a {
   display: inline-block;
   width: 100%;
   height: 100%;
   color: #999;
 }
-footer p {
-  text-align: center;
+footer .copyright {
+  width: 100%;
   color: #515151;
-  font: 12px "ArialMT", "SimSun";
+  font: 12px "ArialMT";
+}
+@media screen and (max-width: 1024px) {
+  .navbar-default {
+    background-color: black;
+  }
+  .header #search {
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/search.png") no-repeat center center;
+  }
+  .carousel-control {
+    display: none !important;
+  }
+  .liMain {
+    display: none;
+  }
+  main .loadMoreBox {
+    width: 100%;
+    margin-left: 30%;
+  }
+  main .toUpArrows {
+    display: none !important;
+  }
+  footer {
+    padding-top: 0;
+  }
+  footer .subscribeContent {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  footer .subscribeA {
+    margin-top: 10px;
+  }
+  footer section {
+    margin: 0 0 20px;
+  }
+  footer .about {
+    width: 50%;
+    float: left;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar-default {
+    border: none;
+  }
+  .nav > li > a {
+    padding: 0;
+  }
+  .header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 5%;
+  }
+  .header .logo {
+    width: 222px;
+    height: 80px;
+    margin-right: 70px;
+  }
+  .header .logo #moreslan {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/logo.png") no-repeat center;
+    background-size: 100%;
+    text-indent: -999em;
+    overflow: hidden;
+  }
+  .header .mr47 {
+    margin-right: 47px;
+  }
+  .header .nav-in > li {
+    position: relative;
+    float: left;
+    height: 80px;
+    padding-top: 35px;
+  }
+  .header .nav-in > li a {
+    display: inline-block;
+    color: #000;
+    font: 14px "arialMT";
+    vertical-align: top;
+  }
+  .header .nav-in > li .liMain {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: -502px;
+    z-index: 999;
+    width: 1500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 0 60px 504px;
+  }
+  .header .nav-in > li .liMain a {
+    display: inline;
+    padding: 0 !important;
+  }
+  .header .liMainContent:nth-child(1) .guide {
+    position: absolute;
+    top: -12px;
+    left: 522px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+    border-width: 6px;
+  }
+  .header .nav-in li:nth-child(2) .liMain {
+    left: -627px;
+  }
+  .header .nav-in li:nth-child(2) .liMain .guide {
+    left: 653px;
+  }
+  .header .nav-in li:nth-child(3) .liMain {
+    left: -762px;
+  }
+  .header .nav-in li:nth-child(3) .liMain .guide {
+    left: 795px;
+  }
+  .header .nav-in li:nth-child(4) .liMain {
+    left: -905px;
+  }
+  .header .nav-in li:nth-child(4) .liMain .guide {
+    left: 926px;
+  }
+  .header .nav-in li:hover .liMain {
+    display: block;
+  }
+  .header .nav-in li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+  .header .firstdl {
+    margin-right: 88px;
+  }
+  .header .firstdl dd {
+    height: 26px;
+  }
+  .header .firstdl dt:nth-child(6),
+  .header .firstdl dt:nth-child(5) {
+    margin-top: 14px;
+  }
+  .header .firstdl dd:last-child {
+    height: 14px;
+  }
+  .header .firstdl dd a {
+    color: #666;
+    font: 14px "arialMT";
+  }
+  .header .firstdl dd a:hover {
+    color: #d75656;
+    border-bottom: 1px solid #d75656;
+  }
+  .header .firstdl .titledt {
+    height: 23px;
+  }
+  .header .firstdl .titledt a {
+    color: #333;
+    font: bold 14px "arialMT";
+  }
+  .header .firstdl .titledt a:hover {
+    text-decoration: none;
+    color: #d75656;
+    border-bottom: 1px solid #d75656;
+  }
+  .header li.pr {
+    width: 24px;
+    margin: 0 40px 0 220px;
+  }
+  .header #search {
+    position: absolute;
+    top: 54%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url("../img/search02.png") no-repeat center center;
+    cursor: pointer;
+  }
+  .header #search:hover {
+    border: none;
+  }
+  .header .login,
+  .header .register {
+    display: inline-block;
+  }
+  .header .login a,
+  .header .register a {
+    color: #000;
+    font: 14px "AdobeHeitiStd-Regular";
+  }
+  .header .login a {
+    display: inline-block;
+    width: 47px;
+    border-right: 1px solid #eee;
+  }
+  .header .register {
+    padding-left: 6px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    padding: 0 210px;
+  }
+  .header .nav-in > li .liMain {
+    left: -502px;
+    width: 1920px;
+  }
+  .header li.pr {
+    margin: 0 40px 0 525px;
+  }
 }

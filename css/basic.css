@@ -1,112 +1,153 @@
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{
-  margin: 0;
-  padding: 0;
+/*-------------Robyn---适合长沙品牌站的 css 初始化 ------------- */
+a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,footer, form, h1, h2, h3, h4, h5, h6, header,html, i, iframe, img,label,legend, li,nav, object, ol, output, p,section, span,table, tbody, td, tfoot, th, thead,tr, tt, ul{
+  word-wrap:break-word;/*单词断句*/
+  }
+  
+  html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+      margin: 0;
+      padding: 0;  /*清除元素的内外边距*/
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing:border-box;
+  }
+  
+  fieldset, img, input, button {
+      border: none;
+      padding: 0;
+      margin: 0;
+      outline-style: none;  /*外面环绕线*/
+  }
+  
+  ul, ol {
+      list-style: none;
+  }
+  
+  /*去掉原样式中的小黑点*/
+  input {
+      padding-top: 0;
+      padding-bottom: 0;
+      white-space:nowrap;
+      font-family: "arialMT";  /*字体的自动识别*/
+  }
+  
+  select, input {
+      vertical-align: middle;
+  }
+  
+  /*输入字居中显示*/
+  select, input, textarea {
+      font-size: 12px;
+      margin: 0;
+  }
+  
+  /**/
+  textarea {
+      resize: none;  /*不可以随意拖动*/
+  }
+  
+  /*防止拖动*/
+  img {
+      border: 0;
+      vertical-align: middle; /*  去掉图片底部默认的3像素空白缝隙*/
+  }
+  
+  table {
+      border-collapse: collapse; /*合并外连线*/
+  }
+  
+  body {
+      font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+      color: #666; /*150%基于当前字体尺寸的百分比行间距*/
+      background: #f6f6f6;
+  }
+  
+  .clearfix:before, .clearfix:after {
+      /*清除浮动*/
+      height: 0;
+      content: "";
+      display: block;
+      clear : both;
+      visibility: hidden;
+  }
+  
+  .clearfix {
+      *zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
+  }
+  
+  a {
+      color: #666;   /*a 标签是不继承颜色 的*/
+      text-decoration: none;
+  }
+  
+  a:hover {
+      color: #C81623;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 100%;
+  }
+  
+  s, i, em {  /*一般是起装饰作用*/
+      font-style: normal;  /*去掉原有的样式*/
+      text-decoration: none;  /*去掉下划线或是删除线*/
+  }
+  
+  .col-red {
+      color: #d53333 !important;/*长沙品牌主色调*/
+  }
+  
+  /*公共类*/
+  .w {
+      /*版心 提取 */
+      /* 此次设计图不符合业界规范 */
+      /* width: 1500px; */
+
+      margin: 0 auto;
+  }
+  
+  .fl {
+      float: left;
+  }
+  
+  .fr {
+      float: right;
+  }
+  
+  .al {
+      text-align: left;
+  }
+  
+  .ac {
+      text-align: center;
+  }
+  
+  .ar {
+      text-align: right;
+  }
+  
+  .hide {
+      display: none;
+  }
+  .pr{
+       position:relative;
+  }
+
+  .df-jcai-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   /* 去除引入iframe默认样式 */
+  iframe {
+  display: block;
   border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  /*word-break:break-all;*/
-  word-wrap:break-word; 
-}
-input{
-  white-space:nowrap;
-}
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-}
-*{
-  background-repeat: no-repeat;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-ul,li,ol{
-  list-style: none;
-}
-img{
-  border: none;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-html, body{
-  height: 100%;
-}
-.content{
-  min-height: 100%;
-}
-a{
-  text-decoration: none;
-  border: none;
-  outline: none;
-  tap-highlight-color: rgba(0,0,0,0);
-  focus-ring-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
-  -moz-tap-highlight-color: rgba(0,0,0,0);
-  -moz-focus-ring-color: rgba(0, 0, 0, 0);
-}
-a:visited{
-  color: inherit;
-}
-input,button{
-  outline: none;
-}
+  }
 
+  /* 再次强调 用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型 */
+  * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
-
--------------------------------------------------------------------------------------------------------------
-
-
-html { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 62.5%; }
-body { margin: 0; font-size: 1.4rem; line-height: 1.5; color: #333333; background-color: white; height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
-audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
-audio:not([controls]) { display: none; height: 0; }
-[hidden], template { display: none; }
-svg:not(:root) { overflow: hidden; }
-
-a { background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent; color: #0088cc; }
-a:active { outline: 0; }
-a:active { color: #006699; }
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-dfn { font-style: italic; }
-mark { background: #ff0; color: #000; }
-small { font-size: 80%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-img { border: 0; vertical-align: middle; }
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
-pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
-
-button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
-button { overflow: visible; }
-button, select { text-transform: none; }
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
-button[disabled], html input[disabled] { cursor: default; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-input { line-height: normal; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-legend { border: 0; padding: 0; }
-textarea { overflow: auto; resize: vertical; }
-optgroup { font-weight: bold; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-td, th { padding: 0; }
-
-html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
-h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
-ul, ol, li, dl, dd { margin: 0; padding: 0; }
-ul, ol { list-style: none outside none; }
-h1, h2, h3 { line-height: 2; font-weight: normal; }
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.4rem; }
-input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
-
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  /*-------------Robyn---适合长沙品牌站的 css 初始化完成 ------------- */
+  

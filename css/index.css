@@ -1,169 +1,35 @@
-.fl {
-  float: left;
+.navbar {
+  margin: 0;
 }
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.navbar-collapse {
+  padding: 0;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
 }
 .header {
-  width: 1920px;
-  height: 80px;
-  line-height: 80px;
   background-color: black;
-  padding-left: 210px;
-  position: relative;
-}
-.header .logo {
-  float: left;
-  width: 222px;
-  height: 31px;
-  margin-top: 19px;
-  background: url("../img/icon.png") no-repeat 0 -294px;
-  margin-right: 70px;
-}
-.header #nav {
-  float: left;
-}
-.header .nav-in > li {
-  position: relative;
-  float: left;
-  margin-right: 62px;
-}
-.header .nav-in > li a {
-  color: #fff;
-  font: 14px "arialMT";
-  padding-bottom: 4px;
-}
-.header .nav-in > li .liMain {
-  display: none;
-  position: absolute;
-  top: 80px;
-  left: -502px;
-  z-index: 999;
-  width: 1920px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px 0 60px 504px;
-}
-.header .liMainContent:nth-child(1) .guide {
-  position: absolute;
-  top: -12px;
-  left: 522px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
-  border-width: 6px;
-}
-.header .nav-in li:nth-child(2) .liMain {
-  left: -627px;
-}
-.header .nav-in li:nth-child(2) .liMain .guide {
-  left: 653px;
-}
-.header .nav-in li:nth-child(3) .liMain {
-  left: -762px;
-}
-.header .nav-in li:nth-child(3) .liMain .guide {
-  left: 795px;
-}
-.header .nav-in li:nth-child(4) .liMain {
-  left: -905px;
-}
-.header .nav-in li:nth-child(4) .liMain .guide {
-  left: 926px;
-}
-.header .nav-in li:last-child {
-  margin-right: 588px;
-}
-.header .nav-in li:hover .liMain {
-  display: block;
-}
-.header .nav-in li a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-}
-.header .firstdl {
-  margin-right: 88px;
-}
-.header .firstdl dd {
-  height: 26px;
-}
-.header .firstdl dt:nth-child(6),
-.header .firstdl dt:nth-child(5) {
-  margin-top: 14px;
-}
-.header .firstdl dd:last-child {
-  height: 14px;
-}
-.header .firstdl dd a {
-  color: #666;
-  font: 14px "arialMT";
-}
-.header .firstdl dd a:hover {
-  color: #d75656;
-  border-bottom: 1px solid #d75656;
-}
-.header .firstdl .titledt {
-  height: 23px;
-}
-.header .firstdl .titledt a {
-  color: #333;
-  font: bold 14px "arialMT";
-}
-.header .firstdl .titledt a:hover {
-  text-decoration: none;
-  color: #d75656;
-  border-bottom: 1px solid #d75656;
-}
-.header .search {
-  display: inline-block;
-  width: 24px;
-  height: 80px;
-  background: url("../img/search.png") no-repeat center center;
-  background-size: 100%;
-  margin-right: 60px;
-  vertical-align: top;
-  cursor: pointer;
-}
-.header .loginBox {
-  float: left ;
-}
-.header .login,
-.header .register {
-  display: inline-block;
-}
-.header .login a,
-.header .register a {
-  color: #fff;
-  font: 14px "AdobeHeitiStd-Regular";
-}
-.header .login {
-  padding-right: 12px;
-}
-.header .login a {
-  display: inline-block;
-  width: 50px;
-  border-right: 1px solid #282828;
-}
-iframe {
-  display: block;
-  border: 0;
 }
 .carousel {
   position: relative;
-  width: 1920px;
-  height: 880px;
+  width: 100%;
+  height: auto;
 }
 .carousel-control {
+  display: none;
   position: absolute;
-  top: 348px;
   width: 84px;
   height: 84px;
   color: #fff;
   border-radius: 50%;
+  opacity: 1;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .carousel-control .poa {
@@ -171,6 +37,9 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.carousel-inner:hover .carousel-control {
+  display: block;
 }
 .left {
   left: 28px;
@@ -187,6 +56,10 @@ iframe {
 .glyphicon-chevron-right:before {
   content: "";
 }
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
 .carousel-control.right {
   right: 28px;
 }
@@ -194,47 +67,56 @@ iframe {
   width: 12px;
   height: 12px;
   border: 2px solid #fff;
+  margin: 1px 10px;
 }
 .carousel-indicators .active {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
+  margin: 1px 10px;
 }
-main {
-  position: relative;
+.carousel-control:focus,
+.carousel-control:hover {
+  opacity: 1;
+}
+.liMain {
+  display: none;
 }
 main .productShow {
-  width: 1920px;
+  width: 100%;
+  padding-top: 12px;
 }
 main .productShow li {
   float: left;
   width: 942px;
-  height: 580px;
-  margin-top: 12px;
-  margin-left: 12px;
+  height: auto;
 }
-main .products {
-  width: 1920px;
-  margin: 120px 0 50px 0;
-  padding-left: 210px;
+main .productShow li img {
+  width: 100%;
+  height: auto;
 }
-main .productsContent {
-  width: 1494px;
+main .productShow li:nth-child(odd) {
+  margin-right: 12px;
 }
-main .productsContent .bestSlect {
-  text-align: center;
+main .bestSlect {
+  width: 100%;
   color: #333;
   font: 36px "arialMT";
-  margin-bottom: 60px;
+  margin: 117px 0 57px 0;
+  margin-top: 117px;
+}
+main .products {
+  width: 100%;
 }
 main .productsShow li {
   float: left;
   text-align: center;
-  width: 284px;
-  height: 359px;
+  width: 100%;
+  height: auto;
   border: 1px solid #f5f5f5;
   margin-right: 19px;
   margin-bottom: 50px;
   padding-top: 32px;
+  background-color: #fff;
 }
 main .productsShow li img {
   width: 220px;
@@ -246,14 +128,9 @@ main .productsShow a {
   font: 16px "arialMT";
 }
 main .productsShow p {
-  margin-top: 32px;
-}
-main .hide {
-  display: none;
+  margin-top: 60px;
 }
 main .loadMoreBox {
-  width: 1920px;
-  padding-left: 880px;
   margin-bottom: 140px;
 }
 main .loadMore {
@@ -272,8 +149,6 @@ main .loadMore .loadMoreC {
 }
 main .toUpArrows {
   position: absolute;
-  bottom: 224px;
-  right: 158px;
   width: 51px;
   height: 50px;
   background-color: #333;
@@ -288,6 +163,238 @@ main .toUpArrows a {
   text-align: center;
 }
 main .toUpArrows a img {
-  width: 20px;
-  height: 12px;
+  width: 21px;
+  height: 21px;
+}
+@media screen and (max-width: 1024px) {
+  .navbar-default {
+    background-color: black;
+  }
+  .header #search {
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/search.png") no-repeat center center;
+  }
+  .carousel-control {
+    display: none !important;
+  }
+  main .toUpArrows {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar-default {
+    border: none;
+  }
+  .nav > li > a {
+    padding: 0;
+  }
+  .header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 5%;
+  }
+  .header .logo {
+    width: 222px;
+    height: 80px;
+    margin-right: 70px;
+  }
+  .header .logo #moreslan {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/logo_01.png") no-repeat;
+    background-size: 100%;
+    text-indent: -999em;
+    overflow: hidden;
+  }
+  .header .mr47 {
+    margin-right: 47px;
+  }
+  .header .nav-in > li {
+    position: relative;
+    float: left;
+    height: 80px;
+    padding-top: 35px;
+  }
+  .header .nav-in > li a {
+    display: inline-block;
+    color: #fff;
+    font: 14px "arialMT";
+    vertical-align: top;
+  }
+  .header .nav-in > li .liMain {
+    position: absolute;
+    top: 80px;
+    left: -502px;
+    z-index: 999;
+    width: 1500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 0 60px 504px;
+  }
+  .header .nav-in > li .liMain a {
+    display: inline;
+    padding: 0 !important;
+  }
+  .header .liMainContent:nth-child(1) .guide {
+    position: absolute;
+    top: -12px;
+    left: 522px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+    border-width: 6px;
+  }
+  .header .nav-in li:nth-child(2) .liMain {
+    left: -627px;
+  }
+  .header .nav-in li:nth-child(2) .liMain .guide {
+    left: 653px;
+  }
+  .header .nav-in li:nth-child(3) .liMain {
+    left: -762px;
+  }
+  .header .nav-in li:nth-child(3) .liMain .guide {
+    left: 795px;
+  }
+  .header .nav-in li:nth-child(4) .liMain {
+    left: -905px;
+  }
+  .header .nav-in li:nth-child(4) .liMain .guide {
+    left: 926px;
+  }
+  .header .nav-in li:hover .liMain {
+    display: block;
+  }
+  .header .nav-in li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+  .header .firstdl {
+    margin-right: 88px;
+  }
+  .header .firstdl dd {
+    height: 26px;
+  }
+  .header .firstdl dt:nth-child(6),
+  .header .firstdl dt:nth-child(5) {
+    margin-top: 14px;
+  }
+  .header .firstdl dd:last-child {
+    height: 14px;
+  }
+  .header .firstdl dd a {
+    color: #666;
+    font: 14px "arialMT";
+  }
+  .header .firstdl dd a:hover {
+    color: #d75656;
+    border-bottom: 1px solid #d75656;
+  }
+  .header .firstdl .titledt {
+    height: 23px;
+  }
+  .header .firstdl .titledt a {
+    color: #333;
+    font: bold 14px "arialMT";
+  }
+  .header .firstdl .titledt a:hover {
+    text-decoration: none;
+    color: #d75656;
+    border-bottom: 1px solid #d75656;
+  }
+  .header li.pr {
+    width: 24px;
+    margin: 0 40px 0 220px;
+  }
+  .header #search {
+    position: absolute;
+    top: 54%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url("../img/search.png") no-repeat center center;
+    cursor: pointer;
+  }
+  .header #search:hover {
+    border: none;
+  }
+  .header .login,
+  .header .register {
+    display: inline-block;
+  }
+  .header .login a,
+  .header .register a {
+    color: #fff;
+    font: 14px "AdobeHeitiStd-Regular";
+  }
+  .header .login a {
+    display: inline-block;
+    width: 47px;
+    border-right: 1px solid #282828;
+  }
+  .header .register {
+    padding-left: 6px;
+  }
+  .carousel-control {
+    top: 248px;
+  }
+  main .products {
+    padding: 0 2%;
+  }
+  main .productsContent {
+    width: 1200px;
+  }
+  main .productsShow li {
+    width: 284px;
+    height: 359px;
+  }
+  main .productsShow li img {
+    width: 220px;
+    height: 220px;
+  }
+  main .toUpArrows {
+    bottom: 90px;
+    right: 35px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    padding: 0 210px;
+  }
+  .header .nav-in > li .liMain {
+    left: -502px;
+    width: 1920px;
+  }
+  .header li.pr {
+    margin: 0 40px 0 525px;
+  }
+  .carousel {
+    position: relative;
+    width: 1920px;
+    height: 880px;
+  }
+  .carousel-control {
+    top: 348px;
+  }
+  main .products {
+    width: 1920px;
+    padding: 0 0 0 210px;
+  }
+  main .productsContent {
+    width: 1494px;
+  }
+  main .toUpArrows {
+    right: 144px;
+    bottom: 90px;
+  }
 }

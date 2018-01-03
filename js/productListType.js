@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2017-12-26 12:26:25
+ * @Last Modified time: 2017-12-26 17:21:55
  */
 $(function () {
 
@@ -56,7 +56,7 @@ $(".select-content li").on("click",function(){
     $(this).parent().siblings(".select-header").text($(this).text()).end().slideUp("fast");  
 });    
 
-  // 模拟选择框功能
+  // 模拟选择框功能结束
 
 
 });

@@ -1,0 +1,17 @@
+.search {
+  width: 1920px;
+  height: 300px;
+  background-color: #ededed;
+  padding: 127px 0 127px 217px;
+  color: rgba(102, 102, 102, 0.5);
+  font: 40px "arialMT";
+}
+.search input {
+  display: border;
+  width: 1500px;
+  border: none;
+  background-color: #ededed;
+  font: 40px "arialMT";
+  color: #333;
+  caret-color: red;
+}

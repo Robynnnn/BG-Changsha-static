@@ -2,25 +2,21 @@
  * @Author: Robyn 
  * @Date: 2017-12-19 11:32:28 
  * @Last Modified by: Robyn
- * @Last Modified time: 2017-12-24 02:00:06
+ * @Last Modified time: 2018-01-02 09:36:26
  */
 
 
 $(function () {
 
-  //        tab栏效果
-  // $('.tab-item').mouseover(function () {
-  //   //            上面选项卡的切换：其实就是排他思想
-  //               $(this).addClass('active').siblings().removeClass('active');
-  //   //            tab内容切换：其实也是排他，不过他需要和选项卡有对应关系
-  //   //            通过获取当前的索引值，让上下内容对应起来
-  //               var index = $(this).index();
-  //               $('.main').eq(index).addClass('selected').siblings().removeClass('selected');
-  //           });
-  // $('.nav-in').mouseout(function () {
-  //   $('.main').removeClass('selected');
-  //   })
-  
+  // 轮播图鼠标移入显示按钮事件
+  $("#carousel-example-generic").mouseover(function () {
+    $(".carousel-control").css("display", "block");
+  });
+  // 轮播图鼠标移出隐藏按钮事件
+  $("#carousel-example-generic").mouseout(function () {
+    $(".carousel-control").css("display", "none");
+  });
+
   // 动态返回按钮
   // 1.获取产品展示的高度
   var productsShowTop = $('#productShow').offset().top;
@@ -34,8 +30,7 @@ $(function () {
     $('#toTop').click(function () {
       $('html,body').stop().animate({
         scrollTop: 0
-      });
-    });
-  })
-
+      })
+    })
+  });
 })

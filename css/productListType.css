@@ -17,6 +17,10 @@
   font: 14px "arialMT";
   line-height: 60px;
 }
+.proLisTypeModule .titTop a {
+  color: #666;
+  font: 14px "arialMT";
+}
 .proLisTypeModule .titTop .d53333 {
   color: #d53333;
 }
