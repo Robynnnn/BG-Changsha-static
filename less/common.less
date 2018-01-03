@@ -1,31 +1,178 @@
-// 清除bootstrap导航默认冗余样式
-.navbar {
-  margin : 0;
-}
-
-.navbar-collapse {
-  padding : 0;
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-  color : #000;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-  color : #000;
-}
-// 清除bootstrap默认冗余样式结束
-
-
-// 头部样式
-
-// 头部样式--开始
-
+// 头部
 .header {
   background-color: #fff;
+
+  .liMain {
+    display: none;
+  }
+
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding : 0 5%;
+
+    // logo标签
+.logo {
+  width: 222px;
+  height: 80px;
+  margin-right: 70px;
+  #moreslan {
+    margin : 0;
+    width: 100%;
+    height: 100%;       
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/logo.png") no-repeat center;
+    background-size: 100%;
+    text-indent: -999em;
+    overflow: hidden;
+  }
 }
 
+.mr47 {
+  margin-right: 47px;
+}
+
+   // 导航栏第一层li
+   .nav-in>li {
+    position: relative;
+    float: left;
+    height: 80px;
+    padding-top : 35px;
+    a {
+      display: inline-block;
+      color:#000;
+      font:  14px "arialMT" ;
+      vertical-align: top;
+    }
+    // li下方的内容
+    .liMain {
+      display: none;
+      position: fixed;
+      top : 80px;
+      left : 0;
+      z-index: 999;
+      width: 100%;
+      background-color: rgba(255,255,255,0.9);
+      padding : 30px 0 60px 0px;
+      a {
+        display: inline;
+        padding : 0 !important;          
+      }
+      .dlList {
+        width: 900px;
+        margin : 0 auto;
+      }
+    }
+  }
+
+  // 小三角
+  .guide {
+    display: none;
+    position: absolute;
+    bottom : 0px;
+    left : 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0.9) transparent;
+    border-width: 6px;
+  }
+
+
+
+  // 第一层lihover事件
+  .nav-in li:hover .liMain,.nav-in li:hover .guide {
+    display: block;
+  }
+
+  // 第一层li里面的a的hover事件
+  .nav-in li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+  }
+
+  // 隐藏框里面的内容区域开始
+  .firstdl {
+    margin-right: 88px;
+    dd {
+      height: 26px;
+    }
+    dt:nth-child(6),dt:nth-child(5)  {
+      // 原设计图要求的是28px，但是上面最后一个dd的高度是26了，减去高度14，还剩14
+      margin-top : 14px;
+    }
+    dd:last-child {
+      height: 14px;
+    }
+
+    dd a {
+      color : #666;
+      font : 14px "arialMT";  
+    }
+
+    dd a:hover {
+      color : #d75656;
+      border-bottom : 1px solid #d75656;
+    }
+  }
+  .firstdl .titledt {
+    height: 23px;
+    a {
+        color : #333;
+        font : bold 14px "arialMT";
+    }
+
+    a:hover {
+      text-decoration: none;
+      color : #d75656;
+      border-bottom : 1px solid #d75656;
+    }
+  }
+  // 隐藏框里面的内容区域结束
+
+  // 搜索图标
+  li.pr {
+    width: 24px;
+    margin : 0 40px 0 220px; 
+  }
+  #search {
+    position: absolute;
+    top : 54%;
+    left : 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url("../img/search02.png") no-repeat center center;
+    cursor: pointer;
+  }
+  #search:hover {
+    border : none;
+  }
+
+  .login,.register {
+    display: inline-block;
+   
+    a {
+      color:#000;
+      font:  14px "AdobeHeitiStd-Regular" ;
+    }
+  }
+  .login {
+    a {
+      display: inline-block;
+      width: 47px;
+      border-right: 1px solid #eee;
+    }      
+  }
+  .register {
+    padding-left: 6px;
+  }
+}
 // 头部样式--结束
 
 
@@ -172,35 +319,6 @@ section {
 
   // 头部样式
   .header {
-    #search {
-      left : 10px;
-      width: 24px;
-      height: 24px;
-      background: url("../img/search.png") no-repeat center center;
-    }
-  }
-
-  // 清除轮播图的左右按钮
-  .carousel-control {
-    display: none !important;
-  }
-
-  .liMain {
-    display: none;
-  }
-
-  main {
-  //   .productShow {
-  //     width: 100%;
-  //   }
-
-  .loadMoreBox {
-    width: 100%;
-    margin-left : 30%;
-
-    // margin : 0 auto;
-  }
-
 
   .toUpArrows {
     display: none !important;
@@ -235,219 +353,55 @@ section {
 } 
 
 // 屏幕宽度大于等于1280px的时候适配
-@media screen and (min-width: 1280px) {
+// @media screen and (min-width: 1280px) {
 
-  // 清除bootstrap默认的样式
-  .navbar-default {
-    border : none;
-  }
-  .nav>li>a {
-    padding : 0;
-  }
-  // 清除bootstrap默认的样式结束
-
-  .header {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    padding : 0 5%;
-
-      // logo标签
-  .logo {
-    width: 222px;
-    height: 80px;
-    margin-right: 70px;
-    #moreslan {
-      margin : 0;
-      width: 100%;
-      height: 100%;       
-    }
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: url("../img/logo.png") no-repeat center;
-      background-size: 100%;
-      text-indent: -999em;
-      overflow: hidden;
-    }
-  }
-
-  .mr47 {
-    margin-right: 47px;
-  }
-
-     // 导航栏第一层li
-     .nav-in>li {
-      position: relative;
-      float: left;
-      height: 80px;
-      padding-top : 35px;
-
-      a {
-        display: inline-block;
-        color:#000;
-        font:  14px "arialMT" ;
-        vertical-align: top;
-      }
-      // li下方的内容
-      .liMain {
-        display: none;
-        position: absolute;
-        top : 80px;
-        left : -502px;
-        z-index: 999;
-        width: 1500px;
-        background-color: rgba(255,255,255,0.9);  
-        padding : 30px 0 60px 504px;
-        a {
-          display: inline;
-          padding : 0 !important;          
-        }
-      }
-    }
-
-    // 小三角
-    .liMainContent:nth-child(1) .guide {
-      position: absolute;
-      top : -12px;
-      left : 522px;
-      width: 0px;
-      height: 0px;
-      border-style: solid;
-      border-color: transparent transparent rgba(255,255,255,0.9) transparent;
-      border-width: 6px;
-    }
-
-    // 小三角位移
-    .nav-in li:nth-child(2) .liMain {
-      left : -627px;
-      .guide {
-        left : 653px;
-      }
-    }
-  
-    .nav-in li:nth-child(3) .liMain {
-      left : -762px;
-      .guide {
-        left : 795px;
-      }
-    }
-  
-    .nav-in li:nth-child(4) .liMain {
-      left : -905px;
-      .guide {
-        left : 926px;
-      }
-    }
-  
-    // 第一层lihover事件
-    .nav-in li:hover .liMain {
-      display: block;
-    }
-  
-    // 第一层li里面的a的hover事件
-    .nav-in li a:hover {
-      text-decoration: none;
-      border-bottom: 1px solid #fff;
-    }
-  
-    // 隐藏框里面的内容区域开始
-    .firstdl {
-      margin-right: 88px;
-      dd {
-        height: 26px;
-      }
-      dt:nth-child(6),dt:nth-child(5), {
-        margin-top : 14px;
-      }
-      dd:last-child {
-        height: 14px;
-      }
-
-      dd a {
-        color : #666;
-        font : 14px "arialMT";  
-      }
-  
-      dd a:hover {
-        color : #d75656;
-        border-bottom : 1px solid #d75656;
-      }
-    }
-    .firstdl .titledt {
-      height: 23px;
-      a {
-          color : #333;
-          font : bold 14px "arialMT";
-      }
-  
-      a:hover {
-        text-decoration: none;
-        color : #d75656;
-        border-bottom : 1px solid #d75656;
-      }
-    }
-    // 隐藏框里面的内容区域结束
-  
-    // 搜索图标
-    li.pr {
-      width: 24px;
-      margin : 0 40px 0 220px; 
-    }
-    #search {
-      position: absolute;
-      top : 54%;
-      left : 0;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-      background: url("../img/search02.png") no-repeat center center;
-      cursor: pointer;
-    }
-    #search:hover {
-      border : none;
-    }
-  
-    .login,.register {
-      display: inline-block;
-      a {
-        color:#000;
-        font:  14px "AdobeHeitiStd-Regular" ;
-      }
-    }
-    .login {
-      a {
-        display: inline-block;
-        width: 47px;
-        border-right: 1px solid #eee;
-      }      
-    }
-    .register {
-      padding-left: 6px;
-    }
-  }
-  // 头部结束
-}
+// }
 
 // 屏幕宽度大于等于1920px的时候适配
 @media screen and (min-width: 1920px) {
-  // 头部
-  .header { 
-    padding : 0 210px;
-    // 导航栏第一层li
-    .nav-in>li {
-      // li下方的内容
-      .liMain {
-        left : -502px;
-        width: 1920px;
-      }
-    }
 
+  // 头部
+  .header {  
+    // padding : 0 210px;
+    .hdMain {
+      width: 1500px;
+      margin : 0 auto;
+    }
     // 搜索图标
     li.pr {
       margin : 0 40px 0 525px;
     }
   }
   // 头部结束
-}
+
+  // 轮播图
+  .carousel {  
+    position: relative;
+    width: 100%;
+    height: 880px;
+  }  
+
+  .carousel-control {
+    top : 348px;
+  }
+
+  // 轮播图结束
+
+  // 主要区域
+  main {
+    .products {
+      width: 1920px;
+      padding : 0 0 0 210px;
+    }
+
+    .productsContent {
+      width: 1494px;
+    }
+
+    .toUpArrows {
+      right : 144px;
+      bottom : 90px;
+    }
+
+  }
+} 
