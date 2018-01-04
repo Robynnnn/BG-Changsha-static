@@ -14,11 +14,9 @@ input,select,textarea,button{outline:none;border:none;background:none;}
 .clearfix:after {content: "\0020";display: block;height: 0;clear: both;}
 .clearfix {zoom: 1;}
 article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block; width:100%;}
-a{text-decoration:none;color:#666;}
-.wrap{width: 1200px;margin: 0 auto;position: static;}
+a{text-decoration:none;}
 .hide{display: none;}
 .show{display: block;}
-.content-rightPart ul { margin-left:15px;}
 :-moz-placeholder {color: #999; opacity:1;  }
 
 ::-moz-placeholder {color: #999;opacity:1;  }
@@ -28,19 +26,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder{color: #999;opacity:
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color: #999;opacity:1;}
 
 html {-webkit-tap-highlight-color: transparent;}
-.wap { margin: 0 auto; }
+.wrap { margin: 0 auto; }
 @media (min-width: 992px) {
-  .wap {
+  .wrap {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .wap {
+  .wrap {
     width: 1200px;
   }
 }
 @media (min-width: 1600px) {
-  .wap {
+  .wrap {
     width: 1500px;
   }
 }
