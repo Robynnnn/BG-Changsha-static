@@ -1,209 +1,268 @@
-.fl {
-  float: left;
+/* Main */
+
+.titTop {
+  width                     : 100%;
+  height                    : 60px;
+  border-top                : 1px solid #ddd;
+  color                     : #666;
+  font                      : 14px "arialMT";
+  line-height               : 60px;
 }
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+
+.titTop a {
+  color                     : #666;
+  font                      : 14px "arialMT";
 }
-.proLisTypeModule .titTop {
-  width: 1920px;
-  height: 60px;
-  border-top: 1px solid #ddd;
-  padding-left: 211px;
-  color: #666;
-  font: 14px "arialMT";
-  line-height: 60px;
+
+
+/* Top img */
+
+.proShow {
+  width                     : 100%;
 }
-.proLisTypeModule .titTop a {
-  color: #666;
-  font: 14px "arialMT";
+
+.proShow img {
+  width                     : 100%;
+  height                    : auto;
 }
-.proLisTypeModule .titTop .d53333 {
-  color: #d53333;
+
+
+/* Category */
+
+.proCategory {
+  width                     : 100%;
+  color                     : #333;
+  font                      : 28px "arialMT";
+  margin-top                : 117px;
 }
-.proLisTypeModule .detailAll {
-  width: 1920px;
-  padding: 120px 0 0 211px;
+
+
+/* Main Show */
+
+.detailAll {
+  width                     : 100%;
+  margin-top                : 57px;
 }
-.proLisTypeModule .detailTit {
-  width: 1560px;
-  text-align: center;
-  color: #333;
-  font: 28px "arialMT";
-  margin-bottom: 58px;
+
+
+/* Title */
+
+.proTab .tab-list {
+  height                    : 20px;
+  line-height               : 20px;
+  float                     : left;
+  color                     : #666;
+  font                      : 14px "arialMT";
+  margin-right              : 66px;
+  cursor                    : pointer;
 }
-.proLisTypeModule .ProWrapper {
-  /* ul */
-  /* li */
+
+.proTab .tab-list:hover {
+  color                     : #333;
+  border-bottom             : 2px solid #d53333;
 }
-.proLisTypeModule .ProWrapper .por {
-  position: relative;
+
+
+/* selectBox */
+
+.select-box {
+  position                  : absolute;
+  right                     : 0;
+  top                       : 0;
 }
-.proLisTypeModule .ProWrapper .select-box {
-  position: absolute;
-  float: left;
-  top: 0;
-  right: 208px;
+
+.select-header {
+  width                     : 102px;
+  height                    : 16px;
+  line-height               : 16px;
+  color                     : #333;
+  font                      : 14px "arialMT";
+  background                : url("../img/selectdown_03.png") no-repeat;
+  background-position-x     : 100%;
+  background-position-y     : 50%;
 }
-.proLisTypeModule .ProWrapper .select-header {
-  background-color: yellowgreen;
-  width: 102px;
-  height: 16px;
-  line-height: 16px;
-  color: #333;
-  font: 14px "arialMT";
-  background: url("../img/selectdown_03.png") no-repeat;
-  background-position-x: 100%;
-  background-position-y: 50%;
+
+.select-content {
+  position                  : absolute;
+  width                     : 102px;
+  height                    : 120px;
+  top                       : 16px;
+  left                      : 0;
+  z-index                   : 99;
+  display                   : none;
+  border                    : 1px solid #ddd;
+  background-color          : #fcfcfc;
+  padding-top               : 14px;
 }
-.proLisTypeModule .ProWrapper .select-content {
-  position: absolute;
-  width: 102px;
-  height: 120px;
-  top: 16px;
-  left: 0;
-  z-index: 99;
-  display: none;
-  border: 1px solid #ddd;
-  background-color: #fcfcfc;
-  padding-top: 14px;
+
+.select-content li {
+  width                     : 102px;
+  color                     : #666;
+  font                      : 12px "arialMT";
+  padding-left              : 10px;
+  margin-bottom             : 10px;
+  cursor                    : pointer;
 }
-.proLisTypeModule .ProWrapper .select-content li {
-  color: #666;
-  font: 12px "arialMT";
-  width: 102px;
-  margin-bottom: 10px;
-  cursor: pointer;
+
+.lowPrice,
+.highPrice {
+  display                   : inline-block;
+  width                     : 6px;
+  height                    : 7px;
 }
-.proLisTypeModule .ProWrapper .lowPrice,
-.proLisTypeModule .ProWrapper .highPrice {
-  display: inline-block;
-  width: 6px;
-  height: 7px;
+
+.lowPrice {
+  margin-left               : 4px;
+  background                : url("../img/lowprice.png") no-repeat;
 }
-.proLisTypeModule .ProWrapper .lowPrice {
-  margin-left: 4px;
-  background: url("../img/lowprice.png") no-repeat;
+
+.highPrice {
+  margin-left               : 1px;
+  background                : url("../img/highprice.png") no-repeat;
 }
-.proLisTypeModule .ProWrapper .highPrice {
-  margin-left: 1px;
-  background: url("../img/highprice.png") no-repeat;
+
+.select-content li:hover {
+  color                     : #d53333;
 }
-.proLisTypeModule .ProWrapper .select-content li:hover {
-  color: #d53333;
-}
-.proLisTypeModule .ProWrapper .proTab .tab-list {
-  float: left;
-  color: #666;
-  font: 14px "arialMT";
-  margin-right: 66px;
-  margin-bottom: 40px;
-  cursor: pointer;
-}
-.proLisTypeModule .ProWrapper .proTab .tab-list:hover {
-  color: #333;
-  border-bottom: 2px solid #d53333;
-}
+
+
+/* 后期与后台联调的时候删除测试区域样式 */
+
 .proLisTypeModule .ProWrapper .test {
-  width: 1708px;
-  height: 820px;
-  background-color: yellowgreen;
+  width                     : 100%;
+  height                    : 820px;
+  background-color          : yellowgreen;
 }
+
 .proLisTypeModule .ProWrapper .test02 {
-  background-color: hotpink;
+  background-color          : hotpink;
 }
-.proLisTypeModule .ProWrapper .productsShow {
-  float: left;
-  display: none;
+
+
+/* 测试区域结束 */
+
+
+/* toggleContent */
+
+.productsShow {
+  display                   : none;
+  margin-top                : 30px;
 }
-.proLisTypeModule .ProWrapper .productsShow li {
-  float: left;
-  text-align: center;
-  width: 286px;
-  height: 380px;
-  border: 1px solid #f5f5f5;
-  margin-right: 19px;
-  margin-bottom: 18px;
-  padding-top: 32px;
+
+.productsShow li {
+  float                     : left;
+  width                     : 20%;
+  max-width                 : 286px;
+  height                    : auto;
+  border                    : 1px solid #f5f5f5;
+  text-align                : center;
+  padding-top               : 2%;
+  margin                    : 0 1% 1% 0;
 }
-.proLisTypeModule .ProWrapper .productsShow li img {
-  width: 220px;
-  height: 220px;
-  margin-bottom: 2px;
+
+.productsShow li:nth-child(5n) {
+  margin-right              : 0;
 }
-.proLisTypeModule .ProWrapper .productsShow li .smallImg {
-  position: relative;
-  width: 100%;
-  height: 32px;
+
+.productsShow li img {
+  width                     : 77%;
+  max-width                 : 220px;
+  height                    : auto;
+  margin                    : 0 auto;
 }
-.proLisTypeModule .ProWrapper .productsShow li .smallImgDetail {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 144px;
+
+
+/* smallImgArea */
+
+.smallImg {
+  width                     : 47%;
+  height                    : auto;
+  margin                    : 0 auto;
+  background-color          : yellowgreen;
 }
-.proLisTypeModule .ProWrapper .productsShow li .smallImgDetail .smallImage {
-  float: left;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ddd;
-  margin-right: 5px;
+
+.smallImg li {
+  width                     : 28%;
+  max-width                 : 32px;
+  height                    : auto;
+  border                    : 1px solid #ddd;
+  padding                   : 0;
+  margin                    : 0 5% 0 0;
 }
-.proLisTypeModule .ProWrapper .productsShow li .smallImgDetail .smallImage:last-child {
-  margin-right: 0;
+
+.smallImg li img {
+  width                     : 100%;
+  max-width                 : 30px;
+  height                    : auto;
 }
-.proLisTypeModule .ProWrapper .productsShow li .smallImgDetail img {
-  width: 30px;
-  height: 30px;
+
+.productsShow p {
+  color                     : #333;
+  font                      : 16px "arialMT";
+  margin-top                : 15px;
 }
-.proLisTypeModule .ProWrapper .productsShow li .price {
-  float: left;
-  color: #333;
-  font: 16px "arialMT";
-  margin-top: 24px;
-  margin-left: 36%;
+
+.productsShow li .price {
+  float                     : left;
+  color                     : #333;
+  font                      : 16px "arialMT";
+  margin-top                : 24px;
+  margin-left               : 36%;
+  margin-bottom             : 12px;
 }
-.proLisTypeModule .ProWrapper .proT {
-  position: relative;
+
+.selected {
+  display                   : block;
 }
-.proLisTypeModule .ProWrapper .proT .selected {
-  display: block;
+
+.productsShow a {
+  text-align                : center;
+  color                     : #333;
+  font                      : 16px "arialMT";
 }
-.proLisTypeModule .ProWrapper .productsShow a {
-  text-align: center;
-  color: #333;
-  font: 16px "arialMT";
+
+.toUpArrows {
+  position                  : fixed;
+  right                     : 4px;
+  bottom                    : 288px;
+  width                     : 42px;
+  height                    : 42px;
+  line-height               : 42px;
+  background-color          : #333;
+  text-align                : center;
+  cursor                    : pointer;
+  display                   : none;
 }
-.proLisTypeModule .ProWrapper .productsShow p {
-  color: #333;
-  font: 16px "arialMT";
-  margin-top: 18px;
+
+
+/* 屏幕宽度小于等于1024px的时候适配(IPad Pro) */
+
+@media screen and (max-width: 1024px) {}
+
+
+/* 屏幕宽度大于等于1280px的时候适配 */
+
+@media screen and (min-width: 1280px) {
+  /* toggleContent */
+  .productsShow li {
+    margin-right            : 0;
+  }
+  /* smallImgArea */
+  .smallImg {
+    width                   : 54%;
+  }
 }
-.proLisTypeModule .ProWrapper .hide {
-  display: none;
-}
-.proLisTypeModule .ProWrapper .toUpArrows {
-  position: absolute;
-  bottom: 50px;
-  right: 141px;
-  width: 51px;
-  height: 50px;
-  background-color: #333;
-  cursor: pointer;
-}
-.proLisTypeModule .ProWrapper .toUpArrows a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  text-align: center;
-}
-.proLisTypeModule .ProWrapper .toUpArrows a img {
-  width: 20px;
-  height: 12px;
+
+
+/* 屏幕宽度大于等于1920px的时候适配 */
+
+@media screen and (min-width: 1920px) {
+  /* toggleContent */
+  .productsShow li {
+    margin-right            : 1%;
+  }
+  /* smallImgArea */
+  .smallImg {
+    width                   : 47%;
+  }
 }

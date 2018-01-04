@@ -344,7 +344,6 @@ main .productsShow li img {
   }
 }
 @media screen and (min-width: 1280px) {
-
   /* main start */
   main .productsShow li {
     margin-right: 0;
