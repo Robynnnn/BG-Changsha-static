@@ -2,20 +2,16 @@
  * @Author: Robyn 
  * @Date: 2017-12-19 11:32:28 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-02 09:36:26
+ * @Last Modified time: 2018-01-03 18:53:19
  */
 
 
 $(function () {
 
-  // 轮播图鼠标移入显示按钮事件
-  $("#carousel-example-generic").mouseover(function () {
-    $(".carousel-control").css("display", "block");
-  });
-  // 轮播图鼠标移出隐藏按钮事件
-  $("#carousel-example-generic").mouseout(function () {
-    $(".carousel-control").css("display", "none");
-  });
+  // 轮播图插件内容
+    $(".flexslider").flexslider({
+      animation: "slide"
+    });
 
   // 动态返回按钮
   // 1.获取产品展示的高度
