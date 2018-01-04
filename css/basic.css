@@ -56,9 +56,9 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
   }
   
   body {
-      font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+      font: 14px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
       color: #666; /*150%基于当前字体尺寸的百分比行间距*/
-      /* background: #f6f6f6; */
+      background: #f6f6f6;
   }
   
   .clearfix:before, .clearfix:after {
@@ -78,11 +78,13 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
       color: #666;   /*a 标签是不继承颜色 的*/
       text-decoration: none;
   }
-  
-  a:hover {
-      color: #C81623;
-  }
-  
+
+@media (min-width: 997px) {
+    /*hover属性均在PC端*/
+    a:hover {
+        color: #C81623;
+    }
+}
   h1, h2, h3, h4, h5, h6 {
       text-decoration: none;
       font-weight: normal;
@@ -148,6 +150,18 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
 
   /* 再次强调 用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型 */
   * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+:-moz-placeholder {color: #999; opacity:1;  }
+
+::-moz-placeholder {color: #999;opacity:1;  }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{color: #999;opacity:1;}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color: #999;opacity:1;}
+
+html {-webkit-tap-highlight-color: transparent;}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav { display: block; width:100%;}
 
   /*-------------Robyn---适合长沙品牌站的 css 初始化完成 ------------- */
   
