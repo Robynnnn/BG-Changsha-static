@@ -15,7 +15,7 @@
 <body>
 
   <!-- 头部 -->
-  <div class="header pr clearfix">
+  <!--<div class="header pr clearfix">
     <div class="hdMain pr clearfix">
       <div class="logo fl">
         <h1 id="moreslan">
@@ -27,12 +27,12 @@
           <li class="mr47">
             <div class="guide"></div>
             <a href="#">Products</a>
-            <!-- 鼠标移入后显示内容区域 -->
+            &lt;!&ndash; 鼠标移入后显示内容区域 &ndash;&gt;
             <div class="liMain">
               <div class="liMainContent clearfix">
 
                 <div class="dlList clearfix">
-                  <!-- 第一列 -->
+                  &lt;!&ndash; 第一列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Power</a>
@@ -62,7 +62,7 @@
                       <a href="#">Turntable</a>
                     </dd>
                   </dl>
-                  <!-- 第二列 -->
+                  &lt;!&ndash; 第二列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Audio & Sounds</a>
@@ -92,7 +92,7 @@
                       <a href="#">USB Hub</a>
                     </dd>
                   </dl>
-                  <!-- 第三列 -->
+                  &lt;!&ndash; 第三列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Stage Lighting Effects</a>
@@ -121,7 +121,7 @@
             <div class="liMain">
               <div class="liMainContent clearfix">
                 <div class="dlList clearfix">
-                  <!-- 第一列 -->
+                  &lt;!&ndash; 第一列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Power</a>
@@ -151,7 +151,7 @@
                       <a href="#">Turntable</a>
                     </dd>
                   </dl>
-                  <!-- 第二列 -->
+                  &lt;!&ndash; 第二列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Audio & Sounds</a>
@@ -181,7 +181,7 @@
                       <a href="#">USB Hub</a>
                     </dd>
                   </dl>
-                  <!-- 第三列 -->
+                  &lt;!&ndash; 第三列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Stage Lighting Effects</a>
@@ -210,7 +210,7 @@
             <div class="liMain">
               <div class="liMainContent clearfix">
                 <div class="dlList clearfix">
-                  <!-- 第一列 -->
+                  &lt;!&ndash; 第一列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Power</a>
@@ -240,7 +240,7 @@
                       <a href="#">Turntable</a>
                     </dd>
                   </dl>
-                  <!-- 第二列 -->
+                  &lt;!&ndash; 第二列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Audio & Sounds</a>
@@ -270,7 +270,7 @@
                       <a href="#">USB Hub</a>
                     </dd>
                   </dl>
-                  <!-- 第三列 -->
+                  &lt;!&ndash; 第三列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Stage Lighting Effects</a>
@@ -299,7 +299,7 @@
             <div class="liMain">
               <div class="liMainContent clearfix">
                 <div class="dlList clearfix">
-                  <!-- 第一列 -->
+                  &lt;!&ndash; 第一列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Power</a>
@@ -329,7 +329,7 @@
                       <a href="#">Turntable</a>
                     </dd>
                   </dl>
-                  <!-- 第二列 -->
+                  &lt;!&ndash; 第二列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Audio & Sounds</a>
@@ -359,7 +359,7 @@
                       <a href="#">USB Hub</a>
                     </dd>
                   </dl>
-                  <!-- 第三列 -->
+                  &lt;!&ndash; 第三列 &ndash;&gt;
                   <dl class="firstdl fl">
                     <dt class="titledt">
                       <a href="#">Stage Lighting Effects</a>
@@ -396,17 +396,107 @@
       </div>
     </div>
 
-  </div>
+  </div>-->
 
   <!--class名为index_header表明是首页导航, class名为other_header表明是非首页导航-->
-  <nav class="header_box index_header">
-    <a href="/" class="logo"><img src="../img/logo_01.png"></a>
-    <ul class="nav_bar">
-      <li><a href="javascript:void(0);">1111</a></li>
-    </ul>
-    <section class="nav_user">
-      <a href="javascript: void(0);" class="search"></a>
-      <section class=""></section>
+  <nav class="header_box index_header wrap">
+    <section class="wrap">
+      <a href="/" class="logo fl"><img src="../img/logo_01.png"></a>
+      <ul class="nav_bar fl">
+        <!--针对m端下拉菜单 设置箭头提示-->
+        <!--如有子元素，则父级添加class='menu_child'-->
+        <li class="nLi menu_child">
+          <a href="javascript:void(0);">Products</a><b></b>
+          <!--下拉菜单-->
+          <section class="menu_bg hide">
+            <section class="wrap menu_box">
+              <dl class="menu_list">
+                <dt class='menu_child'><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt class='menu_child'><a href="javascript: void(0)">Audio & Sounds</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+            </section>
+          </section>
+        </li>
+        <li class="nLi">
+          <a href="javascript:void(0);">Promotion</a><b></b>
+          <!--下拉菜单-->
+          <section class="menu_bg hide">
+            <section class="wrap menu_box">
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Audio & Sounds</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+              </dl>
+              <dl class="menu_list">
+                <dt><a href="javascript: void(0)">Power</a></dt>
+                <dd><a href="javascript: void(0)">iPhone MFI Battery Case</a></dd>
+                <dd><a href="javascript: void(0)">Wireless Charger</a></dd>
+                <dd><a href="javascript: void(0)">Portable Charger</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+                <dd><a href="javascript: void(0)">USB Hub</a></dd>
+              </dl>
+            </section>
+          </section>
+        </li>
+        <li class="nLi"><a href="javascript:void(0);">Community</a><b></b></li>
+        <li class="nLi"><a href="javascript:void(0);">Support</a><b></b></li>
+      </ul>
+      <section class="nav_user fr">
+        <a href="javascript: void(0);" class="search"></a>
+        <ul class="user_action fl">
+          <li class="fl"><a href="javascript: void(0);" class="login">Login</a><b></b></li>
+          <li class="fl line"></li>
+          <li class="fl"><a href="javascript: void(0);" class="register">Register</a><b></b></li>
+          <!--m端下拉菜单框-->
+          <li class="navbar_toggle fl"><span class="icon_line"></span><span class="icon_line"></span><span class="icon_line"></span></li>
+        </ul>
+      </section>
     </section>
   </nav>
 
