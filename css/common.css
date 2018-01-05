@@ -370,8 +370,12 @@
     margin-top: 13px;
   }
   .navbar_toggle {
-    width: 22px;
-    margin: 3px 0 3px 15px;
+    width: 24px;
+    margin-left: 15px;
+    padding: 3px;
+  }
+  .navbar_toggle:active {
+    background-color: #333;
   }
   .navbar_toggle span {
     display: block;
