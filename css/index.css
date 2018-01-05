@@ -130,16 +130,6 @@ main .loadMore .loadMoreC {
   font: 14px "arialMT";
   line-height: 38px;
 }
-/* .toUpArrows {
-  position: fixed;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  background-color: #333;
-  text-align: center;
-  cursor: pointer;
-  display: none;
-}  */
 /* main End */
 
 @media screen and (max-width: 1024px) {
@@ -187,11 +177,6 @@ main .productsShow li img {
   main .productsShow li {
     margin-right: 0;
   }
-  /* main .toUpArrows {
-    bottom: 0px;
-    right: 28px;
-  } */
-
   /* main End */
 }
 @media screen and (min-width: 1920px) {

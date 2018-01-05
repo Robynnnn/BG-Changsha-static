@@ -69,22 +69,7 @@ $(function(){
 
     }
 
-    // robyn_join
-  // 返回顶部按钮区域
-  $(window).scroll(function () {
-    //获取滚动出去的垂直距离
-    var winTop = $(window).scrollTop();
-    winTop >= $(window).height() ? $('#to-Top').show() : $('#to-Top').hide();
-  });
-
-  //点击返回顶部按钮，实现返回顶部效果
-  $('#to-Top').click(function () {
-    $('html,body').stop().animate({
-      scrollTop: 0
-    });
-  });
-  // 返回顶部按钮区域结束
-  // robyn_join_end
+    
 });
 
 function HeaderType(element) {
