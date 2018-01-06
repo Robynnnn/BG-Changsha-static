@@ -2,10 +2,9 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-04 15:16:53
+ * @Last Modified time: 2018-01-05 15:49:03
  */
 $(function () {
-
   //tab栏效果
   $('.tab-list').mouseover(function () {
     //选项卡的切换:排他思想
@@ -14,25 +13,21 @@ $(function () {
     var index = $(this).index();
     $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
   });
-
-  // 返回顶部按钮区域
-  $(window).scroll(function () {
-    //获取滚动出去的垂直距离
-    var winTop = $(window).scrollTop();
-    if (winTop >= $(window).height()) {
-      $('#to-Top').show();
-    } else {
-      $('#to-Top').hide();
-    }
-  });
-  //点击返回顶部按钮，实现返回顶部效果
-  $('#to-Top').click(function () {
-    $('html,body').stop().animate({
-      scrollTop: 0
-    });
-  });
-  // 返回顶部按钮区域结束
   
+    // 返回顶部按钮区域
+    $(window).scroll(function () {
+      //获取滚动出去的垂直距离
+      var winTop = $(window).scrollTop();
+      winTop >= $(window).height() ? $('#to-Top').show() : $('#to-Top').hide();
+    });
+  
+    //点击返回顶部按钮，实现返回顶部效果
+    $('#to-Top').click(function () {
+      $('html,body').stop().animate({
+        scrollTop: 0
+      });
+    });
+    // 返回顶部按钮区域结束
   // 模拟选择框功能
 
   $(".select-header").click(function () {
