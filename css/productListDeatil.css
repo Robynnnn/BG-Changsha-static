@@ -1,75 +1,89 @@
-.fl {
-  float: left;
-}
-.por {
+/* common */
+/* verticalCenter */
+.vc {
   position: relative;
+  top : 50%;
+  transform: translateY(-50%);
 }
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+
+/* common End */
+
+/* main */
+
 .proLisDetailModule {
   background-color: #f5f5f5;
 }
-.proLisDetailModule .titTop {
-  width: 1920px;
+
+.titTop {
+  width: 100%;
   height: 60px;
-  padding-left: 211px;
   color: #666;
   font: 14px "arialMT";
   line-height: 60px;
 }
-.proLisDetailModule .titTop a {
+
+.titTop a {
   color: #666;
   font: 14px "arialMT";
 }
-.proLisDetailModule .titTop .d53333 {
-  color: #d53333;
+
+
+/* sellArea */
+
+.proSell {
+  width: 100%;
 }
-.proLisDetailModule .proSell {
-  width: 1920px;
-  padding-left: 211px;
-}
-.proLisDetailModule .topArea {
+.topArea {
   margin-bottom: 30px;
 }
-.proLisDetailModule .leftSell {
+/* leftArea */
+.leftSell {
+  width: 34%;
+  /* max-width: 505px; */
+  text-align: center;
+  padding-top: 19px;
   background-color: #fff;
-  width: 505px;
-  height: 600px;
-  padding: 19px 0 0 21px;
-  margin-right: 20px;
+  
+  /* margin-right: 18px; */
 }
-.proLisDetailModule .leftSell .bigImg {
-  margin-bottom: 28px;
+
+.leftSell .bigImg img {
+  width: 91%;
+  max-width: 460px;
+  height: auto;
 }
-.proLisDetailModule .leftSell .bigImg img {
-  width: 460px;
-  height: 420px;
+
+.smallImg {
+  margin : 28px 0 50px 0;
 }
-.proLisDetailModule .leftSell .smallImg {
-  padding-left: 30px;
+
+.smallImg ul {
+  width: 80%;
+  margin : 0 auto;
 }
-.proLisDetailModule .leftSell .smallImg li {
+
+.leftSell .smallImg li {
+  width: 20%;
   float: left;
 }
-.proLisDetailModule .leftSell .smallImg li.selected {
+
+.leftSell .smallImg li.selected {
   border: 1px solid #ddd;
 }
-.proLisDetailModule .leftSell .smallImg a {
+
+.leftSell .smallImg a {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: auto;
 }
-.proLisDetailModule .leftSell .smallImg img {
-  width: 80px;
-  height: 80px;
+
+.leftSell .smallImg img {
+  width: 100%;
+  height: auto;
 }
-.proLisDetailModule .leftSell .smallImg .arrow-left,
-.proLisDetailModule .leftSell .smallImg .arrow-right {
+
+.arrow-left,
+.arrow-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -78,186 +92,277 @@
   height: 19px;
   cursor: pointer;
 }
-.proLisDetailModule .leftSell .smallImg .arrow-left {
-  left: 0;
+
+.arrow-left {
+  left: 18px;
   background: url("../img/smallImgleft.png") no-repeat;
 }
-.proLisDetailModule .leftSell .smallImg .arrow-right {
+
+.arrow-right {
   right: 21px;
   background: url("../img/smallImgright.png") no-repeat;
 }
-.proLisDetailModule .rightSell {
-  width: 977px;
-  height: 600px;
+/* leftArea End */
+
+/* rightArea */
+.rightSell {
+  width: 66%;
+  /* max-width: 977px; */
   background-color: #fff;
-  padding-left: 30px;
   color: #333;
 }
-.proLisDetailModule .rightSell .sellTitArea {
-  width: 916px;
-  padding-top: 39px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 44px;
+
+.rsMain {
+  width: 94%;
+  margin : 0 auto;
 }
-.proLisDetailModule .rightSell .tit {
+
+.sellTitArea {
+  width: 100%;
+  padding-top: 48px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;
+}
+
+.goodsTit {
+  position: relative;
+  top : 50%;
+  transform: translateY(-50%);
+}
+.tit {
   color: #666;
-  font: bold 18px "arialMT";
+  font: bold 17px "arialMT";
   margin-bottom: 12px;
 }
-.proLisDetailModule .rightSell .rev {
+/* starArea */
+
+.rightSell .rev {
   color: #d53333;
   font: 14px "arialMT";
-  margin-bottom: 25px;
 }
-.proLisDetailModule .rightSell .star {
+
+.star {
   margin-right: 12px;
 }
-.proLisDetailModule .rightSell .star li {
+
+.star li {
   width: 14px;
   height: 14px;
   float: left;
   background: url("../img/star.svg") no-repeat;
 }
-.proLisDetailModule .rightSell .reviews {
+
+.reviews {
   float: left;
 }
-.proLisDetailModule .rightSell .priceArea {
-  margin-bottom: 31px;
+
+.priceArea {
+  margin-bottom: 8px;
 }
-.proLisDetailModule .rightSell .d53333 {
+
+.d53333 {
   color: #d53333;
   font: bold 30px "arialMT";
 }
-.proLisDetailModule .rightSell .originPri {
+
+.originPri {
   color: #999;
   font: 12px "arialMT";
 }
-.proLisDetailModule .rightSell .proColor {
+
+.proColor {
   margin-bottom: 12px;
 }
-.proLisDetailModule .rightSell .type {
+
+.type {
   display: inline-block;
   height: 32px;
   line-height: 32px;
   margin-right: 20px;
   font: 16px "arialMT";
 }
-.proLisDetailModule .rightSell .spec {
+
+.spec {
   padding-top: 8px;
 }
-.proLisDetailModule .rightSell .secon {
+
+.secon {
   height: 26px;
   line-height: 26px;
 }
-.proLisDetailModule .rightSell .typeColor li {
-  float: left;
+/* colorSelect */
+.typeColor {
+  display: flex;
+}
+.typeColor li {
   width: 32px;
   height: 32px;
   border: 1px solid #ddd;
   margin-right: 5px;
 }
-.proLisDetailModule .rightSell .typeColor li a {
+
+.typeColor li a {
   display: block;
   width: 30px;
   height: 30px;
   line-height: 30px;
 }
-.proLisDetailModule .rightSell .typeColor li img {
+
+.typeColor li img {
   vertical-align: top;
 }
-.proLisDetailModule .rightSell .proType {
+/* typeSelect */
+.proType {
   margin-bottom: 23px;
 }
-.proLisDetailModule .rightSell .typeList li {
-  float: left;
+.typeList {
+  display: flex;
+}
+.typeList li {
   width: 112px;
   height: 26px;
-  line-height: 26px;
   border: 1px solid #ddd;
   text-align: center;
   font: 12px "arialMT";
   margin-right: 5px;
   cursor: pointer;
+  color : #999;
 }
-.proLisDetailModule .rightSell .typeList li span {
+
+.typeList li span {
+  position: relative;
+  top : 50%;
+  transform: translateY(-50%);
   display: block;
   width: 112px;
-  height: 26px;
-  line-height: 26px;
 }
-.proLisDetailModule .rightSell .typeList li:hover {
+
+.typeList li:hover {
   border-color: #d53333;
 }
-.proLisDetailModule .rightSell .turnBlock {
+
+.turnBlock {
   display: block;
   margin: 0 0 11px 0;
   height: 18px;
   line-height: 18px;
 }
-.proLisDetailModule .rightSell .countryList li {
-  float: left;
+/* chooseCountry */
+.proChoose {
+  width: 100%;
+}
+.countryList {
+  width: 100%;
+  display: flex;
+}
+.countryList li {
   color: #999;
   font: 14px "arialMT";
   border: 1px solid #ddd;
-  padding: 8px 17px;
+  text-align: center;
+  height: 30px;
+  padding : 0 1%;
   cursor: pointer;
   margin: 0 5px 24px 0;
 }
-.proLisDetailModule .rightSell .countryList li:hover {
+.countryList li span {
+  display: block;
+  position: relative;
+  top : 50%;
+  transform: translateY(-50%);
+}
+.countryList li:hover {
   color: #333;
   border-color: #d53333;
 }
-.proLisDetailModule .rightSell .countryList .countrySelected {
+
+.countrySelected {
   color: #333;
 }
-.proLisDetailModule .rightSell li.borderSpec {
+
+.rightSell li.borderSpec {
+  color : #333;
   border-color: #d53333;
 }
-.proLisDetailModule .rightSell .buyMethod {
+
+/* plateformChoose */
+.rightSell .buyMethod {
+  width: 100%;
+  display: flex;
   margin-bottom: 14px;
 }
-.proLisDetailModule .rightSell .buyMethod li {
-  float: left;
+
+.buyMethod li {
+  position: relative;
   width: 180px;
   height: 42px;
   margin-right: 9px;
+  color : #fff;
   text-align: center;
+  font : 14px "arialMT";
 }
-.proLisDetailModule .rightSell .buyMethod li a {
-  display: inline-block;
-  width: 180px;
-  height: 42px;
-  line-height: 42px;
-  color: #fff;
-  font: 14px "arialMT";
+
+.buyMethod li span {
+  display: block;
+  position: relative;
+  top : 50%;
+  transform: translateY(-50%);
 }
-.proLisDetailModule .rightSell .buyMethod li:nth-child(1) {
+.buyMethod li a {
+  position: absolute;
+  top : 0;
+  left : 0;
+  width: 100%;
+  height: 100%;
+}
+
+.buyMethod li:nth-child(1) {
   background-color: #d53333;
 }
-.proLisDetailModule .rightSell .buyMethod li:nth-child(2) {
+
+.buyMethod li:nth-child(2) {
   background-color: #eb8e06;
 }
-.proLisDetailModule .rightSell .buyMethod li:nth-child(3) {
+
+.buyMethod li:nth-child(3) {
   background-color: #0074b8;
 }
-.proLisDetailModule .rightSell .freeArea {
+
+.rightSell .freeArea {
   margin-bottom: 23px;
 }
-.proLisDetailModule .rightSell .freeButton {
-  display: inline-block;
+/* freeArea */
+.freeArea {
+  display: flex;
+}
+.rightSell .freeButton {
+  position: relative;
   width: 180px;
   height: 42px;
   background-color: #fedfdf;
   border: 1px solid #d53333;
   text-align: center;
-}
-.proLisDetailModule .rightSell .freeButton a {
-  height: 42px;
-  line-height: 42px;
-  color: #333;
   font: 14px "arialMT";
+  color: #333;
+  margin-right: 16px;
 }
-.proLisDetailModule .rightSell .wish {
+
+.rightSell .freeButton span {
+  display: block;
+  position: relative;
+  top : 50%;
+  transform: translateY(-50%);
+}
+
+.rightSell .freeButton a {
+  position: absolute;
+  top : 0;
+  left : 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.rightSell .wish {
   vertical-align: top;
   display: inline-block;
   height: 42px;
@@ -266,7 +371,8 @@
   font: 14px "arialMT";
   padding: 12px 0 0 24px;
 }
-.proLisDetailModule .rightSell .wish .likeIt {
+
+.rightSell .wish .likeIt {
   position: absolute;
   top: 50%;
   left: 0;
@@ -277,56 +383,72 @@
   background: url("../img/wish.png") no-repeat;
   cursor: pointer;
 }
-.proLisDetailModule .rightSell .wish .wish_press {
+
+.rightSell .wish .wish_press {
   background: url("../img/wish_press.png") no-repeat;
 }
-.proLisDetailModule .rightSell .wish .likeIt:hover {
+
+.rightSell .wish .likeIt:hover {
   background: url("../img/wish_press.png") no-repeat;
 }
-.proLisDetailModule .rightSell .websiteLink li {
-  float: left;
+
+/* websiteLink */
+.websiteLink {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.rightSell .websiteLink li {
+  /* float: left; */
   width: 28px;
   height: 28px;
   background-color: #999;
   border-radius: 50%;
   margin-right: 12px;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   background: url("../img/icon.png") no-repeat;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(1) {
+
+.websiteLink li:nth-child(1) {
   background-position: -2px -9px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(2) {
+
+.websiteLink li:nth-child(2) {
   background-position: -2px -49px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(3) {
+
+.websiteLink li:nth-child(3) {
   background-position: -2px -90px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(4) {
+.websiteLink li:nth-child(4) {
   background-position: -2px -132px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(5) {
+
+.websiteLink li:nth-child(5) {
   background-position: -2px -172px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(6) {
+
+.websiteLink li:nth-child(6) {
   background-position: -2px -214px;
 }
-.proLisDetailModule .rightSell .websiteLink li:nth-child(7) {
+
+.websiteLink li:nth-child(7) {
   background-position: -2px -254px;
 }
-.proLisDetailModule .rightSell a {
+
+.rightSell a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-.proLisDetailModule .middleShow {
-  width: 1502px;
-}
-.proLisDetailModule .middleShowList {
+
+/* middleArea */
+.middleShowList {
   background-color: #fff;
   border-bottom: 1px solid #d5d5d5;
 }
-.proLisDetailModule .middleShowList li {
+
+.middleShowList li {
   float: left;
   height: 42px;
   padding: 13px 20px;
@@ -334,69 +456,99 @@
   font: 14px "arialMT";
   cursor: pointer;
 }
-.proLisDetailModule .middleShowList li.currentShow {
+
+.middleShowList li.currentShow {
   color: #fff;
   font-weight: bold;
   background-color: #d53333;
 }
-.proLisDetailModule .middleShowList li:hover {
+
+ .middleShowList li:hover {
   color: #fff;
   font-weight: bold;
   background-color: #d53333;
 }
-.proLisDetailModule .mainContent {
+
+.mainContent {
   background-color: #fff;
   float: left;
   width: 100%;
-  height: 576px;
+  /* height: 576px; */
   display: none;
 }
-.proLisDetailModule .currentSelected {
+
+.currentSelected {
   display: block;
 }
-.proLisDetailModule .exhibitionUl {
-  padding: 46px 0 260px 252px;
+
+.exhibitionUl {
+  width: 67%;
+  max-width: 996px;
+  margin : 46px auto 0;
 }
-.proLisDetailModule .mainContent:nth-child(1) {
-  height: 2306px;
+.exhibitionUl li {
+  width: 100%;
+  /* height: auto; */
 }
-.proLisDetailModule .mainContent:nth-child(2) {
+.exhibitionUl li img {
+  width: 100%;
+  height: auto;
+}
+
+.downloadArea {
+  width: 96%;
+  margin : 0 auto 130px;
+}
+
+.mainContent:nth-child(2) {
   background-color: orangered;
 }
-.proLisDetailModule .mainContent:nth-child(3) {
+
+.mainContent:nth-child(3) {
   padding: 72px 0 0 20px;
   color: #333;
   font: 14px "arialMT";
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedTit {
-  margin-bottom: 32px;
+
+.mainContent:nth-child(3) .relatedTit {
+  width: 96%;
+  margin : 0 auto 32px;
+  /* margin-bottom: 32px; */
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedList {
+.mainContent:nth-child(3) .relatedList {
   margin-bottom: 48px;
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedList li {
-  width: 1445px;
+
+.mainContent:nth-child(3) .relatedList li {
+  width: 96%;
+  margin : 0 auto;
   height: 30px;
   line-height: 30px;
-  padding-left: 42px;
+  /* padding-left: 42px; */
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedList li dt,
-.proLisDetailModule .mainContent:nth-child(3) .relatedList li dd {
-  display: inline-block;
+
+.mainContent:nth-child(3) .relatedList li dt,
+.mainContent:nth-child(3) .relatedList li dd {
+  /* display: inline-block; */
   float: left;
   height: 30px;
   line-height: 30px;
   color: #333;
-  font: 14px "arialMT";
+  font-size: 14px;
+
+  /* font: 14px "arialMT"; */
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedList li dt {
-  width: 330px;
+
+.mainContent:nth-child(3) .relatedList li dt {
+  width: 22%;
 }
-.proLisDetailModule .mainContent:nth-child(3) .relatedList li:nth-child(odd) {
+
+.mainContent:nth-child(3) .relatedList li:nth-child(odd) {
   border-bottom: 1px solid #ddd;
   background-color: #f5f5f5;
 }
-.proLisDetailModule .mainContent:nth-child(3) .downloadBtn {
+
+.mainContent:nth-child(3) .downloadBtn {
   width: 220px;
   height: 42px;
   line-height: 42px;
@@ -407,7 +559,8 @@
   padding-left: 58px;
   border-radius: 6px;
 }
-.proLisDetailModule .mainContent:nth-child(3) .downloadBtn i {
+
+.mainContent:nth-child(3) .downloadBtn i {
   position: absolute;
   top: 10px;
   left: 24px;
@@ -416,7 +569,8 @@
   height: 18px;
   background: url("../img/download.png") no-repeat;
 }
-.proLisDetailModule .mainContent:nth-child(3) .downloadBtn a {
+
+.mainContent:nth-child(3) .downloadBtn a {
   position: absolute;
   top: 0;
   left: 0;
@@ -425,24 +579,29 @@
   height: 100%;
   z-index: 3;
 }
-.proLisDetailModule .mainContent:nth-child(4) {
+
+.mainContent:nth-child(4) {
   background-color: gray;
 }
-.proLisDetailModule .mainContent:nth-child(5) {
+
+.mainContent:nth-child(5) {
   height: 576px;
   padding: 72px 0 0 20px;
   color: #333;
   font: bold 14px "arialMT";
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQtit {
+
+.mainContent:nth-child(5) .FAQtit {
   margin-bottom: 36px;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li {
-  height: 20px;
-  line-height: 20px;
+
+.mainContent:nth-child(5) .FAQaq li {
+  /* height: 20px; */
+  /* line-height: 20px; */
   padding-left: 24px;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li i {
+
+.mainContent:nth-child(5) .FAQaq li i {
   position: absolute;
   display: block;
   width: 20px;
@@ -450,67 +609,218 @@
   top: 0;
   left: 0;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li:nth-child(1) {
+
+.mainContent:nth-child(5) .FAQaq li:nth-child(1) {
   margin-bottom: 14px;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li:nth-child(1) i {
+
+.mainContent:nth-child(5) .FAQaq li:nth-child(1) i {
   background: url("../img/Q.png") no-repeat;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li:nth-child(2) {
+
+.mainContent:nth-child(5) .FAQaq li:nth-child(2) {
   color: #666;
   font-weight: normal;
   margin-bottom: 30px;
 }
-.proLisDetailModule .mainContent:nth-child(5) .FAQaq li:nth-child(2) i {
+
+.mainContent:nth-child(5) .FAQaq li:nth-child(2) i {
   background: url("../img/A.png") no-repeat;
 }
-.proLisDetailModule .relatedPro {
-  width: 1502px;
-  margin: 115px 0;
+
+.relatedPro {
+  width: 100%;
+  margin-top : 115px;
+  /* margin: 115px 0; */
 }
-.proLisDetailModule .relatedProContent {
-  width: 1494px;
+
+.relatedProContent {
+  width: 100%;
+  /* width: 1494px; */
 }
-.proLisDetailModule .relatedProT {
+
+ .relatedProT {
+   width: 100%;
+   /* display: flex; */
   text-align: center;
 }
-.proLisDetailModule .relatedProT .relatedProTit {
+
+.relatedProT .relatedProTit {
   color: #333;
   font: 30px "arialMT";
 }
-.proLisDetailModule .relatedProT .relatedProDesc {
+
+.relatedProT .relatedProDesc {
   color: #666;
   font: 16px "arialMT";
   margin-bottom: 60px;
 }
-.proLisDetailModule .relatedProShow li {
-  float: left;
+
+.relatedProShow  {
+  width: 100%;
+  display: flex;
+}
+.relatedProShow li {
+
   text-align: center;
-  width: 284px;
-  height: 359px;
+  width: 20%;
+  max-width: 286px;
+  height: auto;
   border: 1px solid #f5f5f5;
-  margin: 0 20px 50px 0;
+  /* margin: 0 20px 50px 0; */
+  margin-bottom: 50px;
   padding-top: 32px;
   background-color: #fff;
 }
-.proLisDetailModule .relatedProShow li img {
-  width: 220px;
-  height: 220px;
+
+.relatedProShow li img {
+  width: 77%;
+  max-width: 220px;
+  height: auto;
+  margin : 0 auto;
 }
-.proLisDetailModule .relatedProShow li:nth-child(5n) {
+
+.relatedProShow li:nth-child(5n) {
   margin-right: 0px;
 }
-.proLisDetailModule .relatedProShow a {
+
+.relatedProShow a {
   text-align: center;
   color: #333;
   font: 16px "arialMT";
 }
-.proLisDetailModule .relatedProShow p {
+
+.relatedProShow p {
   margin-top: 32px;
+  margin-bottom: 36px;
 }
-.proLisDetailModule .reviewArea {
-  width: 1500px;
-  height: 472px;
+
+.reviewArea {
+  width: 100%;
+  /* height: 472px; */
   margin-bottom: 142px;
   background-color: #fff;
+}
+.revTit {
+  width: 96%;
+  height: 66px;
+  margin: 0 auto;
+  /* border-bottom: 1px solid #ddd; */
+}
+.revContent {
+  width: 96%;
+  margin : 0 auto 36px;
+  padding-top : 37px;
+  border-top : 1px solid #ddd;
+}
+.revContent {
+  font-family: "arialMT";
+  
+}
+.revConLeft {
+  width: 30%;
+}
+.revContent .name {
+  font-size: 14px;
+  color : #333;
+}
+.revContent .datetime {
+  font-size: 12px;
+  color : #999;
+}
+
+.revConright {
+  width: 70%;
+}
+.revConright .top .des {
+  color : #333;
+  font : bold 12px "arialMT";
+  margin-top : 10px;
+}
+.revConright .down .des {
+  /* width: 81%; */
+  font : 12px "arialMT";
+  color : #666;
+  margin-top : 12px;
+}
+.imgList {
+  width: 100%;
+  display: flex;
+  margin-top : 10px;
+}
+.imgList li {
+  width: 56px;
+  margin-right: 5px;
+  /* height: 56px; */
+}
+.imgList li img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 414px) {
+  .countryList {
+    display: block;
+  }
+  .countryList li {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .leftSell {
+    float: none;
+    width: 100%;
+  }
+  .rightSell {
+    width: 100%;
+  }
+  /* .bigImg {
+    padding-top : 10%;
+  } */
+}
+
+@media screen and (min-width: 1280px) {
+  .tit {
+    font-size: 16px;
+  }
+  .d53333 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .leftSell {
+    max-width : 505px;
+  }
+  .rightSell {
+    max-width : 977px;
+  }
+  /* 销售区域右边的权宜之计 */
+  .proLisDetailModule .leftSell {
+    margin-right : 18px;
+  }
+  .tit {
+    font-size: 18px;
+  }
+  .d53333 {
+    font-size: 30px;
+  }
+  .websiteLink {
+    margin-bottom: 38px;
+  }
+  .sellTitArea {
+    margin-bottom: 44px;
+    padding-top: 64px;
+  }
+  .priceArea {
+    margin-bottom: 31px;
+  }
+
+}
+
+@media screen and (min-width: 1920px) {
+  .relatedProShow li {
+    margin-right : 20px;
+  }
 }

@@ -6,46 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <!-- 引入重置样式 -->
+
   <link rel="stylesheet" href="../css/basic.css">
+  <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/productListDeatil.css">
 </head>
 
 <body>
-  <!-- 引入头部 -->
-  <div>
+  <!-- header -->
+  <!-- <div>
     <iframe align="center" width="100%" height="80px" src="./header.html" frameborder="no" border="0" marginwidth="0" marginheight="0"
       scrolling="no"></iframe>
-  </div>
-
+  </div> -->
+  <!-- main -->
   <main class="proLisDetailModule">
-    <!-- 路径 -->
+    <!-- titTop -->
     <div class="titTop">
-      <span>
-        <a href="./index.html">Home&nbsp;&nbsp;</a> > </span>
-      <span>
-        <a href="#">Category Name&nbsp;&nbsp;</a> > </span>
-      <span>
-        <a href="#" class="d53333">Category Name&nbsp;&nbsp;</a>
-      </span>
+      <div class="wrap">
+        <span>
+          <a href="./index.html">Home&nbsp;&nbsp;</a> > </span>
+        <span>
+          <a href="#">Category Name&nbsp;&nbsp;</a> > </span>
+        <span>
+          <a href="#" class="col-red">Category Name&nbsp;&nbsp;</a>
+        </span>
+      </div>
     </div>
-    <!-- 销售区 -->
+    <!-- sellArea -->
     <div class="proSell clearfix">
-      <div class="topArea clearfix">
+      <div class="topArea wrap clearfix">
+        <!-- leftArea -->
         <div class="leftSell fl">
           <div class="bigImg">
             <img src="../img/leftSellBig.png" alt="" id="img">
           </div>
-          <div class="smallImg por">
-            <ul id="imageGallery" class="clearfix porUp">
+          <div class="smallImg pr">
+            <ul id="imageGallery" class="clearfix">
               <li class="selected">
                 <a href="../img/leftSellBig.png">
                   <img src="../img/smallImg.png" alt="">
                 </a>
               </li>
               <li>
-                <a href="../img/1.jpg">
-                  <img src="../img/1-small.jpg" alt="">
+                <a href="../img/leftSellBig.png">
+                  <img src="../img/smallImg.png" alt="">
                 </a>
               </li>
               <li>
@@ -64,127 +68,155 @@
                 </a>
               </li>
             </ul>
-
             <span class="arrow-left"></span>
             <span class="arrow-right"></span>
-
           </div>
         </div>
+        <!-- rightArea -->
         <div class="rightSell fl">
-          <div class="sellTitArea">
-            <!-- 商品名称 -->
-            <p class="tit">BlitzWolf&reg; BW-VR3 3D VR Glasses Virtual Reality Headset For 3.5-6.3 inch Mobile Phone</p>
-            <!-- 商品评论 -->
-            <div class="rev clearfix">
-              <ul class="star fl">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <p class="reviews">4.2 (12 Customer Reviews)</p>
+          <div class="rsMain">
+            <div class="sellTitArea">
+              <div class="goodsTit">
+                <!-- goodsName -->
+                <p class="tit">BlitzWolf&reg; BW-VR3 3D VR Glasses Virtual Reality Headset For 3.5-6.3 inch Mobile Phone</p>
+                <!-- goodsRev -->
+                <div class="rev clearfix">
+                  <ul class="star fl">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <p class="reviews">4.2 (12 Customer Reviews)</p>
+                </div>
+              </div>
+
             </div>
-          </div>
-          <!-- 商品价格 -->
-          <div class="priceArea">
-            <span class="d53333">US$25.19</span>
-            <span class="originPri">
-              <del>US$25.19</del>
-            </span>
-          </div>
-          <div class="proColor clearfix">
-            <span class="type fl spec">Color:</span>
-            <ul class="typeColor fl" id="typeColor">
+            <!-- goodsPrice -->
+            <div class="priceArea">
+              <span class="d53333">US$25.19</span>
+              <span class="originPri">
+                <del>US$25.19</del>
+              </span>
+            </div>
+            <div class="proColor clearfix">
+              <!-- colorSelect -->
+              <span class="type fl spec">Color:</span>
+              <ul class="typeColor fl" id="typeColor">
+                <li>
+                  <a href="../img/1.jpg">
+                    <img src="../img/typeColor.png" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="../img/1.jpg">
+                    <img src="../img/typeColor.png" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="../img/1.jpg">
+                    <img src="../img/typeColor.png" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- typeSelect -->
+            <div class="proType clearfix">
+              <span class="type fl secon">Type:</span>
+              <ul class="typeList fl">
+                <li class="borderSpec">
+                  <span>Attribute Value</span>
+                </li>
+                <li>
+                  <span>Attribute Value</span>
+                </li>
+              </ul>
+            </div>
+            <!-- chooseCountry -->
+            <div class="proChoose">
+              <span class="type turnBlock">Choose your country:</span>
+              <ul class="countryList clearfix">
+                <li class="countrySelected borderSpec">
+                  <span>United States</span>
+                </li>
+                <li>
+                  <span>United Kingdom</span>
+                </li>
+                <li>
+                  <span>Germany</span>
+                </li>
+                <li>
+                  <span>Japan</span>
+                </li>
+                <li>
+                  <span>Canada</span>
+                </li>
+                <li>
+                  <span>Canada</span>
+                </li>
+                <li>
+                  <span>...</span>
+                </li>
+              </ul>
+            </div>
+            <!-- plateformChoose -->
+            <div class="buyArea">
+              <ul class="buyMethod clearfix">
+                <li>
+                  <span>Buy at Banggood</span>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <span>Buy at Amazon</span>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <span>Buy at eBay</span>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="freeArea clearfix">
+              <div class="freeButton fl">
+                <span>Get it for Free!</span>
+                <a href="#"></a>
+              </div>
+
+              <span class="wish clearfix pr">
+                <i class="likeIt"></i>
+                Add to wish List
+              </span>
+            </div>
+            <!-- websiteLink -->
+            <ul class="websiteLink clearfix">
               <li>
-                <a href="../img/1.jpg">
-                  <img src="../img/typeColor.png" alt="">
-                </a>
+                <a href="#"></a>
               </li>
               <li>
-                <a href="../img/1.jpg">
-                  <img src="../img/typeColor.png" alt="">
-                </a>
+                <a href="#"></a>
               </li>
               <li>
-                <a href="../img/1.jpg">
-                  <img src="../img/typeColor.png" alt="">
-                </a>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
               </li>
             </ul>
           </div>
-          <div class="proType clearfix">
-            <span class="type fl secon">Type:</span>
-            <ul class="typeList fl">
-              <li class="borderSpec">
-                <span>Attribute Value</span>
-              </li>
-              <li>
-                <span>Attribute Value</span>
-              </li>
-            </ul>
-          </div>
-          <div class="proChoose">
-            <span class="type turnBlock">Choose your country:</span>
-            <ul class="countryList clearfix">
-              <li class="countrySelected borderSpec">United States</li>
-              <li>United Kingdom</li>
-              <li>Germany</li>
-              <li>Japan</li>
-              <li>Canada</li>
-              <li>Canada</li>
-              <li>...</li>
-            </ul>
-          </div>
-          <div class="buyArea">
-            <ul class="buyMethod clearfix">
-              <li>
-                <a href="#">Buy at Banggood</a>
-              </li>
-              <li>
-                <a href="#">Buy at Amazon</a>
-              </li>
-              <li>
-                <a href="#">Buy at eBay</a>
-              </li>
-            </ul>
-          </div>
-          <div class="freeArea">
-            <span class="freeButton">
-              <a href="#">Get it for Free!</a>
-            </span>
-            <span class="wish clearfix por">
-              <i class="likeIt"></i>
-              Add to wish List
-            </span>
-          </div>
-          <ul class="websiteLink clearfix">
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
         </div>
       </div>
-      <!-- 中间内容 -->
-      <div class="middleShow">
+      <!-- middleArea -->
+      <div class="middleShow wrap">
         <div class="proToggle">
           <ul class="middleShowList clearfix">
             <li class="middleShowTit currentShow">Product description</li>
@@ -236,32 +268,35 @@
                 </li>
 
               </ul>
-              <p class="downLoad">DOWNLOADS</p>
-              <div class="downloadBtn por">
-                <a href="#"></a>
-                <i></i>
-                Product Specification
+              <div class="downloadArea">
+                  <p class="downLoad">DOWNLOADS</p>
+                  <div class="downloadBtn pr">
+                    <a href="#"></a>
+                    <i></i>
+                    Product Specification
+                  </div>
               </div>
+
             </div>
             <div class="mainContent"></div>
             <div class="mainContent">
               <p class="FAQtit">FAQ</p>
               <ul class="FAQaq">
-                <li class="por">
+                <li class="pr">
                   <i></i>
                   what's new with these upgraded versions compared to the original?
                 </li>
-                <li class="por">
+                <li class="pr">
                   <i></i>
                   They must have updated their website because this comes up on their products page now and the old version is no longer listed.
                 </li>
               </ul>
               <ul class="FAQaq">
-                <li class="por">
+                <li class="pr">
                   <i></i>
                   what's new with these upgraded versions compared to the original?
                 </li>
-                <li class="por">
+                <li class="pr">
                   <i></i>
                   They must have updated their website because this comes up on their products page now and the old version is no longer listed.
                 </li>
@@ -271,8 +306,8 @@
         </div>
       </div>
 
-      <!-- 下方内容 -->
-      <div class="proListDetailBottomArea">
+      <div class="proListDetailBottomArea wrap">
+
         <div class="relatedPro">
           <div class="relatedProContent">
             <div class="relatedProT">
@@ -319,33 +354,92 @@
         </div>
 
         <div class="customer">
-          <div class="customerT">
-            <div class="relatedProT">
-              <p class="relatedProTit">
-                CUSTOMER REVIEWS
-              </p>
-              <p class="relatedProDesc">
-                Our trusted customer reviews from our storefront
-              </p>
-            </div>
+          <div class="relatedProT">
+            <p class="relatedProTit">
+              CUSTOMER REVIEWS
+            </p>
+            <p class="relatedProDesc">
+              Our trusted customer reviews from our storefront
+            </p>
           </div>
           <div class="reviewArea">
-              <div class="rev clearfix">
-                  <ul class="star fl">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                  <p class="reviews">4.2 (12 Customer Reviews)</p>
+            <div class="revTit">
+              <div class="rev clearfix vc">
+                <ul class="star fl">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <p class="reviews">4.2 (12 Customer Reviews)</p>
+              </div>
+            </div>
+            <div class="revContent clearfix">
+              <div class="revConLeft fl">
+                <dl>
+                  <dt class="name">Hanna</dt>
+                  <dd class="datetime">2017-12-13 at Amazon.com</dd>
+                </dl>
+              </div>
+              <div class="revConright fl">
+                <div class="top">
+                    <ul class="star clearfix">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    <p class="des">good product</p>
                 </div>
+                <div class="down">
+                  <p class="des">Dear customer,Global version 6GB 128GB support B1,B2,B3,B4,B5,B7,B8,B12,B13,B17,B18,B19,B20,B25,B26,B28,B29,B30,B38,B39,B40,B41.Thank you for your support</p>
+                  <ul class="imgList ">
+                    <li><img src="../img/image_43.png" alt=""></li>
+                    <li><img src="../img/image_43.png" alt=""></li>
+                    <li><img src="../img/image_43.png" alt=""></li>
+                    <li><img src="../img/image_43.png" alt=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="revContent clearfix">
+                <div class="revConLeft fl">
+                  <dl>
+                    <dt class="name">Hanna</dt>
+                    <dd class="datetime">2017-12-13 at Amazon.com</dd>
+                  </dl>
+                </div>
+                <div class="revConright fl">
+                  <div class="top">
+                      <ul class="star clearfix">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      <p class="des">good product</p>
+                  </div>
+                  <div class="down">
+                    <p class="des">Dear customer,Global version 6GB 128GB support B1,B2,B3,B4,B5,B7,B8,B12,B13,B17,B18,B19,B20,B25,B26,B28,B29,B30,B38,B39,B40,B41.Thank you for your support</p>
+                    <ul class="imgList ">
+                      <li><img src="../img/image_43.png" alt=""></li>
+                      <li><img src="../img/image_43.png" alt=""></li>
+                      <li><img src="../img/image_43.png" alt=""></li>
+                      <li><img src="../img/image_43.png" alt=""></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
           </div>
 
         </div>
 
 
       </div>
+    </div>
   </main>
 
   <div>
