@@ -181,6 +181,16 @@
     margin-top: 22px;
     margin-right: 40px;
   }
+  /* robyn_join */
+  /* .logo {
+    display: block;
+    width: 228px;
+    height: 80px;
+  }
+  .other_header .logo {
+    background : url("../img/logo.png") no-repeat center center;
+  } */
+  /* robyn_end */
   .logo img {
     width: 228px;
   }
