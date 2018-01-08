@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-08 19:17:13
+ * @Last Modified time: 2018-01-08 23:16:16
  */
 
 // 函数封装
@@ -136,6 +136,11 @@ $(function () {
   
   // 小图切换大图的应用
   $('.leftSell').turnBig("img", "imageGallery", "a");
+  $15('.jqzoom').jqzoom({
+    zoomType: 'innerzoom',
+    preloadImages: false,
+    alwaysOn: false
+  });
   $('.typeColor').turnBig("img", "typeColor", "a");
 
   // 实现li点击之后获取红色边框应用

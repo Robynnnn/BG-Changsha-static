@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="../css/basic.css">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/jquery.jqzoom.css">
   <link rel="stylesheet" href="../css/productListDeatil.css">
 </head>
 
@@ -140,18 +141,46 @@
       <div class="topArea wrap clearfix">
         <!-- leftArea -->
         <div class="leftSell fl">
-          <div class="bigImg">
-            <img src="../img/leftSellBig.png" alt="" id="img">
+          <div class="bigImg clearfix">
+            <a href="../img/leftSellBig.png" class="jqzoom" rel='gal1'>
+              <img src="../img/leftSellBig.png" alt="" id="img">
+            </a>
           </div>
           <div class="smallImg pr">
             <div class="jCarouselLite">
                 <ul id="imageGallery" class="clearfix">
                     <li class="selected">
-                      <a href="../img/leftSellBig.png">
+                      <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
                         <img src="../img/smallImg.png" alt="">
                       </a>
                     </li>
                     <li>
+                        <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
+                          <img src="../img/smallImg.png" alt="">
+                        </a>
+                      </li>
+                      <li>
+                          <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
+                            <img src="../img/smallImg.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                            <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
+                              <img src="../img/smallImg.png" alt="">
+                            </a>
+                          </li>
+                          <li>
+                              <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
+                                <img src="../img/smallImg.png" alt="">
+                              </a>
+                            </li>
+                            <li>
+                                <a class="zoomThumbActive" href="#" rel="{gallery: 'gal1', smallimage: '../img/leftSellBig.png',largeimage: '../img/leftSellBig.png'}">
+                                  <img src="../img/smallImg.png" alt="">
+                                </a>
+                              </li>
+
+                    <!-- <li>
                       <a href="../img/leftSellBig.png">
                         <img src="../img/smallImg.png" alt="">
                       </a>
@@ -175,7 +204,7 @@
                         <a href="../img/leftSellBig.png">
                           <img src="../img/smallImg.png" alt="">
                         </a>
-                      </li>
+                      </li> -->
                   </ul>
             </div>
 
@@ -623,8 +652,15 @@
       <p class="copy_right">Copyright © 2017 xxx All Rights Reserved</p>
   </section>
 </footer>
+<!-- jq多库共存 -->
+<script src="../js/jquery-1.5.js"></script>
+<script src="../js/jquery.jqzoom-core.js"></script>
+<!-- important robyn_warning:don't delete this code -->
+<script type="text/javascript">  
+  var $15 = $;//新的命名  
+</script>
 
-  <script src="../js/jquery.js"></script>
+<script src="../js/jquery.js"></script>
   <script src="../js/jquery.jcarousellite.min.js"></script>
   <script src="../js/productListDeatil.js"></script>
 </body>
