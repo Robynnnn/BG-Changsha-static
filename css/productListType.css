@@ -1,5 +1,6 @@
 /* Main */
 .proLisTypeModule {
+  background-color: #fff;
   margin-top : 80px;
 }
 .titTop {
@@ -179,7 +180,7 @@
 .smallImg {
   width: 47%;
   height: auto;
-  margin: 0 auto;
+  margin: 14px auto 0;
 }
 
 .smallImg li {
@@ -208,7 +209,7 @@
   width: 100%;
   float: left;
   color: #333;
-  font: 16px "arialMT";
+  font: bold 16px "arialMT";
   margin-top: 24px;
   /* margin-left: 36%; */
   margin-bottom: 12px;
