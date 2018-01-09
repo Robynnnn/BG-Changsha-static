@@ -29,9 +29,11 @@
 .word .wordTit {
   /* height: 80px; */
   
-  font-size: 22px;
+  font-size: 42px;
   color : #b4b4b4;
-  white-space:nowrap; 
+  width: 453px;
+  line-height: 42px;
+  /* white-space:nowrap;  */
   /* vertical-align: top; */
 }
 .word .des {
@@ -98,48 +100,83 @@
   text-indent: -999em;
 }
 .flex-prev {
-  background : url("../img/leftrow.png") no-repeat center center;
+  background : url("../images/leftrow.png") no-repeat center center;
 }
 .flex-next {
-  background : url("../img/rightrow.png") no-repeat center center;
+  background : url("../images/rightrow.png") no-repeat center center;
 }
 /* slideShow End */
 
 /* main start */
-main .productShow {
+.productShow {
   width: 95%;
   margin : 0 auto;
 }
-main .productShow li {
+.productShow li {
   float: left;
   width : 49%;
   max-width: 942px;
   margin-top : 12px;
   height: auto;
+  text-align: center;
+  color : #ddd;
 }
-main .productShow li img {
+
+.productShow li a {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.productShow li img {
   width: 100%;
   height: auto;
+  max-height: 580px;
+  transition: 0.9s;  
 }
-main .productShow li:nth-child(odd) {
+
+.productShow li img:hover {
+  transform: scale(1.3);
+}
+
+.productShow li>h3 {
+  width: 100%;
+  position: absolute;
+  top : 16px;
+  left : 0;
+  font-size: 32px;
+  text-align: center;
+  z-index: 8;
+}
+.productShow li>p {
+  width: 100%;
+  position: absolute;
+  top : 57px;
+  left : 0;
+  font-size: 18px;
+  text-align: center;
+  z-index: 8;
+}
+
+.productShow li:nth-child(odd) {
   margin-right: 12px;
 }
-main .bestSlect {
+.bestSlect {
   width: 100%;
   color: #333;
   font: 36px "arialMT";
   margin: 117px 0 57px 0;
   margin-top: 117px;
 }
-main .products {
+.products {
   width: 100%;
 }
-main .productsShow {
+.productsShow {
   width: 80%;
   max-width: 1500px;
   margin : 0 auto;
 }
-main .productsShow li {
+.productsShow li {
   float: left;
   text-align: center;
   width: 20%;
@@ -151,25 +188,25 @@ main .productsShow li {
   padding-top: 32px;
   background-color: #fff;
 }
-main .productsShow li img {
+.productsShow li img {
   width: 77%;
   max-width: 220px;
   height: auto;
   margin : 0 auto;
 }
-main .productsShow a {
+.productsShow a {
   text-align: center;
   color: #333;
   font: 16px "arialMT";
 }
-main .productsShow p {
+.productsShow p {
   margin-top: 60px;
   margin-bottom : 36px;
 }
-main .loadMoreBox {
+.loadMoreBox {
   margin-bottom: 140px;
 }
-main .loadMore {
+.loadMore {
   width: 170px;
   height: 38px;
   line-height: 38px;
@@ -179,7 +216,7 @@ main .loadMore {
   font: 14px "arialMT";
   border: 1px solid #333;
 }
-main .loadMore .loadMoreC {
+.loadMore .loadMoreC {
   font: 14px "arialMT";
   line-height: 38px;
 }

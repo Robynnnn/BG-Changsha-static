@@ -123,9 +123,9 @@
   height: 100%;
 }
 .loginModule .loginArea .otherLogo .facebook {
-  background: url('../img/facebook.png') no-repeat;
+  background: url('../images/facebook.png') no-repeat;
   margin-right: 27px;
 }
 .loginModule .loginArea .otherLogo .goo {
-  background: url('../img/goo.png') no-repeat;
+  background: url('../images/goo.png') no-repeat;
 }

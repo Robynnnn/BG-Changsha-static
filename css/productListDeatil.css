@@ -103,12 +103,12 @@
 
 .arrow-left {
   left: 18px;
-  background: url("../img/smallImgleft.png") no-repeat;
+  background: url("../images/smallImgleft.png") no-repeat;
 }
 
 .arrow-right {
   right: 21px;
-  background: url("../img/smallImgright.png") no-repeat;
+  background: url("../images/smallImgright.png") no-repeat;
 }
 /* leftArea End */
 
@@ -161,7 +161,7 @@
   height: 14px;
   line-height: 17px;
   float: left;
-  background: url("../img/star_press.png") no-repeat;
+  background: url("../images/star_press.png") no-repeat;
 }
 
 .reviews {
@@ -396,16 +396,16 @@
   display: inline-block;
   width: 12px;
   height: 11px;
-  background: url("../img/wish.png") no-repeat;
+  background: url("../images/wish.png") no-repeat;
   cursor: pointer;
 }
 
 .rightSell .wish .wish_press {
-  background: url("../img/wish_press.png") no-repeat;
+  background: url("../images/wish_press.png") no-repeat;
 }
 
 .rightSell .wish .likeIt:hover {
-  background: url("../img/wish_press.png") no-repeat;
+  background: url("../images/wish_press.png") no-repeat;
 }
 
 /* icon_list_website */
@@ -421,7 +421,7 @@
   height: 28px !important;
   border-radius: 14px;
   margin-right: 10px;
-  background-image: url("../img/icon_share.png");
+  background-image: url("../images/icon_share.png");
   transition: all ease-in .3s;
 }
 .icon_list_website a.fb {
@@ -479,7 +479,7 @@
   border-radius: 50%;
   margin-right: 12px; */
   /* margin-bottom: 25px; */
-  /* background: url("../img/icon.png") no-repeat;
+  /* background: url("../images/icon.png") no-repeat;
 } */
 
 /* .icon_list_website li:nth-child(1) {
@@ -641,7 +641,7 @@
   display: block;
   width: 18px;
   height: 18px;
-  background: url("../img/download.png") no-repeat;
+  background: url("../images/download.png") no-repeat;
 }
 
 .mainContent:nth-child(4) .downloadBtn a {
@@ -689,7 +689,7 @@
 }
 
 .mainContent:nth-child(5) .FAQaq li:nth-child(1) i {
-  background: url("../img/Q.png") no-repeat;
+  background: url("../images/Q.png") no-repeat;
 }
 
 .mainContent:nth-child(5) .FAQaq li:nth-child(2) {
@@ -699,7 +699,7 @@
 }
 
 .mainContent:nth-child(5) .FAQaq li:nth-child(2) i {
-  background: url("../img/A.png") no-repeat;
+  background: url("../images/A.png") no-repeat;
 }
 
 .relatedPro {
@@ -846,6 +846,7 @@
   width: 100%;
   display: flex;
   margin-top : 10px;
+  margin-bottom: 82px;
 }
 .imgList li {
   position: relative;
@@ -925,11 +926,11 @@
 }
 .leftBtn {
   left : 20px;
-  background : url("../img/smallImgleft.png") no-repeat;
+  background : url("../images/smallImgleft.png") no-repeat;
 }
 .rightBtn {
   right : 20px;
-  background : url("../img/smallImgright.png") no-repeat;
+  background : url("../images/smallImgright.png") no-repeat;
 }
 .leftRotate,.rightRotate {
   position: absolute;
@@ -940,12 +941,12 @@
 }
 .leftRotate {
   right : 56px;
-  background: url("../img/icon_rotate_left.png") no-repeat;
+  background: url("../images/icon_rotate_left.png") no-repeat;
 }
 
 .rightRotate {
   right : 20px;
-  background: url("../img/icon_rotate_right.png") no-repeat;
+  background: url("../images/icon_rotate_right.png") no-repeat;
 }
 
 .greyArea {

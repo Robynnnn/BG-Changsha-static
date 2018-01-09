@@ -81,7 +81,7 @@
   line-height: 16px;
   color: #333;
   font: 14px "arialMT";
-  background: url("../img/selectdown_03.png") no-repeat;
+  background: url("../images/selectdown_03.png") no-repeat;
   background-position-x: 100%;
   background-position-y: 50%;
 }
@@ -117,12 +117,12 @@
 
 .lowPrice {
   margin-left: 4px;
-  background: url("../img/lowprice.png") no-repeat;
+  background: url("../images/lowprice.png") no-repeat;
 }
 
 .highPrice {
   margin-left: 1px;
-  background: url("../img/highprice.png") no-repeat;
+  background: url("../images/highprice.png") no-repeat;
 }
 
 .select-content li:hover {
@@ -258,11 +258,11 @@
   background-color: #eee;
 }
 .pagination .prev {
-  background: url("../img/pageleft.png") no-repeat center center;
+  background: url("../images/pageleft.png") no-repeat center center;
 }
 
 .pagination .next {
-  background : url("../img/pageright.png") no-repeat center center;
+  background : url("../images/pageright.png") no-repeat center center;
 }
 
 /* backupTOP */

@@ -53,7 +53,7 @@
   width: 28px;
   height: 26px;
   margin-right: 54px;
-  background: url("../img/search.png") no-repeat;
+  background: url("../images/search.png") no-repeat;
 }
 .index_header .nav_user .search {
   background-position: 0 0;
@@ -114,7 +114,7 @@
   height: 28px;
   border-radius: 14px;
   margin-right: 10px;
-  background-image: url("../img/icon_share.png");
+  background-image: url("../images/icon_share.png");
   transition: all ease-in .3s;
 }
 .icon_list a.fb {
@@ -188,7 +188,7 @@
     height: 80px;
   }
   .other_header .logo {
-    background : url("../img/logo.png") no-repeat center center;
+    background : url("../images/logo.png") no-repeat center center;
   } */
   /* robyn_end */
   .logo img {
@@ -466,7 +466,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: url("../img/logo.png") no-repeat center;
+  background: url("../images/logo.png") no-repeat center;
   background-size: 100%;
   text-indent: -999em;
   overflow: hidden;
@@ -568,7 +568,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url("../img/search02.png") no-repeat center center;
+  background: url("../images/search02.png") no-repeat center center;
   cursor: pointer;
 }
 .header #search:hover {
@@ -651,7 +651,7 @@ footer .websiteLink li {
   border-radius: 50%;
   margin-right: 12px;
   margin-bottom: 25px;
-  background: url("../img/icon.png") no-repeat -2px -9px;
+  background: url("../images/icon.png") no-repeat -2px -9px;
 }
 footer .websiteLink li:nth-child(2) {
   background-position: -2px -49px;
