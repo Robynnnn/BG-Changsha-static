@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-09 12:36:42
+ * @Last Modified time: 2018-01-09 18:42:01
  */
 
 // 函数封装
@@ -195,6 +195,10 @@ $(function () {
   // 点击加载全部文字
   $(".down p").readMoreBtn();
 
+  // 评论区分页特效
+  $(".num").click(function () {
+    $(this).addClass("current").siblings().removeClass("current");
+    });
 
   // 评论区函数
   $(".revImg").revFunction();

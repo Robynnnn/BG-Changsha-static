@@ -960,6 +960,32 @@
   background-color: rgba(38,38,38,0.7);
 }
 
+.revPagenation {
+  position: absolute;
+  bottom : 46px;
+  right : 28px;
+}
+.revPagenation a {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  font-size: 14px;
+  color : #666;
+  text-align: center;
+}
+.xiaosanjiao {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #969696;
+  border-width: 5px;
+}
+.current {
+  border : 1px solid #ddd;
+}
+
 @media screen and (max-width: 414px) {
   .countryList {
     display: block;
