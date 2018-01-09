@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-08 23:16:16
+ * @Last Modified time: 2018-01-09 12:36:42
  */
 
 // 函数封装
@@ -63,24 +63,28 @@
   $.fn.revFunction = function () {
     // start
     // 评论区域点击小图变大图
-    $("#revSmImg").on("click", "li", function () {
+    $(".revImg").on("click", "li", function () {
       // 获取当前 li 的 eq
-      var index = $(this).index();
-      // 显示遮罩层
-      $(".greyArea").fadeIn(400);
-      $(".revbigImgArea").fadeIn(400);
-      $(".revbigImg li").eq(index).show().siblings().hide();
-
+      var index = $(this).index(),
+      // 获取对应大图区域
+            par = $(this).parent().parent(),
+      // 获取大图li的长度
+       liLength = par.find(".revbigImg li").length,
+      // 初始化旋转度数为0
+         degNum = 0;
+      // 相应的大图区域展示
+      par.find(".greyArea").fadeIn(400);
+      par.find(".revbigImgArea").fadeIn(400);
+      par.find(".revbigImg li").eq(index).show().siblings().hide();
+      // end
       // 左按钮
       $(".leftBtn").click(function () {
-
-        var liLength = $(".revbigImg li").length;
 
         if (index == 0) {
           index = liLength;
         }
 
-        $(".revbigImg li").eq(index - 1).show().siblings().hide();
+        par.find(".revbigImg li").eq(index - 1).show().siblings().hide();
 
         index--;
 
@@ -89,30 +93,34 @@
 
       // 右按钮
       $(".rightBtn").click(function () {
-        var liLength = $(".revbigImg li").length;
+
+
         if (index == liLength - 1) {
           index = -1;
-        };
-        $(".revbigImg li").eq(index + 1).show().siblings().hide();
+        }
+
+        par.find(".revbigImg li").eq(index + 1).show().siblings().hide();
+
         index++;
+
       });
       // end
 
       // 左旋转
-      var degNum = 0;
       $(".leftRotate").click(function () {
         degNum -= 90;
-        $(".revbigImg li").eq(index).css({
-          "transform": "translate(0,0) rotate(" + degNum + "deg)"
+        par.find(".revbigImg li").eq(index).find("img").css({
+          "transform": "translate(-50%,-50%) rotate(" + degNum + "deg)"
         });
       });
+      // end
 
       // 右旋转
 
       $(".rightRotate").click(function () {
         degNum += 90;
-        $(".revbigImg li").eq(index).css({
-          "transform": "translate(0,0) rotate(" + degNum + "deg)"
+        par.find(".revbigImg li").eq(index).find("img").css({
+          "transform": "translate(-50%,-50%) rotate(" + degNum + "deg)"
         });
       });
       // end
@@ -131,17 +139,20 @@ $(function () {
       btnPrev : ".smallImg .arrow-right",
       visible : 5
     });
-    // $(".jCarouselLite").css({"left":"50px"});
-    
-  
+      
   // 小图切换大图的应用
   $('.leftSell').turnBig("img", "imageGallery", "a");
+  $('.typeColor').turnBig("img", "typeColor", "a");
+
+  // 用jq1.5版本的插件实现放大镜功能
   $15('.jqzoom').jqzoom({
     zoomType: 'innerzoom',
     preloadImages: false,
     alwaysOn: false
   });
-  $('.typeColor').turnBig("img", "typeColor", "a");
+ // end
+
+
 
   // 实现li点击之后获取红色边框应用
   $(".typeList").borderRed(".typeList");
@@ -192,8 +203,6 @@ $(function () {
   $(".greyArea").click(function () {
     $(".revbigImgArea").fadeOut(400);
     $(".greyArea").fadeOut(400);
-    // $(".revbigImgArea").css({"display":"none"});
-    // $(".greyArea").css({"display":"none"});
   });
 
 
