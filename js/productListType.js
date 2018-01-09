@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-05 15:49:03
+ * @Last Modified time: 2018-01-09 15:02:07
  */
 $(function () {
   //tab栏效果
@@ -13,6 +13,13 @@ $(function () {
     var index = $(this).index();
     $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
   });
+
+  // 分页按钮效果
+  $(".num").click(function () {
+    $(this).addClass("current").siblings().removeClass("current");
+    });
+
+
   
     // 返回顶部按钮区域
     $(window).scroll(function () {

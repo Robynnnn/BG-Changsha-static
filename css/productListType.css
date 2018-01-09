@@ -2,6 +2,7 @@
 .proLisTypeModule {
   background-color: #fff;
   margin-top : 80px;
+  padding-bottom: 140px;
 }
 .titTop {
   width: 100%;
@@ -225,6 +226,46 @@
   font: 16px "arialMT";
 }
 
+/* pagination */
+.pagination {
+  height: 28px;
+  /* margin : 50px auto 140px; */
+  margin-top : 50px;
+}
+.pagination .pagSelect {
+  position: absolute;
+  top : 0;
+  left : 50%;
+  transform: translateX(-50%);
+}
+.current {
+  background-color: #eee;
+}
+.pagination a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border : 1px solid #e8e8e8;
+  vertical-align: top;
+  text-align: center;
+  margin-right : 9px;
+  color : #666;
+  font-size: 14px;
+  font-family: "arialMT";
+}
+.pagination a:hover {
+  background-color: #eee;
+}
+.pagination .prev {
+  background: url("../img/pageleft.png") no-repeat center center;
+}
+
+.pagination .next {
+  background : url("../img/pageright.png") no-repeat center center;
+}
+
+/* backupTOP */
 .toUpArrows {
   position: fixed;
   right: 4px;
