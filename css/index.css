@@ -1,6 +1,10 @@
 body {
   background-color: #fff;
 }
+
+.hidden {
+  display: none;
+}
 /* sildeShow start */
 
 .flexslider {
