@@ -2,17 +2,18 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-09 15:02:07
+ * @Last Modified time: 2018-01-10 18:02:37
  */
+
 $(function () {
-  //tab栏效果
-  $('.tab-list').mouseover(function () {
-    //选项卡的切换:排他思想
-    $(this).addClass('active').siblings().removeClass('active');
-    //tab内容切换：其实也是排他，不过他需要和选项卡有对应关系
-    var index = $(this).index();
-    $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
-  });
+  // //tab栏效果
+  // $('.tab-list').mouseover(function () {
+  //   //选项卡的切换:排他思想
+  //   $(this).addClass('active').siblings().removeClass('active');
+  //   //tab内容切换：其实也是排他，不过他需要和选项卡有对应关系
+  //   var index = $(this).index();
+  //   $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
+  // });
 
   // 分页按钮效果
   $(".num").click(function () {
@@ -68,6 +69,13 @@ $(function () {
   });
 
   // 模拟选择框功能结束
+
+  // 小图对应大图
+  $('.imgTab li img').click(function(){
+    $(this).parent('li').parent('ul').prev('a').children('img').attr('src', $(this).attr('src'));
+    $(this).parent("li").addClass('selected').siblings().removeClass('selected');
+});
+
 
 
 });

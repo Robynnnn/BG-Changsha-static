@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-09 18:42:01
+ * @Last Modified time: 2018-01-10 18:44:40
  */
 
 // 函数封装
@@ -33,7 +33,7 @@
   // 加载更多文字
   $.fn.readMoreBtn = function () {
     var pHeight = $(".down p").height();
-    pHeight >= 48 ? $(".readMore").css({
+    pHeight >= 42 ? $(".readMore").css({
       "display": "block"
     }) : $(".readMore").css({
       "display": "none"

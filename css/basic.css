@@ -56,7 +56,7 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
   }
   
   body {
-      font: 14px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+      font: 14px/150% "arial";
       color: #666; /*150%基于当前字体尺寸的百分比行间距*/
       background: #f6f6f6;
   }

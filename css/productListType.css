@@ -9,13 +9,14 @@
   height: 60px;
   border-top: 1px solid #ddd;
   color: #666;
-  font: 14px "arialMT";
+  font-size: 14px;
   line-height: 60px;
 }
 
 .titTop a {
   color: #666;
-  font: 14px "arialMT";
+  font-size: 14px;
+  font-family: "arial";
 }
 
 
@@ -36,7 +37,7 @@
 .proCategory {
   width: 100%;
   color: #333;
-  font: 28px "arialMT";
+  font-size: 28px;
   margin-top: 117px;
 }
 
@@ -56,14 +57,27 @@
   line-height: 20px;
   float: left;
   color: #666;
-  font: 14px "arialMT";
+  font-size: 14px;
   margin-right: 66px;
   cursor: pointer;
+}
+
+.proTab .active {
+  border-bottom: 2px solid #d53333;
+}
+
+.proTab .tab-list>a {
+  display: block;
+  height: 20px;
+  line-height: 20px;
 }
 
 .proTab .tab-list:hover {
   color: #333;
   border-bottom: 2px solid #d53333;
+  color: #666;
+  font-size: 14px;
+
 }
 
 
@@ -80,7 +94,7 @@
   height: 16px;
   line-height: 16px;
   color: #333;
-  font: 14px "arialMT";
+  font-size: 14px;
   background: url("../images/selectdown_03.png") no-repeat;
   background-position-x: 100%;
   background-position-y: 50%;
@@ -96,15 +110,15 @@
   display: none;
   border: 1px solid #ddd;
   background-color: #fcfcfc;
-  padding-top: 14px;
+  padding-top: 5px;
 }
 
 .select-content li {
   width: 102px;
   color: #666;
-  font: 12px "arialMT";
+  font-size: 12px;
   padding-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   cursor: pointer;
 }
 
@@ -179,9 +193,12 @@
 /* smallImgArea */
 
 .smallImg {
+  display: flex;
+  justify-content: center;
   width: 47%;
   height: auto;
   margin: 14px auto 0;
+  text-align: center;
 }
 
 .smallImg li {
@@ -193,6 +210,17 @@
   margin: 0 5% 0 0;
 }
 
+.smallImg li a {
+  display: inline-block;
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+}
+
+.smallImg .selected {
+  border : 1px solid #d53333;
+}
+
 .smallImg li img {
   width: 100%;
   max-width: 30px;
@@ -200,8 +228,21 @@
 }
 
 .productsShow p {
+  width: 90%;
+  height: 34px;
+  margin : 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  
+
   color: #333;
-  font: 16px "arialMT";
+  font-size: 14px;
   margin-top: 15px;
 }
 
@@ -210,9 +251,9 @@
   width: 100%;
   float: left;
   color: #333;
-  font: bold 16px "arialMT";
+  font-weight: bold;
+  font-size: 16px;
   margin-top: 24px;
-  /* margin-left: 36%; */
   margin-bottom: 12px;
 }
 
@@ -223,7 +264,8 @@
 .productsShow a {
   text-align: center;
   color: #333;
-  font: 16px "arialMT";
+  font-size: 16px;
+  font-family: "arial";
 }
 
 /* pagination */
@@ -252,7 +294,7 @@
   margin-right : 9px;
   color : #666;
   font-size: 14px;
-  font-family: "arialMT";
+  font-family: "arial";
 }
 .pagination a:hover {
   background-color: #eee;
