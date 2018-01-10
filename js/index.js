@@ -2,16 +2,19 @@
  * @Author: Robyn 
  * @Date: 2017-12-19 11:32:28 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-09 21:58:14
+ * @Last Modified time: 2018-01-10 10:00:45
  */
 
 // 函数封装
 ;(function ($) {
   // 加载更多的特效
   $.fn.loadMore = function () {
-    var addHeight = 2*($(".productsShow li").height()+50),
-        proUlSumHeight = $(".productsShow").height(),
+    var addHeight       = 2*($(".productsShow li").height()+80),
+        proLiLength     = $(".productsShow li").length,
+        proUlSumHeight  =  $(".productsShow").height(),
         currentUlHeight = addHeight;
+    // 判断是否隐藏loadmore
+    proLiLength <= 10 ?  $(".loadMore").css({"display":"none"}) :  $(".loadMore").css({"display":"block"});
 
     if (proUlSumHeight > addHeight) {
       $(".productsShow").css({"height":currentUlHeight});
@@ -20,7 +23,7 @@
     $(".loadMore").click(function () {
   
       currentUlHeight += addHeight;
-  
+      console.log(addHeight);
       $(".productsShow").css({"height":currentUlHeight});
   
       if (currentUlHeight >= proUlSumHeight ) {

@@ -105,6 +105,11 @@
 .footer_leftPart .msg {
   line-height: 28px;
 }
+
+#email_msg {
+  display: none;
+}
+
 .icon_list {
   margin: 26px 0 12px 0;
 }
