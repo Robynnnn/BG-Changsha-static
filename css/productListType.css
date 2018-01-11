@@ -51,7 +51,9 @@
 
 
 /* Title */
-
+.proTab  {
+  height: 20px;
+}
 .proTab .tab-list {
   height: 20px;
   line-height: 20px;
@@ -222,14 +224,14 @@
 }
 
 .smallImg li img {
-  width: 100%;
+  width: 96%;
   max-width: 30px;
   height: auto;
 }
 
 .productsShow p {
   width: 90%;
-  height: 34px;
+  height: 40px;
   margin : 0 auto;
   text-align: center;
   display: -webkit-box;
