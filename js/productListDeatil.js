@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-10 18:44:40
+ * @Last Modified time: 2018-01-11 14:03:54
  */
 
 // 函数封装
@@ -31,33 +31,32 @@
   };
 
   // 加载更多文字
-  $.fn.readMoreBtn = function () {
-    var pHeight = $(".down p").height();
-    pHeight >= 42 ? $(".readMore").css({
-      "display": "block"
-    }) : $(".readMore").css({
-      "display": "none"
-    });
-    $(".readMore").click(function () {
-      $(".down p").removeClass("mui-ellipsis-3");
-      $(".hideBtn").css({
-        "display": "block"
+  $.fn.readMore = function () {
+    
+    var desBoxLength = $('.desBox').length;
+    for (var i = 0; i < desBoxLength; i++) {
+      // 判断文字高度
+      if ( $('.desBox').eq(i).height() >= 48) {
+        $('.readMore').eq(i).css({"display":"block"});
+      } else {
+        $('.readMore').eq(i).css({"display":"none"});
+        $('.hideBtn').eq(i).css({"display": "none"});
+      }
+    }
+    // readMore按钮操作
+    $('.readMore').click(function () {
+      $(this).css({"display":"none"});
+      $(this).siblings().removeClass('block-with-text').find('.hideBtn').css({"display":"inline-block"});
       });
-      $(".readMore").css({
-        "display": "none"
-      });
-    });
-
+  // hide按钮操作
     $(".hideBtn").click(function () {
-      $(".down p").addClass("mui-ellipsis-3");
-      $(".hideBtn").css({
-        "display": "none"
+      // console.log(11);
+      $(this).css({"display":"none"});
+      $(this).parent().addClass('block-with-text').siblings().css({"display":"block"});
       });
-      $(".readMore").css({
-        "display": "block"
-      });
-    });
-  };
+
+    // end
+    };
 
   // 评论区图片功能
   $.fn.revFunction = function () {
@@ -108,22 +107,47 @@
 
       // 左旋转
       $(".leftRotate").click(function () {
-        degNum -= 90;
+        degNum = (degNum + 90)%360;
+        // console.log(degNum);
         par.find(".revbigImg li").eq(index).find("img").css({
-          "transform": "translate(-50%,-50%) rotate(" + degNum + "deg)"
+          "transform" : "translate(-50%,-50%) rotate("+(-degNum)+"deg)"
         });
-      });
-      // end
+        // if (degNum == 90 || degNum == 270) {
+        //   par.find(".revbigImg li").eq(index).find("img").css({
+        //     "width" : "568px",
+        //     "height" : "496px"
+        //   }) 
+
+        // } else {
+        //   par.find(".revbigImg li").eq(index).find("img").css({
+        //     "width" : "468px",
+        //     "height" : "670px"
+        //   }) 
+        // }
+        });
+      // testend
 
       // 右旋转
-
       $(".rightRotate").click(function () {
-        degNum += 90;
+        degNum = (degNum + 90)%360;
+        // console.log(degNum);
         par.find(".revbigImg li").eq(index).find("img").css({
-          "transform": "translate(-50%,-50%) rotate(" + degNum + "deg)"
+          "transform" : "translate(-50%,-50%) rotate("+degNum+"deg)"
         });
-      });
-      // end
+        // if (degNum == 90 || degNum == 270) {
+        //   par.find(".revbigImg li").eq(index).find("img").css({
+        //     "width" : "568px",
+        //     "height" : "396px"
+        //   }) 
+
+        // } else {
+        //   par.find(".revbigImg li").eq(index).find("img").css({
+        //     "width" : "468px",
+        //     "height" : "670px"
+        //   }) 
+        // }
+        });
+      //end
     });
 
     // end
@@ -190,10 +214,8 @@ $(function () {
     return false;
   });
 
-
-
-  // 点击加载全部文字
-  $(".down p").readMoreBtn();
+  // 加载更多
+  $('.revConright').readMore();
 
   // 评论区分页特效
   $(".num").click(function () {
