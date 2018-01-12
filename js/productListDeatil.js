@@ -2,26 +2,26 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-11 14:03:54
+ * @Last Modified time: 2018-01-11 18:36:22
  */
 
 // 函数封装
 ;(function ($) {
   // 小图换大图
-  $.fn.turnBig = function (imgID, ulClass, aLink) {
-    var img = document.getElementById(imgID);
-    var ul = document.getElementById(ulClass);
-    var links = ul.getElementsByTagName(aLink);
-    for (var i = 0; i < links.length; i++) {
-      links[i].onclick = turn; // 节省内存空间
-    }
+  // $.fn.turnBig = function (imgID, ulClass, aLink) {
+  //   var img = document.getElementById(imgID);
+  //   var ul = document.getElementById(ulClass);
+  //   var links = ul.getElementsByTagName(aLink);
+  //   for (var i = 0; i < links.length; i++) {
+  //     links[i].onclick = turn; // 节省内存空间
+  //   }
 
-    function turn() {
-      img.src = this.href;
-      $(this).parent().addClass('selected').siblings().removeClass('selected');
-      return false;
-    }
-  };
+  //   function turn() {
+  //     img.src = this.href;
+  //     $(this).parent().addClass('selected').siblings().removeClass('selected');
+  //     return false;
+  //   }
+  // };
 
   // 实现li点击之后获取红色边框
   $.fn.borderRed = function (ulClass) {
@@ -157,24 +157,49 @@
 // 入口函数
 $(function () {
 
-  // 小图左右按钮
-    $(".smallImg .jCarouselLite").jCarouselLite({
-      btnNext : ".smallImg .arrow-left",
-      btnPrev : ".smallImg .arrow-right",
-      visible : 5
-    });
+  jq('#demo1').banqh({
+    box:"#demo1",//总框架
+    pic:"#ban_pic1",//大图框架
+    pnum:"#ban_num1",//小图框架
+    prev_btn:"#prev_btn1",//小图左箭头
+    next_btn:"#next_btn1",//小图右箭头
+    pop_prev:"#prev2",//弹出框左箭头
+    pop_next:"#next2",//弹出框右箭头
+    prev:"#prev1",//大图左箭头
+    next:"#next1",//大图右箭头
+    pop_div:"#demo2",//弹出框框架
+    pop_pic:"#ban_pic2",//弹出框图片框架
+    pop_xx:".pop_up_xx",//关闭弹出框按钮
+    mhc:".mhc",//朦灰层
+    autoplay:false,//是否自动播放
+    interTime:5000,//图片自动切换间隔
+    delayTime:400,//切换一张图片时间
+    pop_delayTime:400,//弹出框切换一张图片时间
+    order:0,//当前显示的图片（从0开始）
+    picdire:true,//大图滚动方向（true为水平方向滚动）
+    mindire:true,//小图滚动方向（true为水平方向滚动）
+    min_picnum:5,//小图显示数量
+    pop_up:true//大图是否有弹出框
+  })
+
+  // // 小图左右按钮
+  //   $(".smallImg .jCarouselLite").jCarouselLite({
+  //     btnNext : ".smallImg .arrow-left",
+  //     btnPrev : ".smallImg .arrow-right",
+  //     visible : 5
+  //   });
       
   // 小图切换大图的应用
-  $('.leftSell').turnBig("img", "imageGallery", "a");
-  $('.typeColor').turnBig("img", "typeColor", "a");
+  // $('.leftSell').turnBig("img", "imageGallery", "a");
+  // $('.typeColor').turnBig("img", "typeColor", "a");
 
-  // 用jq1.5版本的插件实现放大镜功能
-  $15('.jqzoom').jqzoom({
-    zoomType: 'innerzoom',
-    preloadImages: false,
-    alwaysOn: false
-  });
- // end
+//   // 用jq1.5版本的插件实现放大镜功能
+//   $15('.jqzoom').jqzoom({
+//     zoomType: 'innerzoom',
+//     preloadImages: false,
+//     alwaysOn: false
+//   });
+//  // end
 
 
 
@@ -231,5 +256,17 @@ $(function () {
     $(".greyArea").fadeOut(400);
   });
 
+  // test Area
+  // var index = $()
+  // $('.next').click(function () {
+
+  //   });
+  $("#img").click(function () {
+    $('.topBig').show();
+    // $()$(this).parent().href
+    });
+
+
+  // test end
 
 });
