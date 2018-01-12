@@ -55,8 +55,8 @@
   height: 20px;
 }
 .proTab .tab-list {
-  height: 20px;
-  line-height: 20px;
+  height: 22px;
+  line-height: 22px;
   float: left;
   color: #666;
   font-size: 14px;
@@ -66,6 +66,10 @@
 
 .proTab .active {
   border-bottom: 2px solid #d53333;
+}
+
+.proTab .active a {
+  color : #333;
 }
 
 .proTab .tab-list>a {

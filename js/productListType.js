@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-10 18:02:37
+ * @Last Modified time: 2018-01-12 10:54:12
  */
 
 $(function () {
@@ -14,6 +14,12 @@ $(function () {
   //   var index = $(this).index();
   //   $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
   // });
+
+  // 子类目页的选中状态
+  $(".proTab").on("click","li",function () {
+    $(this).addClass("active").siblings().removeClass("active");
+    });
+  
 
   // 分页按钮效果
   $(".num").click(function () {
