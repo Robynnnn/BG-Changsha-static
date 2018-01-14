@@ -58,25 +58,8 @@
   height: auto;
   max-height: 420px;
   margin : 0 auto;
-  /* cursor: pointer; */
 }
 
-/* .topBig {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-
-} */
-/* .mhc {
-  display: none;
-  position: fixed;
-  top : 0;
-  left : 0;
-  width: 100%;
-  height: 100%;
-  z-index: 998;
-  background-color: rgba(38,38,38,0.7);
-} */
 .topBigList {
   width: 750px;
   height: 750px;
@@ -145,22 +128,10 @@
 }
 
 .smallImg ul {
-  /* display: flex; */
-  /* width: 80%; */
-  /* margin : 0 auto; */
   position: absolute;
   left : 38px;
   top : 0;
-  /* left : 50%; */
-  /* top : 50%; */
-  /* transform: translate(-50%,-50%); */
 }
-/* .jCarouselLite {
-  left: 50px !important;
-} */
-/* #imageGallery {
-  left : 52px !important;
-} */
 
 .leftSell .smallImg li {
   width: 80px;
@@ -226,8 +197,8 @@
 .next_btn1{  width:13px; text-align:center; height:19px; cursor:pointer;position: absolute;top:50%;right : 8px;transform: translateY(-50%);background: url("../images/smallImgright.png") no-repeat;}
 .prev1{ position:absolute; top:50%; left:50px;transform: translateY(-50%); width:13px; height:19px;z-index:9;cursor:pointer;background: url("../images/smallImgleft.png") no-repeat;}
 .next1{ position:absolute; top:50%; right:50px;transform: translateY(-50%); width:13px; height:19px;z-index:9;cursor:pointer;background: url("../images/smallImgright.png") no-repeat;}
-.mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:absolute; left:0; top:0; display:none;}
-.pop_up{ width:750px; height:750px; background:#fff; position:absolute; -position:absolute; left:50%; top:50%;transform: translate(-50%,-50%); display:none; z-index:99;}
+.mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:fixed; left:0; top:0; display:none;}
+.pop_up{ width:750px; height:750px; background:#fff; position:fixed; -position:absolute; left:50%; top:50%;transform: translate(-50%,-50%); display:none; z-index:99;}
 .pop_up_xx{ width:32px; height:32px;border-radius: 50%;background: url("../images/icon_close.png") no-repeat; position:absolute; top:-16px; right:-16px; cursor:pointer;}
 .pop_up2{ width:750px; height:750px; position:relative; overflow:hidden;}
 .pop_up2{ width:750px; height:750px; position:relative; overflow:hidden; float:left;}
@@ -300,13 +271,7 @@
  .revstar {
    width: 100%;
  }
-/* .star li {
-  width: 14px;
-  height: 14px;
-  line-height: 17px;
-  float: left;
-  background: url("../images/star_press.png") no-repeat;
-} */
+
 
 .reviews {
   float: left;
@@ -347,12 +312,6 @@
  
 }
 
-
-
-/* .secon {
-  height: 26px;
-  line-height: 26px;
-} */
 /* colorSelect */
 .typeColor {
   display: flex;
@@ -378,13 +337,6 @@
 .typeColor li img {
   vertical-align: top;
 }
-/* typeSelect */
-/* .proType {
-  margin-bottom: 23px;
-} */
-/* .typeList {
-  display: flex;
-} */
 
 .typeColor li span {
   display: inline-block;
@@ -393,7 +345,6 @@
   top : 50%;
   transform: translateY(-50%);
   display: block;
-  /* width: 112px; */
 }
 
 .typeColor li:hover {
@@ -408,7 +359,6 @@
 }
 /* chooseCountry */
 .proChoose {
-  /* display: none; */
   width: 100%;
 }
 /* 缺货时候的样式 */
@@ -1342,35 +1292,79 @@
   } */
 }
 
+
+    
+
+  /* .countryList {
+    display: block;
+  }
+  .countryList li {
+    float: left;
+  }
+} */
+
+/* 低于IPad pro 的屏幕*/
+@media screen and (max-width: 1024px) {
+  
+
+  /* .leftSell {
+    float: none;
+    width: 100%;
+  } */
+  /* 左边区域 */
+  /* .leftarea {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 22%;
+  }
+    .ban {
+      width: 66%;
+      max-width: 100%;
+    } */
+    .ban {
+      width: 100%;
+    }
+  .rightSell {
+    width: 100%;
+  }
+  /* 关联产品区域箭头隐藏 */
+  .flex-direction-nav a {
+    display: none;
+  }
+  /* 评论区域 */
+  .readMore {
+    right: 31px;
+    width: 74px;
+  }
+}
+
+
+
+
 /* IPhone 8 Plus */
 @media screen and (max-width: 414px) {
+
+  .ban2 ul li {
+    width: 360px;
+  }
+  .ban2 ul li img {
+    width: 360px;
+  }
+  .min_pic {
+    width: 390px;
+  }
+  .rightSell {
+    width: 100%;
+  }
+
   .countryList {
     display: block;
   }
   .countryList li {
     float: left;
   }
-}
 
-/* 低于IPad pro 的屏幕*/
-@media screen and (max-width: 1024px) {
-
-  .leftSell {
-    float: none;
-    width: 100%;
-  }
-
-  .ban {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .rightSell {
-    width: 100%;
-  }
-  /* .bigImg {
-    padding-top : 10%;
-  } */
 }
 
 
@@ -1388,6 +1382,16 @@
   .leftSell {
     max-width : 505px;
   }
+
+  /* 左边弹出的遮罩层 */
+  .mhc {
+    position: fixed;
+  }
+
+  .pop_up {
+    position: fixed;
+  }
+
   .rightSell {
     max-width : 977px;
   }

@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-11 18:36:22
+ * @Last Modified time: 2018-01-14 19:00:22
  */
 
 // 函数封装
@@ -112,18 +112,6 @@
         par.find(".revbigImg li").eq(index).find("img").css({
           "transform" : "translate(-50%,-50%) rotate("+(-degNum)+"deg)"
         });
-        // if (degNum == 90 || degNum == 270) {
-        //   par.find(".revbigImg li").eq(index).find("img").css({
-        //     "width" : "568px",
-        //     "height" : "496px"
-        //   }) 
-
-        // } else {
-        //   par.find(".revbigImg li").eq(index).find("img").css({
-        //     "width" : "468px",
-        //     "height" : "670px"
-        //   }) 
-        // }
         });
       // testend
 
@@ -134,18 +122,6 @@
         par.find(".revbigImg li").eq(index).find("img").css({
           "transform" : "translate(-50%,-50%) rotate("+degNum+"deg)"
         });
-        // if (degNum == 90 || degNum == 270) {
-        //   par.find(".revbigImg li").eq(index).find("img").css({
-        //     "width" : "568px",
-        //     "height" : "396px"
-        //   }) 
-
-        // } else {
-        //   par.find(".revbigImg li").eq(index).find("img").css({
-        //     "width" : "468px",
-        //     "height" : "670px"
-        //   }) 
-        // }
         });
       //end
     });
@@ -157,6 +133,13 @@
 // 入口函数
 $(function () {
 
+  // 获取当前屏幕的宽度
+  const window_width = $(window).width();
+
+  
+
+
+if (window_width >= 1280) {
   jq('#demo1').banqh({
     box:"#demo1",//总框架
     pic:"#ban_pic1",//大图框架
@@ -180,31 +163,43 @@ $(function () {
     mindire:true,//小图滚动方向（true为水平方向滚动）
     min_picnum:5,//小图显示数量
     pop_up:true//大图是否有弹出框
-  })
+  });
 
-  // // 小图左右按钮
-  //   $(".smallImg .jCarouselLite").jCarouselLite({
-  //     btnNext : ".smallImg .arrow-left",
-  //     btnPrev : ".smallImg .arrow-right",
-  //     visible : 5
-  //   });
-      
-  // 小图切换大图的应用
-  // $('.leftSell').turnBig("img", "imageGallery", "a");
-  // $('.typeColor').turnBig("img", "typeColor", "a");
+  $(".mhc").click(function () {
+    $(".mhc").css({"display":"none"});
+    $(".pop_up").css({"display":"none"});
+    });
+} else {
+  jq('#demo1').banqh({
+    box:"#demo1",//总框架
+    pic:"#ban_pic1",//大图框架
+    pnum:"#ban_num1",//小图框架
+    prev_btn:"#prev_btn1",//小图左箭头
+    next_btn:"#next_btn1",//小图右箭头
+    pop_prev:"#prev2",//弹出框左箭头
+    pop_next:"#next2",//弹出框右箭头
+    prev:"#prev1",//大图左箭头
+    next:"#next1",//大图右箭头
+    pop_div:"#demo2",//弹出框框架
+    pop_pic:"#ban_pic2",//弹出框图片框架
+    pop_xx:".pop_up_xx",//关闭弹出框按钮
+    mhc:".mhc",//朦灰层
+    autoplay:false,//是否自动播放
+    interTime:5000,//图片自动切换间隔
+    delayTime:400,//切换一张图片时间
+    pop_delayTime:400,//弹出框切换一张图片时间
+    order:0,//当前显示的图片（从0开始）
+    picdire:true,//大图滚动方向（true为水平方向滚动）
+    mindire:true,//小图滚动方向（true为水平方向滚动）
+    min_picnum:5,//小图显示数量
+    pop_up:false//大图是否有弹出框
+  });
+}
 
-//   // 用jq1.5版本的插件实现放大镜功能
-//   $15('.jqzoom').jqzoom({
-//     zoomType: 'innerzoom',
-//     preloadImages: false,
-//     alwaysOn: false
-//   });
-//  // end
-
-
+ 
 
   // 实现li点击之后获取红色边框应用
-  $(".typeList").borderRed(".typeList");
+  $(".typeColor").borderRed(".typeColor");
   $(".countryList").borderRed(".countryList");
 
   // 获得/失去 红心
@@ -244,7 +239,7 @@ $(function () {
 
   // 评论区分页特效
   $(".num").click(function () {
-    $(this).addClass("current").siblings().removeClass("current");
+    $(this).addClass("currentSel").siblings().removeClass("currentSel");
     });
 
   // 评论区函数
@@ -256,17 +251,35 @@ $(function () {
     $(".greyArea").fadeOut(400);
   });
 
-  // test Area
-  // var index = $()
-  // $('.next').click(function () {
+// 缺货时候
+if (!$(".proChoose").height()) {
+  $(".buyArea").css({"display":"none"});
+  $(".ComingSoon").css({"display":"block"});
+} else {
+  $(".ComingSoon").css({"display":"none"});
+}
 
-  //   });
-  $("#img").click(function () {
-    $('.topBig').show();
-    // $()$(this).parent().href
-    });
+$(".ComWishlist span").click(function () {
+  $(this).toggleClass('colD533');
+  });
 
+// 轮播图
+  // 轮播图插件内容
+  $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 20,
+    minItems: 2,
+    maxItems: 5,
+    slideshow:false,
+    directionNav:true,
+    nextText:"",
+    prevText:"",
+    start: function(slider){
+      $('body').removeClass('loading');
+    }
+  });
 
-  // test end
-
+// 入口函数end
 });

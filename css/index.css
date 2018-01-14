@@ -312,6 +312,24 @@ main .productsShow li img {
     display: none !important;
   }
 }
+
+
+
+
+
+
+
+/* 低于IPad Pro 的宽度*/
+@media screen and (max-width: 1024px) {
+  /* 轮播图文字位置调整 */
+  .word {
+    top : 92px;
+    left :92px;
+  }
+}
+
+
+/* 适配大于1280的屏幕 */
 @media screen and (min-width: 1280px) {
   /* main start */
   main .productsShow li {

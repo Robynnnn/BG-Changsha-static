@@ -163,7 +163,6 @@ if(can.pop_up==true){
 		function show(tpqhnum){
 			var gdjl_w=(-tpqhnum*picw);
       var gdjl_h=-tpqhnum*pich;
-      console.log(gdjl_w);
 			if(can.picdire==true){
 				jq(can.pic).find('ul li').css('float','left');
 				jq(can.pic).find('ul').stop().animate({'left':gdjl_w},can.delayTime);
