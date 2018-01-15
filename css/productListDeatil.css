@@ -259,9 +259,19 @@
   display: inline-block;
   width: 70px;
   height: 13px;
-  background : url("../images/star_press.png") repeat;
+  background : url("../images/star_nor.png") repeat;
   margin-right: 12px;
+  position: relative;
 }
+
+.star span {
+  display: inline-block;
+  position: absolute;
+  height: 13px;
+  background : url("../images/star_press.png") repeat;
+
+}
+
  .rev a {
    display: inline-block;
    
@@ -335,6 +345,8 @@
 }
 
 .typeColor li img {
+  width: 30px;
+  height: 30px;
   vertical-align: top;
 }
 
@@ -485,6 +497,20 @@
 .buyMethod li:nth-child(3) {
   background-color: #0074b8;
 }
+
+.buyMethod li:nth-child(4) {
+  background-color: #28a9e2;
+}
+
+.buyMethod .gray {
+  background-color: #ddd !important;
+}
+
+.buyMethod .gray a {
+  cursor: default;
+}
+
+
 
 .rightSell .freeArea {
   margin-bottom: 23px;
@@ -657,6 +683,8 @@
 .currentSelected {
   display: block;
 }
+
+
 
 .exhibitionUl {
   width: 67%;
@@ -980,8 +1008,13 @@
 }
 
 .relatedProShow p {
-  margin-top: 32px;
-  margin-bottom: 36px;
+  width: 90%;
+  margin : 32px 0 15px 8px;
+  height: 42px;
+  /* margin-top: 32px; */
+  /* margin-bottom: 15px; */
+  text-align: center;
+  overflow: hidden;
 }
 
 .reviewArea {
@@ -1328,6 +1361,13 @@
   .rightSell {
     width: 100%;
   }
+
+  /*后台模板渲染图片区域*/
+  .exhibitionArea img {
+  width: 66%;
+  height:auto;
+}
+
   /* 关联产品区域箭头隐藏 */
   .flex-direction-nav a {
     display: none;

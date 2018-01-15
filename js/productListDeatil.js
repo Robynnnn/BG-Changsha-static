@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-14 19:00:22
+ * @Last Modified time: 2018-01-15 18:11:49
  */
 
 // 函数封装
@@ -27,8 +27,37 @@
   $.fn.borderRed = function (ulClass) {
     $(ulClass).on("click", "li", function () {
       $(this).addClass("borderSpec").siblings().removeClass('borderSpec');
+      if ($(this).hasClass("fobidBuy")) {
+        $(this).removeClass("borderSpec");
+      }
     });
   };
+
+  // 右侧color点击左侧展示对应大图
+  $.fn.colorTurnBigImg = function (moveLength) {
+    $(".typeColor").on("click","li",function () {
+      // 获取右侧img中src的属性
+      var imgSrc = $(this).find("img").attr("src");
+      // 判断是否有图片，如果没有图片，就直接return 
+      if (!imgSrc) {
+        return ;
+      }
+      var li_node = $("#ban_num1 ul").find("li");
+      $.each(li_node,function (idx,ele) {
+        // 判断右侧的src和左侧小图哪个src相等，如果相等，就让当前li增加class on，其余移除on
+        if (imgSrc == $(ele).find("img").attr("src")) {
+          // pc端每次移动505px
+          var moveDistance = -(idx*moveLength);
+          $(this).addClass("on").siblings().removeClass("on");
+          $("#ban_pic1 ul").css({"left":moveDistance});
+        }
+        });
+        // end
+      });
+
+    // end
+    };
+
 
   // 加载更多文字
   $.fn.readMore = function () {
@@ -136,9 +165,6 @@ $(function () {
   // 获取当前屏幕的宽度
   const window_width = $(window).width();
 
-  
-
-
 if (window_width >= 1280) {
   jq('#demo1').banqh({
     box:"#demo1",//总框架
@@ -169,6 +195,9 @@ if (window_width >= 1280) {
     $(".mhc").css({"display":"none"});
     $(".pop_up").css({"display":"none"});
     });
+
+  $(".typeColor").colorTurnBigImg("505");
+
 } else {
   jq('#demo1').banqh({
     box:"#demo1",//总框架
@@ -194,6 +223,9 @@ if (window_width >= 1280) {
     min_picnum:5,//小图显示数量
     pop_up:false//大图是否有弹出框
   });
+
+  $(".typeColor").colorTurnBigImg("360");
+  
 }
 
  
@@ -280,6 +312,13 @@ $(".ComWishlist span").click(function () {
       $('body').removeClass('loading');
     }
   });
+
+
+  // test area
+
+
+  
+  // test end
 
 // 入口函数end
 });
