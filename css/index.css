@@ -1,22 +1,18 @@
 body {
   background-color: #fff;
 }
-
 .hidden {
   display: none;
 }
 /* sildeShow start */
-
 .flexslider {
   width: 100%;
   height: auto;
   border : none;
   margin : 0;
 }
-
 .slides {
-  width: 100%;
-  
+  width: 100%; 
 }
 
 .flexslider .slides img {
@@ -40,14 +36,10 @@ body {
 }
 
 .word .wordTit {
-  /* height: 80px; */
-  
   font-size: 42px;
   color : #b4b4b4;
   width: 453px;
   line-height: 42px;
-  /* white-space:nowrap;  */
-  /* vertical-align: top; */
 }
 .word .des {
   font-size: 20px;
@@ -167,31 +159,27 @@ body {
 
 .productShow li>p {
   position: absolute;
-  top : 101px;
+  top: 101px;
   width: 90%;
-  left : 50%;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
   text-align: center;
   z-index: 8;
+  overflow: hidden;
+  line-height: 18px;
+  max-height: 36px;
+
 }
+
 
 .productShow .colorDDD {
   color : #ddd;
 }
 
-/* .productShow .colorDDD:hover h3,.productShow .colorDDD:hover p {
-  border-bottom: 1px solid #ddd;
-} */
-
 .productShow .color333 {
   color : #333;
 }
-
-/* .productShow .color333:hover h3,.productShow .color333:hover p {
-  border-bottom : 1px solid #333 ;
-} */
-
 
 .productShow li:nth-child(odd) {
   margin-right: 12px;
@@ -272,61 +260,105 @@ body {
 }
 /* main End */
 
+/* 低于IPad Pro 的宽度*/
 @media screen and (max-width: 1024px) {
-/* slideShow start */
-.flex-control-nav {
-  bottom : -6px;
-}
-.flex-direction-nav {
-  display: none;
-}
-.flex-control-nav li {
-  margin : 0 2px;
-}
-.flex-control-paging li a {
-  width: 6px;
-  height: 6px;
-}
-/* slideShow End */
-/* main start */
-main .productShow {
-  width: 90%;
-}
-main .productShow li {
-  width: 100%;
-  
-}
-main .productsShow {
-  width: 100%;
-}
-main .productsShow li {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-main .productsShow li img {
-  width: 100%;
-}
-/* main End */
+  /* slideShow start */
+  .flex-control-nav {
+    bottom: -6px;
+  }
+  .flex-direction-nav {
+    display: none;
+  }
+  .flex-control-nav li {
+    margin: 0 2px;
+  }
+  .flex-control-paging li a {
+    width: 6px;
+    height: 6px;
+  }
+  /* slideShow End */
+  /* main start */
+  main .productShow {
+    width: 90%;
+  }
+  main .productShow li {
+    width: 100%;
+  }
+  main .productsShow {
+    width: 100%;
+  }
+  main .productsShow li {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  main .productsShow li img {
+    width: 100%;
+  }
+  /* main End */
   main .toUpArrows {
     display: none !important;
   }
-}
-
-
-
-
-
-
-
-/* 低于IPad Pro 的宽度*/
-@media screen and (max-width: 1024px) {
   /* 轮播图文字位置调整 */
   .word {
-    top : 92px;
-    left :92px;
+    top: 92px;
+    left: 92px;
   }
 }
+
+/* 屏幕宽度低于414px */
+@media screen and (max-width: 414px) {
+  /* slide show area */
+  .word {
+    top : 65px;
+    left : 58px;
+  }
+
+  .word .wordTit {
+    width: 193px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .word .des {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .word .detail {
+    width: 126px;
+    height: 38px;
+  }
+
+  .word .detail a {
+    font-size: 14px;
+    line-height: 38px;
+  }
+  /* slide show end */
+
+
+  /* productShow  */
+  .productShow li>h3 {
+    top : 23px;
+    font-size: 26px;
+  }
+
+  .productShow li>p {
+    top : 52px;
+    font-size: 16px;
+  }
+  /* productShow end */
+}
+
+
+
+
+
+
+
+/* @media screen and (max-width: 1024px) {
+
+} */
 
 
 /* 适配大于1280的屏幕 */
