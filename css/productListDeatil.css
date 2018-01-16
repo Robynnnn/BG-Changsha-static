@@ -439,11 +439,11 @@
   color: #333;
 }
 
-.countryList .fobidBuy {
+.rightSell .fobidBuy {
   cursor: default;
 }
 
-.countryList .fobidBuy:hover {
+.rightSell .fobidBuy:hover {
   color : #999 !important;
   border-color: #ddd !important;
 }
@@ -1296,7 +1296,7 @@
   border-color: transparent transparent transparent #969696;
   border-width: 5px;
 }
-.currentSel {
+.currentSele {
   border : 1px solid #ddd;
 }
 
