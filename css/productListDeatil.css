@@ -441,6 +441,7 @@
 
 .rightSell .fobidBuy {
   cursor: default;
+  border : 1px dashed #ddd !important;
 }
 
 .rightSell .fobidBuy:hover {
