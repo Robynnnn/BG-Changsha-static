@@ -12,7 +12,7 @@ $(function(){
             return false
         }
 
-        headerType === 'index'? $header.css('backgroundColor', 'rgba(0, 0, 0, 1)'): $header.css('backgroundColor', 'rgba(255, 255, 255, 1)');
+        headerType === 'index'? $header.css('backgroundColor', 'transparent'): $header.css('backgroundColor', 'rgba(255, 255, 255, 1)');
     });
 
 

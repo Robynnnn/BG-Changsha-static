@@ -2,15 +2,17 @@
  * @Author: Robyn 
  * @Date: 2017-12-19 11:32:28 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-17 18:20:02
+ * @Last Modified time: 2018-01-18 09:47:24
  */
 
 // 函数封装
 ;(function ($) {
+  // 跟随banner轮播替换导航字体颜色
   $.fn.turnColorDark = function () {
-    $(".index_header .nav_bar .nLi > a").css({
-      "color": "#333"
-    });
+    const window_width = $(window).width();
+    // 判断是否是移动端，如果是pc端，更改一级导航的字体颜色，如果是M端，改变面包条的颜色
+    window_width > 768 ? $(".index_header .nav_bar .nLi > a").css({"color": "#333"}) :  $(".navbar_toggle span").css({"background-color":"#000"});
+
     $(".index_header .nav_user a").css({
       "color": "#333"
     });
@@ -23,10 +25,13 @@
     // $(".logo img").attr("src", $('.logo').attr('data-path')+"logo.png");
     };
 
+  // 跟随banner轮播替换导航字体颜色
   $.fn.turnColorWhite = function () {
-    $(".index_header .nav_bar .nLi > a").css({
-      "color": "#fff"
-    });
+    const window_width = $(window).width();
+
+    // 判断是否是移动端，如果是pc端，更改一级导航的字体颜色，如果是M端，改变面包条的颜色
+    window_width > 768 ? $(".index_header .nav_bar .nLi > a").css({"color": "#fff"}) : $(".navbar_toggle span").css({"background-color":"#fff"});
+    
     $(".index_header .nav_user a").css({
       "color": "#fff"
     });
