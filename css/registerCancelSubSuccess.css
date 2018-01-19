@@ -1,32 +1,59 @@
 .regCancelSubSuccess {
-  width: 1920px;
-  height: 658px;
-  background-color: #f5f5f5;
-  padding: 30px 0 0 608px;
+  margin: 110px auto;
 }
-.regCancelSubSuccess .regContentBox {
+
+.regContentBox {
   position: relative;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   height: 507px;
   background-color: #fff;
-  padding: 94px 0 0 108px;
+  padding: 94px 0 0;
 }
-.regCancelSubSuccess .regContentBox .regTit {
-  width: 480px;
+
+.regContentBox .regTit {
+  width: 63%;
   height: 82px;
   line-height: 82px;
-  padding: 22px 0 0 118px;
   color: #333;
-  font: 26px "Arial-BoldMT";
-  background: url("../images/success.jpg") no-repeat;
-  margin-bottom: 90px;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 auto 90px;
+  text-align: center;
 }
-.regCancelSubSuccess .regContentBox .regContent {
-  width: 480px;
+
+.leftImg {
+  float: left;
+  width: 82px;
+  height: 82px;
+  vertical-align: middle;
+  margin-right: 36px;
+}
+
+.titWord {
+  float: left;
+}
+
+.regContentBox .regContent {
+  width: 69%;
+  max-width: 480px;
+  margin: 0 auto;
   color: #666;
-  font: 14px "ArialMT";
 }
-.regCancelSubSuccess .regContentBox .regContent .d53333 {
+
+.regContentBox .regContent .d53333 {
   margin: 22px 0;
   color: #d53333;
+}
+
+@media screen and (max-width: 414px) {
+  .leftImg {
+    float: none;
+    margin : 0 auto;
+  }
+
+  .regContentBox .regTit {
+    font-size: 18px;
+  }
 }
