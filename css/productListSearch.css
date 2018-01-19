@@ -13,7 +13,7 @@
   background-color: #ededed;
   font-size: 40px;
   color: #333;
-  caret-color: red;
+  caret-color: #d53333;
 }
 
 .closeSerach {
@@ -26,6 +26,8 @@
   background: url("../images/close.png") no-repeat;
   z-index: 1999;
 }
+
+
 
 /* 融合区域 */
 /* Main */
@@ -308,6 +310,21 @@
     width: 24%;
     margin : 0;
   }
+  .searchBtn {
+    position: absolute;
+    top : 0;
+    right : 0;
+    display: inline-block;
+    width: 28px;
+    height: 26px;
+    background : url("../images/search.png") no-repeat -30px 0;
+  }
+  .searchBtn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 
