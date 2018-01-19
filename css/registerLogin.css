@@ -1,131 +1,186 @@
 .loginModule {
-  width: 1920px;
-  padding: 30px 0 120px 610px;
-  background-color: #f5f5f5;
+  margin : 110px auto;
 }
-.loginModule .loginArea {
-  width: 700px;
+  .loginArea {
+  width: 100%;
+  max-width: 700px;
+  margin : 0 auto;
   height: 720px;
   background-color: #fff;
   padding-top: 62px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
-.loginModule .loginArea .tit {
-  width: 500px;
+  .loginArea .tit {
+  width: 72%;
+  max-width: 500px;
+  margin : 0 auto 62px;
   text-align: center;
   color: #333;
-  font: 18px "arialMT";
-  margin-bottom: 62px;
+  font-size: 18px;
 }
-.loginModule .loginArea .form-group {
+
+  .loginArea .form-group {
+  width: 72%;
+  max-width: 500px;
+  margin : 0 auto 40px;
   color: #999;
-  font: 14px "arialMT";
-  width: 500px;
   height: 40px;
-  margin-bottom: 40px;
 }
-.loginModule .loginArea .form-group input {
+  .loginArea .form-group input {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #e6e6e6;
   padding-left: 15px;
 }
-.loginModule .loginArea .form-group:nth-child(3) {
+  .loginArea .form-group:nth-child(3) {
   overflow: hidden;
   margin-bottom: 16px;
 }
-.loginModule .loginArea .form-group:nth-child(3) input {
+  .loginArea .form-group:nth-child(3) input {
   float: left;
+  width: 77%;
+  max-width: 390px;
   margin-right: 10px;
-  width: 390px;
+
 }
-.loginModule .loginArea .veriCode {
+  .loginArea .veriCode {
   float: left;
-  width: 100px;
+  width: 18%;
+  max-width: 100px;
   height: 40px;
   cursor: pointer;
-  background-color: hotpink;
+  border : 1px solid #000;
 }
-.loginModule .loginArea .fogotBottom {
-  width: 500px;
+
+.loginArea .veriCode img {
+  width: 100%;
+  max-width: 92px;
+  height: 33px;
+}
+
+.operation {
+  width: 100%;
+  text-align: center;
+}
+
+  .loginArea .fogotBottom {
+    width: 72%;
+  max-width: 500px;
+  margin : 0 auto;
+  height: 21px;
   color: #666;
-  font: 12px "arialMT";
+  font-size: 12px;
   margin-bottom: 26px;
 }
-.loginModule .loginArea .fogotBottom span {
-  margin-right: 275px;
+  .loginArea .fogotBottom span:nth-child(1) {
+    position: absolute;
+    top : 0;
+    left : 0;
+    /* float: left; */
+  /* margin-right: 275px; */
+
 }
-.loginModule .loginArea .fogotBottom .check {
+.inputBox {
+  position: absolute;
+  top : 0;
+  right: 0;
+}
+  .loginArea .fogotBottom .check {
+    /* float: right; */
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: middle;
 }
-.loginModule .loginArea .sub,
-.loginModule .loginArea .sign {
-  width: 500px;
+  .loginArea .sub,
+  .loginArea .sign {
+    width: 72%;
+  max-width: 500px;
+  /* margin : 0 auto; */
   height: 40px;
-  font: 14px "arialMT";
 }
-.loginModule .loginArea .sub {
+  .loginArea .sub {
   color: #f5f5f5;
   background-color: #d53333;
   margin-bottom: 24px;
 }
-.loginModule .loginArea .sign {
+  .loginArea .sign {
   background-color: #fff;
   color: #d53333;
   border: 1px solid #d53333;
   margin-bottom: 68px;
 }
-.loginModule .loginArea .other {
+  .loginArea .other {
+    width: 100%;
+    max-width: 700px;
   position: relative;
 }
-.loginModule .loginArea .head {
+  .loginArea .head {
+    width: 72%;
+    max-width: 500px;
+    height: 21px;
   color: #999;
-  font: 14px "arialMT";
-  width: 500px;
+    margin : 0 auto 22px;
   text-align: center;
-  overflow: hidden;
-  margin-bottom: 22px;
 }
-.loginModule .loginArea .head span {
-  display: inline-block;
-  float: left;
+  .loginArea .head span {
+  display:  block;
+  position: relative;
 }
-.loginModule .loginArea .head .content {
+.loginArea .head span:before,.loginArea .head span:after {
+  width: 35%;
+  height: 1px;
+  content : '';
+  position:absolute;
+  top : 50%;
+  transform: translateY(-50%);
+  background-color: #d5d5d5;
+}
+
+.loginArea .head span:before {
+  left : 2%;
+}
+
+.loginArea .head span:after {
+  right : 2%;
+}
+
+
+
+
+  .loginArea .head .content {
   width: 52px;
 }
-.loginModule .loginArea .head .line {
+  .loginArea .head .line {
   height: 1px;
   width: 224px;
   margin-top: 7px;
   background-color: #d5d5d5;
 }
-.loginModule .loginArea .otherLogo {
+  .loginArea .otherLogo {
   position: absolute;
   left: 50%;
-  transform: translateX(-95%);
+  transform: translateX(-50%);
   overflow: hidden;
 }
-.loginModule .loginArea .otherLogo .facebook,
-.loginModule .loginArea .otherLogo .goo {
+  .loginArea .otherLogo .facebook,
+  .loginArea .otherLogo .goo {
   float: left;
   width: 39px;
   height: 39px;
   border-radius: 50%;
 }
-.loginModule .loginArea .otherLogo .facebook a,
-.loginModule .loginArea .otherLogo .goo a {
+  .loginArea .otherLogo .facebook a,
+  .loginArea .otherLogo .goo a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.loginModule .loginArea .otherLogo .facebook {
+  .loginArea .otherLogo .facebook {
   background: url('../images/facebook.png') no-repeat;
   margin-right: 27px;
 }
-.loginModule .loginArea .otherLogo .goo {
+  .loginArea .otherLogo .goo {
   background: url('../images/goo.png') no-repeat;
 }
