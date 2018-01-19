@@ -192,6 +192,7 @@
   width: 77%;
   max-width: 220px;
   height: auto;
+  max-height: 220px;
   margin: 0 auto;
 }
 
@@ -274,10 +275,18 @@
   font-family: "arial";
 }
 
+.productsShow .proTypeBigImg {
+  display: block;
+  width: 77%;
+  max-width: 220px;
+  margin : 0 auto;
+  height: auto;
+  text-align: center;
+}
+
 /* pagination */
 .pagination {
   height: 28px;
-  /* margin : 50px auto 140px; */
   margin-top : 50px;
 }
 .pagination .pagSelect {

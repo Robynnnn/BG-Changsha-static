@@ -2,9 +2,25 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-12 10:54:12
+ * @Last Modified time: 2018-01-19 13:35:42
  */
 
+
+ ;(function ($) {
+   $.fn.fitHeight = function (className) {
+     const _Width = $(className).width();
+     const window_width = $(window).width();
+     if (window_width > 1024) {
+      $(className).height(_Width);
+     } else {
+      $(className).height(_Width + 4);
+     }
+     
+     
+     };
+   })(jQuery);
+
+ 
 $(function () {
   // //tab栏效果
   // $('.tab-list').mouseover(function () {
@@ -14,6 +30,10 @@ $(function () {
   //   var index = $(this).index();
   //   $('.proT .productsShow').eq(index).addClass('selected').siblings().removeClass('selected');
   // });
+
+
+  $(".proTypeBigImg").fitHeight(".proTypeBigImg");
+  $(".smallImg li").fitHeight(".smallImg li");
 
   // 子类目页的选中状态
   $(".proTab").on("click","li",function () {
@@ -82,6 +102,24 @@ $(function () {
     $(this).parent("li").addClass('selected').siblings().removeClass('selected');
 });
 
-
+$('#cateListSort li a').click(function(){
+  var sortType = $(this).attr('data-type');
+  var r = url = window.location.href;
+  if (r != null && r != 'undefined' && r != "") {
+      value = encodeURIComponent(sortType);
+      var reg = new RegExp("(^|)sort_type=([^&]*)(|$)");
+      var tmp = "sort_type=" + value;
+      if (url.match(reg) != null) {
+          r = url.replace(eval(reg), tmp);
+      } else {
+          if (url.match("[\?]")) {
+              r = url + "&" + tmp;
+          } else {
+              r = url + "?" + tmp;
+          }
+      }
+  }
+  location.href = r;
+});
 
 });
