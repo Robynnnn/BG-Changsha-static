@@ -1,65 +1,87 @@
 .fogetModule {
-  width: 1920px;
-  padding: 30px 0 120px 610px;
-  background-color: #f5f5f5;
+  margin: 110px auto;
 }
-.fogetModule .fogetArea {
-  width: 700px;
+
+.fogetArea {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   height: 507px;
   background-color: #fff;
   padding-top: 62px;
-  padding-left: 100px;
+  text-align: center;
+  /* padding-left: 100px; */
 }
-.fogetModule .fogetArea .tit {
-  width: 500px;
+
+.fogetArea .tit {
+  width: 72%;
+  max-width: 500px;
   text-align: center;
   color: #333;
-  font: 18px "arialMT";
-  margin-bottom: 76px;
+  font-size: 18px;
+  margin: 0 auto 76px;
 }
-.fogetModule .fogetArea .warningMessage {
-  width: 500px;
+
+.fogetArea .warningMessage {
+  width: 72%;
+  max-width: 500px;
+  margin: 0 auto 36px;
   color: #666;
-  font: 14px "arialMT";
-  margin-bottom: 36px;
+  text-align: left;
 }
-.fogetModule .fogetArea form {
+
+.fogetArea form {
   position: relative;
 }
-.fogetModule .fogetArea .form-group {
+
+.fogetArea .form-group {
+  width: 72%;
+  max-width: 500px;
   color: #999;
-  font: 14px "arialMT";
-  width: 500px;
   height: 40px;
-  margin-bottom: 68px;
+  margin: 0 auto 68px;
 }
-.fogetModule .fogetArea .form-group input {
+
+.fogetArea .form-group input {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #e6e6e6;
   padding-left: 15px;
 }
-.fogetModule .fogetArea .pro {
+
+.fogetArea .pro {
   position: absolute;
   top: 69px;
-  left: 0;
-  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  max-width: 500px;
   text-align: center;
   color: #d53333;
-  font: 14px "arialMT";
 }
-.fogetModule .fogetArea .sub {
-  width: 500px;
+
+.fogetareaBtn {
+  width: 72%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.fogetArea .sub {
+  width: 100%;
+  max-width: 500px;
   height: 40px;
-  font: 14px "arialMT";
   color: #f5f5f5;
   background-color: #d53333;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
-.fogetModule .fogetArea .cancel {
+
+.fogetArea .cancel {
   display: block;
   color: #666;
-  font: 12px "arialMT";
+  font-size: 12px;
   text-decoration: underline;
+  text-align: left;
 }
+
+
