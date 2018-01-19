@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-16 10:23:42
+ * @Last Modified time: 2018-01-16 15:30:06
  */
 
 // 函数封装
@@ -62,27 +62,13 @@
     // end
   };
 
-  $.fn.judgeRightHeight = function () {
-    var poaHeight = $(".poa").height(),
-      rightsellHeight = $(".rightSell").height();
+  $.fn.RightHeight = function () {
+    
+    var leftHeight = $(".ban").height();
+    // console.log(leftHeight);
 
-    if (!poaHeight) {
-      $(".rightSell").css({
-        "height": rightsellHeight + 95
-      });
-    } else if (poaHeight != 95) {
-      console.log(111);
-      if (poaHeight == 44) {
-        $(".rightSell").css({
-          "height": rightsellHeight + 51
-        });
-      } else if (poaHeight == 51) {
-        $(".rightSell").css({
-          "height": rightsellHeight + 44
-        });
-      }
-    }
-
+    $(".rightSell").css({"height":leftHeight});
+     
   };
 
   // 加载更多文字
@@ -240,6 +226,9 @@ $(function () {
       });
     });
 
+  // 让左右两侧高度相等
+  $(".rightSell").RightHeight();
+
   } else {
     jq('#demo1').banqh({
       box: "#demo1", //总框架
@@ -271,8 +260,8 @@ $(function () {
 
   window_width >= 1024 ? $(".typeColor").colorTurnBigImg("505") : $(".typeColor").colorTurnBigImg("360");
 
-  // 根据获取的poa灵活处理右侧的高度
-  $(".rightSell").judgeRightHeight();
+  // // 根据获取的poa灵活处理右侧的高度
+  // $(".rightSell").judgeRightHeight();
 
   // 实现li点击之后获取红色边框应用
   $(".typeColor").borderRed(".typeColor");
