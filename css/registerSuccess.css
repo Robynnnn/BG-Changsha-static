@@ -1,66 +1,85 @@
 .regSucModule {
-  width: 1920px;
-  padding: 30px 0 120px 610px;
-  background-color: #f5f5f5;
+  margin : 110px auto;
 }
-.regSucModule .regSucArea {
-  width: 700px;
+.regSucArea {
+  width: 100%;
+  max-width: 700px;
+  margin : 0 auto;
   height: 532px;
   background-color: #fff;
   padding-top: 62px;
-  padding-left: 98px;
 }
-.regSucModule .regSucArea .tit {
-  width: 500px;
+  .regSucArea .tit {
+  width: 72%;
+  max-width: 500px;
+  margin : 0 auto;
   text-align: center;
   color: #333;
-  font: 18px "arialMT";
+  font-size: 18px;
   margin-bottom: 76px;
 }
-.regSucModule .regSucArea p {
+
+.actContent {
+  width: 100%;
+  padding-left : 98px;
+}
+
+  .regSucArea p {
   color: #666;
-  font: 14px "arialMT";
+
 }
-.regSucModule .regSucArea p .email {
+  .regSucArea p .email {
   color: #d53333;
-  font: 16px "arialMT";
+  font-size: 16px;
 }
-.regSucModule .regSucArea .par1 {
+  .regSucArea .par1 {
   margin-bottom: 23px;
 }
-.regSucModule .regSucArea .par2 {
+  .regSucArea .par2 {
   margin-bottom: 24px;
 }
-.regSucModule .regSucArea .par3 {
+  .regSucArea .par3 {
   margin-bottom: 69px;
 }
-.regSucModule .regSucArea .click {
+  .regSucArea .click {
   position: relative;
   padding-top: 27px;
+  width: 100%;
+  text-align: center;
 }
-.regSucModule .regSucArea .pro {
+  .regSucArea .pro {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   color: #d53333;
-  font: 14px "arialMT";
 }
-.regSucModule .regSucArea .sub,
-.regSucModule .regSucArea .sign {
-  width: 500px;
+  .regSucArea .sub,
+  .regSucArea .sign {
+  width: 72%;
+  max-width: 500px;
+  margin : 0 auto;
   height: 40px;
-  font: 14px "arialMT";
 }
-.regSucModule .regSucArea .sub {
+  .regSucArea .sub {
   color: #f5f5f5;
   background-color: #d53333;
   margin-bottom: 24px;
 }
-.regSucModule .regSucArea .sign {
+  .regSucArea .sign {
   background-color: #fff;
   color: #d53333;
   border: 1px solid #d53333;
   margin-bottom: 68px;
+}
+
+/* 屏幕宽度低于414px */
+@media screen and (max-width: 414px) {
+  .regSucArea {
+    height: 585px;
+  }
+  .actContent {
+    padding-left: 20px;
+  }
 }
