@@ -1,23 +1,18 @@
 body {
   background-color: #fff;
 }
-
 .hidden {
   display: none;
 }
-
-
 /* sildeShow start */
-
 .flexslider {
   width: 100%;
   height: auto;
-  border: none;
-  margin: 0;
+  border : none;
+  margin : 0;
 }
-
 .slides {
-  width: 100%;
+  width: 100%; 
 }
 
 .flexslider .slides img {
@@ -32,22 +27,23 @@ body {
 
 .word {
   position: absolute;
-  top: 276px;
-  left: 363px;
+  top : 276px;
+  left : 363px;
+ 
   height: 220px;
+  
   z-index: 999;
 }
 
 .word .wordTit {
   font-size: 42px;
-  color: #b4b4b4;
+  color : #b4b4b4;
   width: 453px;
   line-height: 42px;
 }
-
 .word .des {
   font-size: 20px;
-  color: #4e4e4e;
+  color : #4e4e4e;
   margin-bottom: 38px;
 }
 
@@ -56,6 +52,7 @@ body {
   width: 170px;
   height: 50px;
   background-color: #d53333;
+
 }
 
 .word .detail a {
@@ -63,83 +60,69 @@ body {
   width: 100%;
   height: 100%;
   line-height: 50px;
-  color: #fff;
+  color : #fff ;
   text-align: center;
   font-size: 18px;
+
 }
 
 .flex-control-nav {
   z-index: 2;
   bottom: 50px;
 }
-
 .flex-control-nav li {
-  margin: 0 10px;
+  margin : 0 10px;
 }
-
 .flex-control-paging li a {
   width: 12px;
   height: 12px;
-  border: 2px solid #fff;
-  background: rgba(0, 0, 0, 1);
-  -webkit-box-shadow: none;
+  border : 2px solid #fff;
+  background: rgba(0,0,0,1);
+  -webkit-box-shadow : none;
   box-shadow: none;
 }
-
 .flex-control-paging li a.flex-active {
-  background: rgba(255, 255, 255, 1)
+  background: rgba(255,255,255,1)
 }
-
 .flex-control-paging li a:hover {
-  background: rgba(255, 255, 255, 1)
+  background: rgba(255,255,255,1)
 }
-
 .flex-direction-nav a {
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255,255,255,.2);
   text-indent: -999em;
 }
-
 .flex-direction-nav a:before {
   content: "";
 }
-
 .flex-direction-nav a.flex-next:before {
   content: "";
 }
-
 .flex-direction-nav .flex-next {
-  right: 0px;
+  right : 0px;
   text-align: unset;
   text-indent: -999em;
 }
-
 .flex-prev {
-  background: url("../images/leftrow.png") no-repeat center center;
+  background : url("../images/leftrow.png") no-repeat center center;
 }
-
 .flex-next {
-  background: url("../images/rightrow.png") no-repeat center center;
+  background : url("../images/rightrow.png") no-repeat center center;
 }
-
-
 /* slideShow End */
 
-
 /* main start */
-
 .productShow {
   width: 95%;
-  margin: 0 auto;
+  margin : 0 auto;
 }
-
 .productShow li {
   float: left;
-  width: 49%;
+  width : 49%;
   max-width: 942px;
-  margin-top: 12px;
+  margin-top : 12px;
   height: auto;
   text-align: center;
   cursor: pointer;
@@ -155,7 +138,7 @@ body {
   width: 100%;
   height: auto;
   max-height: 580px;
-  transition: 0.9s;
+  transition: 0.9s;  
 }
 
 .productShow li img:hover {
@@ -165,7 +148,7 @@ body {
 .proWord {
   width: 100%;
   position: absolute;
-  top: 60px;
+  top : 60px;
   z-index: 8;
 }
 
@@ -183,28 +166,35 @@ body {
   /* overflow: hidden; */
 }
 
+
+
 .productShow li p {
+  /* position: absolute; */
+  /* top: 101px; */
   width: 90%;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   font-size: 18px;
-  overflow: hidden;
-  line-height: 21px;
-  max-height: 42px;
-  margin: 10px auto 0;
   text-align: center;
+  /* z-index: 8; */
+  overflow: hidden;
+  line-height: 18px;
+  max-height: 36px;
+  margin-top : 10px;
 }
 
+
 .productShow .colorDDD {
-  color: #ddd;
+  color : #ddd;
 }
 
 .productShow .color333 {
-  color: #333;
+  color : #333;
 }
 
 .productShow li:nth-child(odd) {
   margin-right: 12px;
 }
-
 .bestSlect {
   width: 100%;
   color: #333;
@@ -212,53 +202,45 @@ body {
   margin: 117px 0 57px 0;
   margin-top: 117px;
 }
-
 .products {
   width: 100%;
 }
-
 .productsShow {
   width: 80%;
   max-width: 1500px;
-  margin: 0 auto;
+  margin : 0 auto;
   overflow: hidden;
 }
-
 .productsShow li {
   float: left;
   text-align: center;
   width: 20%;
   max-width: 286px;
-  height: 360px;
+  height: auto;
+  max-height: 360px;
   border: 1px solid #f5f5f5;
   margin-bottom: 50px;
   padding-top: 32px;
   background-color: #fff;
 }
-
 .productsShow li img {
   width: 77%;
   max-width: 220px;
   height: auto;
-  margin: 0 auto;
+  margin : 0 auto;
 }
-
 .productsShow a {
   text-align: center;
   color: #333;
   font-size: 16px;
   font-family: "arial";
 }
-
 .productsShow p {
-  width: 90%;
-  font-size: 14px;
-  max-height: 40px;
+  max-height: 38px;
   overflow: hidden;
-  margin : 38px auto 36px;
-  text-align: left;
+  margin-top: 60px;
+  margin-bottom : 36px;
 }
-
 .mui-ellipsis-2 {
   display: -webkit-box;
   overflow: hidden;
@@ -268,11 +250,9 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
 .loadMoreBox {
   margin-bottom: 140px;
 }
-
 .loadMore {
   width: 170px;
   height: 38px;
@@ -281,21 +261,17 @@ body {
   color: #262626;
   text-align: center;
   font-size: 14px;
+  
   border: 1px solid #333;
-  margin-top: 50px;
-  margin : 50px auto 140px;
+  margin-top : 50px;
 }
-
 .loadMore .loadMoreC {
+  
   line-height: 38px;
 }
-
-
 /* main End */
 
-
 /* 低于IPad Pro 的宽度*/
-
 @media screen and (max-width: 1024px) {
   /* slideShow start */
   .flex-control-nav {
@@ -341,48 +317,53 @@ body {
   }
 }
 
-
 /* 屏幕宽度低于414px */
-
 @media screen and (max-width: 414px) {
   /* slide show area */
   .word {
-    top: 65px;
-    left: 58px;
+    top : 65px;
+    left : 58px;
   }
+
   .word .wordTit {
     width: 193px;
     font-size: 18px;
     line-height: 18px;
   }
+
   .word .des {
     font-size: 14px;
     margin-bottom: 12px;
   }
+
   .word .detail {
     width: 126px;
     height: 38px;
   }
+
   .word .detail a {
     font-size: 14px;
     line-height: 38px;
   }
   /* slide show end */
+
+
   /* productShow  */
   .proWord {
-    top: 23px;
+    top : 23px;
     width: 100%;
   }
   .productShow li h3 {
     width: 90%;
     /* top : 23px; */
     /* text-align: center; */
-    margin: 0 auto;
+    margin : 0 auto;
     font-size: 26px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    white-space:nowrap;
+    text-overflow:ellipsis;
     overflow: hidden;
   }
+
   .productShow li p {
     /* top : 52px; */
     font-size: 16px;
@@ -391,13 +372,17 @@ body {
 }
 
 
+
+
+
+
+
 /* @media screen and (max-width: 1024px) {
 
 } */
 
 
 /* 适配大于1280的屏幕 */
-
 @media screen and (min-width: 1280px) {
   /* main start */
   main .productsShow li {
@@ -405,19 +390,22 @@ body {
   }
   /* main End */
 }
-
 @media screen and (min-width: 1920px) {
+
   /* header start */
   .header {
     padding: 0 210px;
   }
+
   .header li.pr {
     margin: 0 40px 0 525px;
   }
+
   /* header End */
+
   /* main start */
   main .productsShow li {
     margin-right: 14px;
   }
-  /* main End */
+    /* main End */
 }

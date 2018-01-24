@@ -57,7 +57,7 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
   
   body {
       font: 14px/150% "arial";
-      color: #666; /*150%基于当前字体尺寸的百分比行间距*/
+      color: #999; /*150%基于当前字体尺寸的百分比行间距*/
       background: #f6f6f6;
   }
   
@@ -75,7 +75,7 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
   }
   
   a {
-      color: #666;   /*a 标签是不继承颜色 的*/
+      color: #999;   /*a 标签是不继承颜色 的*/
       text-decoration: none;
   }
 

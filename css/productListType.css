@@ -210,11 +210,13 @@
 
 .smallImg li {
   width: 28%;
-  max-width: 32px;
+  max-width: 26px;
   height: auto;
   border: 1px solid #ddd;
   padding: 0;
   margin: 0 5% 0 0;
+  overflow: hidden;
+  padding-top : 1px;
 }
 
 .smallImg li a {
@@ -230,7 +232,7 @@
 
 .smallImg li img {
   width: 96%;
-  max-width: 30px;
+  max-width: 22px;
   height: auto;
 }
 
@@ -322,19 +324,6 @@
   background : url("../images/pageright.png") no-repeat center center;
 }
 
-/* backupTOP */
-.toUpArrows {
-  position: fixed;
-  right: 4px;
-  bottom: 288px;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
-  background-color: #333;
-  text-align: center;
-  cursor: pointer;
-  display: none;
-}
 
 @media screen and (max-width: 414px) {
   .proTab .tab-list {

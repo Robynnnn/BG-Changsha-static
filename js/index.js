@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-19 11:32:28 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-18 09:47:24
+ * @Last Modified time: 2018-01-24 10:55:03
  */
 
 // 函数封装
@@ -20,9 +20,7 @@
       "background-position": "-30px 0"
     });
         // 静态时候
-    $(".logo img").attr("src", "../images/logo.png");
-        // 加入php时候
-    // $(".logo img").attr("src", $('.logo').attr('data-path')+"logo.png");
+    $(".logo img").attr("src", $('.logo').attr('data-path')+"logo.png");
     };
 
   // 跟随banner轮播替换导航字体颜色
@@ -39,9 +37,7 @@
       "background-position": "0 0"
     });
     // 静态时候
-    $(".logo img").attr("src", "../images/logo_01.png");
-    // 加入php时候
-    // $(".logo img").attr("src", $('.logo').attr('data-path')+"logo_01.png");
+    $(".logo img").attr("src", $('.logo').attr('data-path')+"logo_01.png");
     };
 
     // 轮播图插件
@@ -50,6 +46,8 @@
     $(".flexslider").flexslider({
       animation: "slide",
       slideshowSpeed: 5000,
+      prevText:"",
+      nextText:"",
       start: function (slider) {
         if (!$(".slides li").eq(1).hasClass("dark")) {
           $(".index_header").turnColorDark();
@@ -131,7 +129,7 @@ $(function () {
           $children.eq(i).hide();
         }
 
-        $("<div class='loadMoreBox df-jcai-center'><div class='loadMore'><span class='loadMoreC'>Load More +</span></div></div>").insertAfter($(this)).click(function () {
+        $("<div class='loadMore df-jcai-center'><span class='loadMoreC'>Load More +</span></div>").insertAfter($(this)).click(function () {
           if (showMoreNChildren($children, 2*pagesize) <= 0) {
             //如果目标元素已经没有隐藏的子元素了，就隐藏“点击更多的按钮条”
             $(this).hide();

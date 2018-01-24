@@ -74,7 +74,7 @@ $(function(){
   $('input[name="subscribe"]').blur(function () {
     var email = $(this).val();
     if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/) || email.length > 30) {
-      $('#email_msg').html('Please enter email address').show();
+      $('#email_msg').html('Please enter your email address').show();
       status = 'false';
     } else {
       $('#email_msg').hide();
@@ -86,24 +86,21 @@ $(function(){
 
     if (status == 'true') {
       var email = $("input[name=subscribe]").val();
-      $('#email_msg').html('Thanks for your subscription!').show();
-      $.post("index.php?com=ajax&t=saveSubscribeEmail", {
+      $('#email_msg').html('Subscribed successfully! Now you can receive our newsletters.We sent you an email.Please go to view your inbox and add our mailbox to whitelist.').show();
+      $.post("/subscribe.html", {
         email: email
       }, function (data) {
-        console.log(data);
         if (data == 1) {
-          $('#email_msg').html("Thanks for your subscription!");
+          $('#email_msg').html("Subscribed successfully! Now you can receive our newsletters.We sent you an email.Please go to view your inbox and add our mailbox to whitelist.");
         } else {
           $('#email_msg').html("Subscribe failed");
         }
         $("input[name=subscribe]").val('');
-        /*$("input[name=subscribe]").val('');
-        $('#email_msg').hide();*/
       }, "json");
 
     } else {
       $('#email_msg').show();
-      $('#email_msg').html("Please enter email address");
+      $('#email_msg').html("Please enter your email address");
     }
 
   });

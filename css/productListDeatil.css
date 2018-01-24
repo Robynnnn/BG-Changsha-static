@@ -246,7 +246,51 @@
   font-weight: bold;
   
   margin-bottom: 12px;
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 2.4em;
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  /* */
+  margin-right: -1em;
+  padding-right: 1em;
 }
+
+.tit:before {
+ /* points in the end */
+ width: 56px;
+ height: 20px;
+ content: '...';
+ /* absolute position */
+ position: absolute;
+ /* set position to right bottom corner of block */
+ right: 0;
+ bottom: 0;
+ background-color: #fff;
+}
+.tit:after {
+ /* points in the end */
+ width: 56px;
+ height: 21px;
+ content: '';
+ /* absolute position */
+ position: absolute;
+ /* set position to right bottom corner of text */
+ right: 0;
+ /* width: 1em; */
+ /* set width and height */
+ /* height: 1em; */
+ margin-top: 0.2em;
+ background: white;
+}
+
+
+
 /* starArea */
 
 .rightSell .rev {
@@ -411,9 +455,10 @@
 
 .countryList {
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
 .countryList li {
+  float: left;
   color: #999;
   font-size: 14px;
  
@@ -422,7 +467,7 @@
   height: 30px;
   padding : 0 1%;
   cursor: pointer;
-  margin: 0 5px 24px 0;
+  margin: 0 5px 12px 0;
 }
 .countryList li span {
   display: block;
@@ -458,6 +503,7 @@
 .rightSell .buyMethod {
   width: 100%;
   display: flex;
+  margin-top : 12px;
   margin-bottom: 14px;
 }
 
@@ -1441,7 +1487,52 @@
 @media screen and (min-width: 1280px) {
   .tit {
     font-size: 16px;
+     /* hide text if it more than N lines  */
+     overflow: hidden;
+     /* for set '...' in absolute position */
+     position: relative;
+     /* use this value to count block height */
+     line-height: 1.2em;
+     /* max-height = line-height (1.2) * lines max number (3) */
+     max-height: 2.4em;
+     /* fix problem when last visible word doesn't adjoin right side  */
+     text-align: justify;
+     /* */
+     margin-right: -1em;
+     padding-right: 1em;
   }
+
+  .tit:before {
+    /* points in the end */
+    width: 56px;
+    height: 20px;
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+.tit:after {
+    /* points in the end */
+    width: 56px;
+    height: 20px;
+    content: '';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 0;
+    /* width: 1em; */
+    /* set width and height */
+    /* height: 1em; */
+    margin-top: 0.2em;
+    background: white;
+}
+
+
+
+
   .d53333 {
     font-size: 25px;
   }

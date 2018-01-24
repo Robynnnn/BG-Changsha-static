@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-25 19:10:33 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-19 13:35:42
+ * @Last Modified time: 2018-01-24 16:21:53
  */
 
 
@@ -13,7 +13,7 @@
      if (window_width > 1024) {
       $(className).height(_Width);
      } else {
-      $(className).height(_Width + 4);
+      $(className).height(_Width);
      }
      
      

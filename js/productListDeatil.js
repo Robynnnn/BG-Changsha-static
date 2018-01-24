@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2017-12-26 16:38:19 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-16 15:30:06
+ * @Last Modified time: 2018-01-22 14:51:00
  */
 
 // 函数封装
@@ -227,7 +227,7 @@ $(function () {
     });
 
   // 让左右两侧高度相等
-  $(".rightSell").RightHeight();
+  // $(".rightSell").RightHeight();
 
   } else {
     jq('#demo1').banqh({
