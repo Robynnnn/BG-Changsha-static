@@ -241,7 +241,7 @@
     <!-- top path end -->
 
     <!-- left area start -->
-    <div class="userLeft">
+    <div class="userLeft clearfix">
       <div class="leftTop colorWhite">
         <div class="userImg">
           <img src="../images/user.png" alt="">
@@ -259,7 +259,7 @@
         </ul>
       </div>
       <div class="leftBottom colorWhite">
-        <ul class="infoSelect">
+        <ul class="infoSelect clearfix">
           <li>My Products</li>
           <li>Wishlist</li>
           <li class="selected">My Profile</li>
@@ -512,20 +512,26 @@
             <li class="current colorWhite">
               <div class="mpd">
                 <form action="">
-                  <div class="mainProfile">
+                  <div class="mainProfile clearfix">
 
                     <!-- avator -->
                     <p>
                       <label class="labelW15">Avator</label>
-                      <span class="uploadImg">
+                      <span class="uploadImg pr">
                         <a href="#">
                           <img src="../images/user.png" alt="">
                         </a>
-                        <span>Upload picture can not more than 2M</span>
+                        <span class="btn_1">
+                          <input type="file" id="file1" name="avatars" value="Upload">
+                          <input type="button" value="Upload" class="fileBtn" style="display: inline-block;">
+                          <em class="showFileName"></em>
+                          <em class="fileerrorTip">You did not upload the file or provided an invalid file, please try again！</em>
+                          <em>
+                            <i>*</i> Upload picture can not be more than 2M</em>
+                        </span>
+                        <input type="hidden" id="avatarsPath" name="avatars_path" value="">                       
                       </span>
                     </p>
-
-                   
 
                     <!-- nickName -->
                     <p>
@@ -565,7 +571,7 @@
                       <label class="labelW15">Birthday
                         <i>*</i>
                       </label>
-                      <input class="f-txt" type="date" value="2018-01-23" id="timer">
+                      <input class="f-txt" type="date" value="0000-00-00" id="timer">
                     </p>
 
                     <!-- Country -->
@@ -575,12 +581,12 @@
                       </label>
                       <!-- <input class="f-txt" type="text"> -->
                       <select class="countrySel">
-                          <option value="Robyn">Robyn</option>
-                          <option value="China">China</option>
-                          <option value="Germany">Germany</option>
-                          <option value="Canada">Canada</option>
-                          <option value="Italy">Italy</option>
-                        </select>
+                        <option value="Robyn">Robyn</option>
+                        <option value="China">China</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Italy">Italy</option>
+                      </select>
                     </p>
 
                     <!-- my preference -->
@@ -593,7 +599,7 @@
                         <span class="cateBtn">Category Name</span>
                         <span class="cateBtn">Category Name</span>
                         <span class="cateBtn">Category Name</span>
-                        
+
                       </span>
                     </p>
 
@@ -958,6 +964,7 @@
 
   <script src="../js/jquery.js"></script>
   <script src="../js/jquery.searchableSelect.js"></script>
+  <script src="../js/ajaxfileupload.js"></script>
   <script src="../js/userCenter.js"></script>
 
 </body>
