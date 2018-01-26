@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2018-01-20 16:19:47 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-24 09:28:36
+ * @Last Modified time: 2018-01-25 09:47:20
  */
 
 
@@ -71,8 +71,50 @@ $(function () {
 
   });
 
-  // Birthday timer
-  $("#timer").timer();
+
+  // upload Img
+  $(".btn_1 :button").click(function () {
+    ajaxFileUpload();
+    $('.btn_1 .fileBtn').hide();
+    $(".btn_1 .fileerrorTip").hide();
+});
+
+function ajaxFileUpload() {
+    $.ajaxFileUpload({
+        url: '/index.php?com=account&t=setCustomers_avatars', //用于文件上传的服务器端请求地址
+        secureuri: false, //一般设置为false
+        fileElementId: 'file1', //文件上传空间的id属性
+        dataType: 'json', //返回值类型 一般设置为json
+        success: function (data) { //服务器成功响应处理函数
+            console.log(data, 999);
+            if (data.error == 0) {
+                $(".reviews_right .My_Profile .Avatar .img img").attr("src", data.customers_avatars);
+                $('#avatarsPath').val(data.avatars_path);
+                $('#avatarsPath-error').hide();
+            }
+        }
+    })
+    return false;
+}
+
+//显示文件名
+$(".btn_1").on("change", "input[type='file']", function () {
+    var filePath = $(this).val();
+    if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1 || filePath.indexOf("gif") != -1) {
+        $('.btn_1 .fileBtn').show();
+        $(".fileerrorTip").html("").hide();
+        var arr = filePath.split('\\');
+        var fileName = arr[arr.length - 1];
+        $(".showFileName").html(fileName).css({"display":"block"});
+    } else {
+        $(".showFileName").html("");
+        $(".fileerrorTip").html("You did not upload the file or provided an invalid file, please try again！").show().css({"display":"block"});
+        return false
+    }
+})
+  // upload end
+
+
 
   // 国家选择
   $('.countrySel').searchableSelect();

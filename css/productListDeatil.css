@@ -197,7 +197,7 @@
 .next_btn1{  width:13px; text-align:center; height:19px; cursor:pointer;position: absolute;top:50%;right : 8px;transform: translateY(-50%);background: url("../images/smallImgright.png") no-repeat;}
 .prev1{ position:absolute; top:50%; left:50px;transform: translateY(-50%); width:13px; height:19px;z-index:9;cursor:pointer;background: url("../images/smallImgleft.png") no-repeat;}
 .next1{ position:absolute; top:50%; right:50px;transform: translateY(-50%); width:13px; height:19px;z-index:9;cursor:pointer;background: url("../images/smallImgright.png") no-repeat;}
-.mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:fixed; left:0; top:0; display:none;}
+.mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:fixed; left:0; top:0; display:none;z-index: 3}
 .pop_up{ width:750px; height:750px; background:#fff; position:fixed; -position:absolute; left:50%; top:50%;transform: translate(-50%,-50%); display:none; z-index:99;}
 .pop_up_xx{ width:32px; height:32px;border-radius: 50%;background: url("../images/icon_close.png") no-repeat; position:absolute; top:-16px; right:-16px; cursor:pointer;}
 .pop_up2{ width:750px; height:750px; position:relative; overflow:hidden;}
@@ -362,8 +362,10 @@
   line-height: 32px;
   margin-right: 20px;
   font-size: 16px;
+}
 
- 
+.poa>div:nth-child(2)>span {
+  margin-right: 24px;
 }
 
 /* colorSelect */
@@ -881,6 +883,10 @@
 
 .mainContent:nth-child(5) .FAQaq li:nth-child(2) i {
   background: url("../images/A.png") no-repeat;
+}
+
+.faqdes {
+  width: 96%;
 }
 
 .relatedPro {

@@ -20,7 +20,7 @@
 
 .labelW15 {
   display: inline-block;
-  width: 19%;
+  width: 20%;
   max-width: 176px;
   text-align: center;
   height: 21px;
@@ -62,7 +62,7 @@
   width: 16%;
   max-width: 240px;
   float: left;
-  margin-right: 30px;
+  margin-right: 29px;
 }
 
 .leftTop {
@@ -132,10 +132,6 @@
   color: #d53333;
 }
 
-.infoSelect li:hover {
-  border-left: 1px solid #d53333;
-  color: #d53333;
-}
 
 
 /* left area end */
@@ -421,7 +417,7 @@
 
 /* my profile start */
 
-.userRight .exhibition li:nth-child(3) {
+.userRight .exhibition>li:nth-child(3) {
   width: 100%;
 }
 
@@ -468,6 +464,34 @@
 .mainProfile>p,
 .Pwd>p {
   margin-bottom: 38px;
+}
+
+#file1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 121px;
+  height: 121px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileBtn {
+  position: absolute;
+  top: 86px;
+  left: 132px;
+  display: inline-block;
+  background-color: #d53333;
+  color: #fff;
+  width: 80px;
+  height: 34px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn_1 em.fileerrorTip {
+  display: none;
+  line-height: 28px;
 }
 
 .userRight label i {
@@ -589,10 +613,7 @@
   cursor: pointer;
 }
 
-.mainProfile .category>span:hover {
-  color: #d53333;
-  border: 1px solid #d53333;
-}
+
 
 .categorySel {
   color: #d53333 !important;
@@ -1082,3 +1103,119 @@
 
 
 /* right area end */
+
+
+/* 屏幕小于780时候 */
+
+@media screen and (max-width: 780px) {
+/* left area */
+.userLeft {
+  width: 100%;
+  max-width: 100%;
+}
+.leftTop .info {
+  padding : 0;
+}
+.leftTop .info {
+  width: 24%;
+  margin : 0 auto;
+}
+
+.leftTop .info li:nth-child(1) {
+  margin-right : 34%; 
+}
+
+.infoSelect .selected {
+  border : none;
+}
+
+.infoSelect li {
+  float: left;
+  width: 20%;
+  padding-left : 6.5%;
+}
+
+.userRight {
+  width: 100%;
+}
+
+.labelW15 {
+  width: 22%;
+}
+
+.num {
+  width: 70px;
+}
+
+}
+
+
+/* 屏幕小于414时候 */
+
+@media screen and (max-width: 414px) {
+  .leftTop .info {
+    width: 50%;
+  }
+
+  .infoSelect li {
+    padding-left : 0;
+    text-align: center;
+    font-size: 12px;
+
+  }
+
+  .labelW15 {
+    width: 40%;
+  }
+
+  .pub>span {
+    font-size: 12px;
+  }
+
+  .num {
+    width: 20px;
+  }
+
+}
+
+/* 屏幕小于1024时 */
+
+@media screen and (width: 1024px) {
+  /* 左侧 */
+  .leftTop .info {
+    padding: 0 11%;
+  }
+
+}
+
+
+/* 屏幕大于1280以上 */
+
+@media screen and (min-width: 1280px) {
+  /* wishlist 右侧小图 */
+  .smallImg li {
+    height: 31px;
+  }
+
+  /* my profile */
+  .mainProfile .category>span:hover {
+    color: #d53333;
+    border: 1px solid #d53333;
+  }
+
+  .infoSelect li:hover {
+    border-left: 1px solid #d53333;
+    color: #d53333;
+  }
+  
+}
+
+
+/* 屏幕大于1920以上 */
+
+@media screen and (min-width: 1680px) {
+  /* 左侧 */
+  .leftTop .info li:nth-child(1) {
+    margin-right: 27%;
+  }
+}
