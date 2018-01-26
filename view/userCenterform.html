@@ -8,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="../css/basic.css">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
   <link rel="stylesheet" href="../css/userCenter.css">
 </head>
 
@@ -240,7 +241,7 @@
     <!-- top path end -->
 
     <!-- left area start -->
-    <div class="userLeft">
+    <div class="userLeft clearfix">
       <div class="leftTop colorWhite">
         <div class="userImg">
           <img src="../images/user.png" alt="">
@@ -258,7 +259,7 @@
         </ul>
       </div>
       <div class="leftBottom colorWhite">
-        <ul class="infoSelect">
+        <ul class="infoSelect clearfix">
           <li>My Products</li>
           <li>Wishlist</li>
           <li>My Profile</li>
@@ -354,7 +355,7 @@
 
           <ul class="wishlistDetail clearfix">
 
-            <li class="pr">
+            <li class="pr wishDel">
               <img src="../images/image_18.jpg" alt="">
               <ul class="smallImg clearfix imgTab">
                 <li>
@@ -371,10 +372,111 @@
                 iste ea cum, modi nisi quidem, quaerat ab quam quis ipsam quae! Eos officiis similique doloribus quaerat.
               </p>
               <span class="price">US $25.19</span>
-
               <div class="buyIt">
                 <span class="del"></span>
-                <div class="butBtn">Buy</div>
+                <div class="buyBtn">
+                  <a href="#">Buy</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pr wishDel">
+              <img src="../images/image_18.jpg" alt="">
+              <ul class="smallImg clearfix imgTab">
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+              </ul>
+              <p>Xiaomi Note 4X Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores eligendi odit! Itaque
+                iste ea cum, modi nisi quidem, quaerat ab quam quis ipsam quae! Eos officiis similique doloribus quaerat.
+              </p>
+              <span class="price">US $25.19</span>
+              <div class="buyIt">
+                <span class="del"></span>
+                <div class="buyBtn">
+                  <a href="#">Buy</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pr wishDel">
+              <img src="../images/image_18.jpg" alt="">
+              <ul class="smallImg clearfix imgTab">
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+              </ul>
+              <p>Xiaomi Note 4X Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores eligendi odit! Itaque
+                iste ea cum, modi nisi quidem, quaerat ab quam quis ipsam quae! Eos officiis similique doloribus quaerat.
+              </p>
+              <span class="price">US $25.19</span>
+              <div class="buyIt">
+                <span class="del"></span>
+                <div class="buyBtn">
+                  <a href="#">Buy</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pr wishDel">
+              <img src="../images/image_18.jpg" alt="">
+              <ul class="smallImg clearfix imgTab">
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+              </ul>
+              <p>Xiaomi Note 4X Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores eligendi odit! Itaque
+                iste ea cum, modi nisi quidem, quaerat ab quam quis ipsam quae! Eos officiis similique doloribus quaerat.
+              </p>
+              <span class="price">US $25.19</span>
+              <div class="buyIt">
+                <span class="del"></span>
+                <div class="buyBtn">
+                  <a href="#">Buy</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pr wishDel">
+              <img src="../images/image_18.jpg" alt="">
+              <ul class="smallImg clearfix imgTab">
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+                <li>
+                  <img src="../images/smallImg.png" alt="">
+                </li>
+              </ul>
+              <p>Xiaomi Note 4X Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat asperiores eligendi odit! Itaque
+                iste ea cum, modi nisi quidem, quaerat ab quam quis ipsam quae! Eos officiis similique doloribus quaerat.
+              </p>
+              <span class="price">US $25.19</span>
+              <div class="buyIt">
+                <span class="del"></span>
+                <div class="buyBtn">
+                  <a href="#">Buy</a>
+                </div>
               </div>
             </li>
 
@@ -410,16 +512,24 @@
             <li class="current colorWhite">
               <div class="mpd">
                 <form action="">
-                  <div class="mainProfile">
+                  <div class="mainProfile clearfix">
 
                     <!-- avator -->
                     <p>
                       <label class="labelW15">Avator</label>
-                      <span class="uploadImg">
+                      <span class="uploadImg pr">
                         <a href="#">
                           <img src="../images/user.png" alt="">
                         </a>
-                        <span>Upload picture can not more than 2M</span>
+                        <span class="btn_1">
+                          <input type="file" id="file1" name="avatars" value="Upload">
+                          <input type="button" value="Upload" class="fileBtn" style="display: inline-block;">
+                          <em class="showFileName"></em>
+                          <em class="fileerrorTip">You did not upload the file or provided an invalid file, please try again！</em>
+                          <em>
+                            <i>*</i> Upload picture can not be more than 2M</em>
+                        </span>
+                        <input type="hidden" id="avatarsPath" name="avatars_path" value="">                       
                       </span>
                     </p>
 
@@ -436,9 +546,11 @@
                       <label class="labelW15">Email</label>
                       <span>liwanping@banggood.com</span>
 
-                      <span>
+                      <span class="mailBox">
+                        <i class="unauthorized"></i>
                         <a href="#">Verify Now</a>
                       </span>
+                      <span class="authorized"> </span>
                     </p>
 
                     <!-- Gender -->
@@ -447,10 +559,10 @@
                         <i>*</i>
                       </label>
                       <label for="male">
-                        <input type="radio" id="male">Male
+                        <input type="radio" id="male" name="gender">Male
                       </label>
                       <label for="female">
-                        <input type="radio" id="female">Female
+                        <input type="radio" id="female" name="gender">Female
                       </label>
                     </p>
 
@@ -459,7 +571,7 @@
                       <label class="labelW15">Birthday
                         <i>*</i>
                       </label>
-                      <input class="f-txt" type="text">
+                      <input class="f-txt" type="date" value="0000-00-00" id="timer">
                     </p>
 
                     <!-- Country -->
@@ -467,7 +579,14 @@
                       <label class="labelW15">Country
                         <i>*</i>
                       </label>
-                      <input class="f-txt" type="text">
+                      <!-- <input class="f-txt" type="text"> -->
+                      <select class="countrySel">
+                        <option value="Robyn">Robyn</option>
+                        <option value="China">China</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Italy">Italy</option>
+                      </select>
                     </p>
 
                     <!-- my preference -->
@@ -475,19 +594,19 @@
                       <label class="labelW15">My Preference
                       </label>
                       <span class="category clearfix">
-                        <span>Category Name</span>
-                        <span>Category Name</span>
-                        <span>Category Name</span>
-                        <span>Category Name</span>
-                        <span>Category Name</span>
-                        <span>...</span>
+                        <span class="cateBtn">Category Name</span>
+                        <span class="cateBtn">Category Name</span>
+                        <span class="cateBtn">Category Name</span>
+                        <span class="cateBtn">Category Name</span>
+                        <span class="cateBtn">Category Name</span>
+
                       </span>
                     </p>
 
                     <!-- subscribe -->
                     <p>
                       <label class="labelW15"></label>
-                      <input type="checkbox"> Newsletter Subscribe
+                      <input type="checkbox" class="subsc"> Newsletter Subscribe
                     </p>
 
                     <!-- save -->
@@ -555,10 +674,114 @@
           <!-- delete list -->
           <div class="delList">
             <form action="">
-              <table>
-                <tbody></tbody>
+              <table class="click-for-del">
+                <tr>
+                  <th>
+                    <input type="checkbox" name="" id="checkAll">
+                    <i class="delAll"></i>
+                  </th>
+                  <th>
+                    From
+                  </th>
+                  <th>
+                    Subject
+                  </th>
+                  <th>
+                    Date
+                  </th>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check" name="del">
+                    <i></i>
+                  </td>
+                  <td>
+                    XXX Team
+                  </td>
+                  <td>
+                    Hi XXX,Welcome to XXXXXXX...
+                  </td>
+                  <td>
+                    Aug 03 2016
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check" name="del">
+                    <i></i>
+                  </td>
+                  <td>
+                    XXX Team
+                  </td>
+                  <td>
+                    Hi XXX,Welcome to XXXXXXX...
+                  </td>
+                  <td>
+                    Aug 03 2016
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check" name="del">
+                    <i></i>
+                  </td>
+                  <td>
+                    XXX Team
+                  </td>
+                  <td>
+                    Hi XXX,Welcome to XXXXXXX...
+                  </td>
+                  <td>
+                    Aug 03 2016
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check" name="del">
+                    <i></i>
+                  </td>
+                  <td>
+                    XXX Team
+                  </td>
+                  <td>
+                    Hi XXX,Welcome to XXXXXXX...
+                  </td>
+                  <td>
+                    Aug 03 2016
+                  </td>
+                </tr>
               </table>
+
+              <!-- pagenation -->
+              <div class="pagination pr">
+                <div class="pagSelect clearfix">
+                  <a href="#" class="prev"></a>
+                  <a href="#" class="num currentPage">1</a>
+                  <a href="#" class="num">2</a>
+                  <a href="#" class="num">3</a>
+                  <a href="#" class="num">...</a>
+                  <a href="#" class="num">10</a>
+                  <a href="#" class="next"></a>
+                </div>
+              </div>
             </form>
+
+            <div class="popAlert">
+              <div class="popgray"></div>
+              <div class="popContent colorWhite">
+                <span class="warn"></span>
+                <p>Are you want to delete?</p>
+                <span class="noRequest">NO</span>
+                <span class="yesRequest">YES</span>
+                <span class="confirmBtn">
+                  CONFIRM
+                </span>
+              </div>
+            </div>
+
           </div>
 
           <!-- when if it have none delete list show this  box-->
