@@ -1,56 +1,62 @@
 .loginModule {
-  margin : 110px auto;
+  margin: 110px auto;
 }
-  .loginArea {
+
+.loginArea {
   width: 100%;
   max-width: 700px;
-  margin : 0 auto;
+  margin: 0 auto;
   height: 720px;
   background-color: #fff;
   padding-top: 62px;
   /* padding-left: 100px; */
 }
-  .loginArea .tit {
+
+.loginArea .tit {
   width: 72%;
   max-width: 500px;
-  margin : 0 auto 62px;
+  margin: 0 auto 62px;
   text-align: center;
   color: #333;
   font-size: 18px;
 }
 
-  .loginArea .form-group {
+.loginArea .form-group {
   width: 72%;
   max-width: 500px;
-  margin : 0 auto 40px;
+  margin: 0 auto 40px;
   color: #999;
   height: 40px;
 }
-  .loginArea .form-group input {
+
+.loginArea .form-group input {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #e6e6e6;
   padding-left: 15px;
+  border-radius: 2px;
 }
-  .loginArea .form-group:nth-child(3) {
+
+.loginArea .form-group:nth-child(3) {
   overflow: hidden;
   margin-bottom: 16px;
 }
-  .loginArea .form-group:nth-child(3) input {
+
+.loginArea .form-group:nth-child(3) input {
   float: left;
   width: 77%;
   max-width: 390px;
-  margin-right: 10px;
-
+  margin-right: 22px;
 }
-  .loginArea .veriCode {
+
+.loginArea .veriCode {
   float: left;
   width: 18%;
   max-width: 100px;
   height: 40px;
   cursor: pointer;
-  border : 1px solid #000;
+  border: 1px solid #000;
 }
 
 .loginArea .veriCode img {
@@ -64,123 +70,171 @@
   text-align: center;
 }
 
-  .loginArea .fogotBottom {
-    width: 72%;
+.loginArea .fogotBottom {
+  width: 72%;
   max-width: 500px;
-  margin : 0 auto;
+  margin: 0 auto;
   height: 21px;
   color: #666;
   font-size: 12px;
   margin-bottom: 26px;
 }
-  .loginArea .fogotBottom span:nth-child(1) {
-    position: absolute;
-    top : 0;
-    left : 0;
-    /* float: left; */
-  /* margin-right: 275px; */
 
+.loginArea .fogotBottom span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 .inputBox {
   position: absolute;
-  top : 0;
+  top: 0;
   right: 0;
 }
-  .loginArea .fogotBottom .check {
-    /* float: right; */
+
+.loginArea .fogotBottom .check {
+  /* float: right; */
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: middle;
 }
-  .loginArea .sub,
-  .loginArea .sign {
-    width: 72%;
+
+.loginArea .sub,
+.loginArea .sign {
+  width: 72%;
   max-width: 500px;
-  /* margin : 0 auto; */
   height: 40px;
+  border-radius: 2px;
 }
-  .loginArea .sub {
+
+.loginArea .sub {
   color: #f5f5f5;
   background-color: #d53333;
   margin-bottom: 24px;
 }
-  .loginArea .sign {
+
+.loginArea .sign {
   background-color: #fff;
   color: #d53333;
   border: 1px solid #d53333;
   margin-bottom: 68px;
 }
-  .loginArea .other {
-    width: 100%;
-    max-width: 700px;
+
+.loginArea .other {
+  width: 100%;
+  max-width: 700px;
   position: relative;
 }
-  .loginArea .head {
-    width: 72%;
-    max-width: 500px;
-    height: 21px;
+
+.loginArea .head {
+  width: 72%;
+  max-width: 500px;
+  height: 21px;
   color: #999;
-    margin : 0 auto 22px;
+  margin: 0 auto 22px;
   text-align: center;
 }
-  .loginArea .head span {
-  display:  block;
+
+.loginArea .head span {
+  display: block;
   position: relative;
 }
-.loginArea .head span:before,.loginArea .head span:after {
+
+.loginArea .head span:before,
+.loginArea .head span:after {
   width: 35%;
   height: 1px;
-  content : '';
-  position:absolute;
-  top : 50%;
+  content: '';
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   background-color: #d5d5d5;
 }
 
 .loginArea .head span:before {
-  left : 2%;
+  left: 2%;
 }
 
 .loginArea .head span:after {
-  right : 2%;
+  right: 2%;
 }
 
-
-
-
-  .loginArea .head .content {
+.loginArea .head .content {
   width: 52px;
 }
-  .loginArea .head .line {
+
+.loginArea .head .line {
   height: 1px;
   width: 224px;
   margin-top: 7px;
   background-color: #d5d5d5;
 }
-  .loginArea .otherLogo {
+
+.loginArea .otherLogo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
 }
-  .loginArea .otherLogo .facebook,
-  .loginArea .otherLogo .goo {
+
+.loginArea .otherLogo .facebook,
+.loginArea .otherLogo .goo {
   float: left;
-  width: 39px;
-  height: 39px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
 }
-  .loginArea .otherLogo .facebook a,
-  .loginArea .otherLogo .goo a {
+
+.loginArea .otherLogo .facebook a,
+.loginArea .otherLogo .goo a {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 28px;
+  height: 28px;
+  /* width: 100%; */
+  /* height: 100%; */
+  transition: all ease-in .3s;
+  background: url("../images/icon_share.png") no-repeat;
 }
-  .loginArea .otherLogo .facebook {
-  background: url('../images/facebook.png') no-repeat;
+
+.loginArea .otherLogo .facebook {
   margin-right: 27px;
 }
-  .loginArea .otherLogo .goo {
-  background: url('../images/goo.png') no-repeat;
+
+.loginArea .otherLogo .facebook a {
+  background-position: 0 0;
+  /* background: url('../images/facebook.png') no-repeat; */
+  /* margin-right: 27px; */
+}
+
+.loginArea .otherLogo .facebook a:hover {
+  background-position: 0 -35px;
+}
+
+.loginArea .otherLogo .goo a {
+  background-position: -35px 0;
+  /* background: url('../images/goo.png') no-repeat; */
+}
+
+.loginArea .otherLogo .goo a:hover {
+  background-position: -35px -35px;
+}
+
+/* M端 */
+
+@media screen and (max-width: 768px) {
+  .loginArea .form-group:nth-child(3) input {
+    width: 60%;
+  }
+  .loginArea .veriCode {
+    width: 30%;
+  }
+}
+
+/* PC端 */
+
+@media screen and (min-width: 1024px) {
+  .loginArea .tit {
+    font-size: 22px;
+  }
 }

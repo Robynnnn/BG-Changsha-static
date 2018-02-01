@@ -2,7 +2,7 @@
  * @Author: Robyn 
  * @Date: 2018-01-20 16:19:47 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-25 09:47:20
+ * @Last Modified time: 2018-02-01 11:35:40
  */
 
 
@@ -71,47 +71,56 @@ $(function () {
 
   });
 
-
-  // upload Img
-  $(".btn_1 :button").click(function () {
-    ajaxFileUpload();
-    $('.btn_1 .fileBtn').hide();
-    $(".btn_1 .fileerrorTip").hide();
-});
-
-function ajaxFileUpload() {
-    $.ajaxFileUpload({
-        url: '/index.php?com=account&t=setCustomers_avatars', //用于文件上传的服务器端请求地址
-        secureuri: false, //一般设置为false
-        fileElementId: 'file1', //文件上传空间的id属性
-        dataType: 'json', //返回值类型 一般设置为json
-        success: function (data) { //服务器成功响应处理函数
-            console.log(data, 999);
-            if (data.error == 0) {
-                $(".reviews_right .My_Profile .Avatar .img img").attr("src", data.customers_avatars);
-                $('#avatarsPath').val(data.avatars_path);
-                $('#avatarsPath-error').hide();
-            }
-        }
+// upload hover
+$("#file1").hover(function () {
+  $(".grayUpload").show();
+  },function () {
+    $(".grayUpload").hide();
     })
-    return false;
-}
+  // upload Img
+  // $(".btn_1 :button").click(function () {
+  //   ajaxFileUpload();
+  //   $('.btn_1 .fileBtn').hide();
+  //   $(".btn_1 .fileerrorTip").hide();
+  // });
 
-//显示文件名
-$(".btn_1").on("change", "input[type='file']", function () {
+  // function ajaxFileUpload() {
+  //   $.ajaxFileUpload({
+  //     url: '/index.php?com=account&t=setCustomers_avatars', //用于文件上传的服务器端请求地址
+  //     secureuri: false, //一般设置为false
+  //     fileElementId: 'file1', //文件上传空间的id属性
+  //     dataType: 'json', //返回值类型 一般设置为json
+  //     success: function (data) { //服务器成功响应处理函数
+  //       console.log(data, 999);
+  //       if (data.error == 0) {
+  //         $(".reviews_right .My_Profile .Avatar .img img").attr("src", data.customers_avatars);
+  //         $('#avatarsPath').val(data.avatars_path);
+  //         $('#avatarsPath-error').hide();
+  //       }
+  //     }
+  //   })
+  //   return false;
+  // }
+
+  //显示文件名
+  $(".btn_1").on("change", "input[type='file']", function () {
     var filePath = $(this).val();
     if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1 || filePath.indexOf("gif") != -1) {
-        $('.btn_1 .fileBtn').show();
-        $(".fileerrorTip").html("").hide();
-        var arr = filePath.split('\\');
-        var fileName = arr[arr.length - 1];
-        $(".showFileName").html(fileName).css({"display":"block"});
+      $('.btn_1 .fileBtn').show();
+      $(".fileerrorTip").html("").hide();
+      var arr = filePath.split('\\');
+      var fileName = arr[arr.length - 1];
+      $(".showFileName").html(fileName).css({
+        "display": "block"
+      });
     } else {
-        $(".showFileName").html("");
-        $(".fileerrorTip").html("You did not upload the file or provided an invalid file, please try again！").show().css({"display":"block"});
-        return false
+      $(".showFileName").html("");
+      $(".fileerrorTip").html("You did not upload the file or provided an invalid file, please try again！").show().css({
+        "display": "block"
+      });
+      return false
     }
-})
+  })
   // upload end
 
 
@@ -264,3 +273,88 @@ $(".btn_1").on("change", "input[type='file']", function () {
 
   // 入口函数结束
 });
+
+//重置密码
+$(function () {
+  //验证新密码不能和旧密码一样
+  jQuery.validator.addMethod("isPassword", function (value, element) {
+    var isTrue = false;
+    var oldpasswordVal = $('#oldPassword').val();
+    if (value !== oldpasswordVal) {
+      isTrue = true;
+    }
+    return isTrue;
+  }, "The new password cannot be consistent with the old password!");
+  $('#Change_form').validate({
+    debug: false,
+    onkeyup: false,
+    rules: {
+      oldpassword: {
+        required: true,
+        remote: {
+          url: "/index.php?com=account&t=checkUserPassword", //后台处理程序
+          type: "post", //数据发送方式
+          // dataType: "json",           //接受数据格式
+          data: {
+            oldpassword: function () {
+              return $("#oldPassword").val();
+            },
+            customers_id: function () {
+              return $('#customers_id').val();
+            },
+            email: function () {
+              return $('#email').val();
+            },
+          }
+        }
+      },
+      newpassword: {
+        required: true,
+        rangelength: [6, 20],
+        isPassword: true
+      },
+      ConfirmNewPassword: {
+        required: true,
+        equalTo: '#newPassword'
+      }
+    },
+    messages: {
+      oldpassword: {
+        required: 'The history password cannot be empty!',
+        remote: "History password error!!"
+      },
+      newpassword: {
+        required: 'Password cannot be empty!',
+        rangelength: 'The number of bits is 6 to 20 bits!'
+      },
+      ConfirmNewPassword: {
+        required: 'Verify that the password is not empty!',
+        equalTo: 'The two input password does not match!'
+      }
+    },
+    errorElement: 'span',
+    submitHandler: function () { //采用异步提交表单
+      //表单序列化
+      var param = $('#Change_form').serialize();
+      $.ajax({
+        url: '/index.php?com=account&t=Edit_user_password',
+        dataType: 'json',
+        type: 'post',
+        data: param,
+        success: function (res) {
+          prompt_mask(res.msg);
+          $('#oldPassword').val('');
+          $('#newPassword').val('');
+          $('#ConfirmNewPassword').val('');
+        },
+        error: function (res) {
+          console.log(res);
+        }
+      })
+      // return false;//阻止表单提交
+    },
+    invalidHandler: function () {
+      return false;
+    }
+  });
+})

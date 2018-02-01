@@ -2,9 +2,10 @@
  * @Author: Robyn 
  * @Date: 2018-01-21 13:27:26 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-01-21 13:57:11
+ * @Last Modified time: 2018-01-31 18:11:25
  */
 
+//  函数封装
 ;
 (function ($) {
 
@@ -45,6 +46,7 @@
 
 })(jQuery);
 
+// 入口函数
 $(function () {
 
 

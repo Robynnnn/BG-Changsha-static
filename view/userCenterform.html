@@ -280,12 +280,12 @@
           </div>
           <!-- prolistTit -->
           <div class="w95 prolistTit clearfix pub">
-            <span class="num">No.</span>
-            <span class="OrderNum">Order No.</span>
-            <span class="pro">Product</span>
-            <span class="coupon">Coupon</span>
-            <span class="reg">Register Date</span>
-            <span class="sta">Status</span>
+            <span class="num color333">No.</span>
+            <span class="OrderNum color333">Order No.</span>
+            <span class="pro color333">Product</span>
+            <span class="coupon color333">Coupon</span>
+            <span class="reg color333">Register Date</span>
+            <span class="sta color333">Status</span>
           </div>
           <!-- prolistTit end -->
           <div class="w95 pub clearfix prolistContent">
@@ -521,15 +521,16 @@
                         <a href="#">
                           <img src="../images/user.png" alt="">
                         </a>
+                        <span class="grayUpload">Upload</span>
                         <span class="btn_1">
                           <input type="file" id="file1" name="avatars" value="Upload">
-                          <input type="button" value="Upload" class="fileBtn" style="display: inline-block;">
+                          <!-- <input type="button" value="Upload" class="fileBtn" style="display: inline-block;"> -->
                           <em class="showFileName"></em>
                           <em class="fileerrorTip">You did not upload the file or provided an invalid file, please try again！</em>
                           <em>
                             <i>*</i> Upload picture can not be more than 2M</em>
                         </span>
-                        <input type="hidden" id="avatarsPath" name="avatars_path" value="">                       
+                        <input type="hidden" id="avatarsPath" name="avatars_path" value="">
                       </span>
                     </p>
 
@@ -559,10 +560,12 @@
                         <i>*</i>
                       </label>
                       <label for="male">
-                        <input type="radio" id="male" name="gender">Male
+                        <input type="radio" id="male" name="gender" class="radio">
+                        <span class="radio">Male</span>
                       </label>
                       <label for="female">
-                        <input type="radio" id="female" name="gender">Female
+                        <input type="radio" id="female" name="gender" class="radio">
+                        <span class="radio">Female</span>
                       </label>
                     </p>
 
@@ -612,7 +615,7 @@
                     <!-- save -->
                     <label for="" class="labelW15"></label>
                     <div class="btn">
-                      <button type="submit" class="submit">Submit</button>
+                      <button type="submit" class="submit">Save</button>
                     </div>
                   </div>
                 </form>
@@ -621,7 +624,7 @@
             <!-- change password detail area -->
             <li>
               <div class="changePwd">
-                <form action="" class="Pwd">
+                <form action="" class="Pwd" id="Change_form" method="post">
                   <!-- Old Pwd -->
                   <p>
                     <label class="labelW15">
@@ -629,7 +632,7 @@
                       <i>*</i>
 
                     </label>
-                    <input type="text" class="f-txt">
+                    <input type="password" name="oldpassword" class="f-txt form-control" id="oldPassword">
                   </p>
                   <!-- New Pwd -->
                   <p>
@@ -637,7 +640,7 @@
                       New Password
                       <i>*</i>
                     </label>
-                    <input type="text" class="f-txt">
+                    <input type="password" name="newpassword" class="f-txt form-control" id="newPassword">
                   </p>
                   <!-- Confirm New Pwd -->
                   <p>
@@ -645,7 +648,7 @@
                       Confirm New Password
                       <i>*</i>
                     </label>
-                    <input type="text" class="f-txt">
+                    <input type="password" name="ConfirmNewPassword" class="f-txt form-control" id="ConfirmNewPassword">
                   </p>
 
                   <!-- warning -->
@@ -961,6 +964,9 @@
   </footer>
 
   <script src="../js/jquery.js"></script>
+  <script src="../js/jquery.searchableSelect.js"></script>
+  <script src="../js/ajaxfileupload.js"></script>
+  <script src="../js/jquery-validate.js"></script>
   <script src="../js/userCenter.js"></script>
 
 </body>

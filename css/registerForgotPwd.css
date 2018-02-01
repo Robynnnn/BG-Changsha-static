@@ -47,9 +47,11 @@
   height: 100%;
   border: 1px solid #e6e6e6;
   padding-left: 15px;
+  border-radius: 2px;
 }
 
 .fogetArea .pro {
+  display: none;
   position: absolute;
   top: 69px;
   left: 50%;
@@ -73,6 +75,8 @@
   color: #f5f5f5;
   background-color: #d53333;
   margin: 0 auto 10px;
+  cursor: pointer;
+  border-radius: 2px;
 }
 
 .fogetArea .cancel {
@@ -81,4 +85,13 @@
   font-size: 12px;
   text-decoration: underline;
   text-align: left;
+}
+
+/* PC端 */
+
+@media screen and (min-width: 1024px) {
+
+  .fogetArea .tit {
+    font-size: 22px;
+  }
 }

@@ -27,7 +27,7 @@ a,address,article, aside,b,body,center,dd, del,div, dl, dt, em, embed, fieldset,
       padding-top: 0;
       padding-bottom: 0;
       white-space:nowrap;
-      font-family: "arialMT";  /*字体的自动识别*/
+      font-family: "arial";  /*字体的自动识别*/
   }
   
   select, input {
