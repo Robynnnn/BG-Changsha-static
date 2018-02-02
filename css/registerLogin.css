@@ -33,14 +33,21 @@
   display: block;
   width: 100%;
   height: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e5e5e5;
   padding-left: 15px;
   border-radius: 2px;
 }
 
-.loginArea .form-group:nth-child(3) {
+.loginArea .loginVer {
+  display: none;
   overflow: hidden;
   margin-bottom: 16px;
+}
+
+.loginArea .loginVer .veriCode>a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .loginArea .form-group:nth-child(3) input {
@@ -80,6 +87,11 @@
   margin-bottom: 26px;
 }
 
+.loginArea .fogotBottom>span a {
+  font-size: 12px;
+  color : #666;
+}
+
 .loginArea .fogotBottom span:nth-child(1) {
   position: absolute;
   top: 0;
@@ -106,19 +118,24 @@
   max-width: 500px;
   height: 40px;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .loginArea .sub {
   color: #f5f5f5;
   background-color: #d53333;
-  margin-bottom: 24px;
+  margin-bottom: 68px;
+}
+
+.loginArea .sub>a {
+  color : #f5f5f5;
 }
 
 .loginArea .sign {
   background-color: #fff;
   color: #d53333;
   border: 1px solid #d53333;
-  margin-bottom: 68px;
+  margin-bottom: 24px;
 }
 
 .loginArea .other {
