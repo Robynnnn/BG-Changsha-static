@@ -226,43 +226,44 @@
   </nav>
 
   <main class="registerModule wrap">
-    <div class="registerArea">
+    <div class="registerArea register">
       <p class="tit">Create Account</p>
       <form action="" class="pr">
 
-        <div class="form-group">
-          <input type="text" name="username" id="username" placeholder="username">
+        <div class="form-group inputbox_1">
+          <input type="text" name="username" id="exampleInputName1" placeholder="username">
           <span class="warnning">This name is already exist</span>
         </div>
 
-        <div class="form-group">
+        <div class="form-group inputbox_1">
           <input type="text" name="email" id="exampleInputEmail1" placeholder="Email address *">
           <span class="warnning"></span>
         </div>
 
-        <div class="form-group pr">
-          <input type="password" name="pwd" id="pwd" placeholder="Password*">
+        <div class="form-group pr inputbox_1">
+          <input type="password" name="password" id="exampleInputPassword1" placeholder="Password*">
           <span class="warnning"></span>
         </div>
 
-        <div class="form-group">
-          <input type="password" name="confirmPwd" id="confirmPwd" placeholder="Confirm password*">
+        <div class="form-group inputbox_1">
+          <input type="password" name="re_password" id="exampleInputConfirmPassword1" placeholder="Confirm password*">
           <span class="warnning"></span>
-          <span class="Subscribe">
-            <input class="check" type="checkbox" name="remember" />Subscribe to Newsletter
-          </span>
+          <label class="Subscribe label-Click">
+            <input class="check" type="checkbox" name="is_Subscribe" checked="checked" value="1" />Subscribe to Newsletter
+          </label>
         </div>
 
-        <div class="form-group">
-          <input type="text">
-          <div class="veriCode">
-            <img src="../images/veriCode.png" alt="">
+        <div class="form-group inputbox_1">
+            <input type="hidden" name="token" value="">
+          <input type="text" name="captcha">
+          <div class="veriCode code_img">
+            <a href="javascript:;"><img src="../images/veriCode.png" alt=""></a>
           </div>
         </div>
 
         <div class="btn">
           <button class="sub">Register</button>
-          <button class="sign">Sign In</button>
+          <button class="sign"><a href="javascript:;">Sign In</a></button>
         </div>
 
       </form>
