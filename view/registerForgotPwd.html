@@ -230,17 +230,17 @@
   <main class="fogetModule wrap">
     <div class="fogetArea">
       <p class="tit">Retrieve Password</p>
-      <p class="warningMessage">Please enter your email address below.You will receive a link to reset your pass-word.</p>
+      <p class="warningMessage">Please enter your email address below.You will receive a link to reset your password.</p>
       <form action="" class="pr">
         <div class="form-group">
           <!-- <label for="email">Email address*</label> -->
           <input type="email" name="email" id="email" placeholder="Email address*">
         </div>
-        <p class="pro">This email address has not been registered.</p>
+        <p class="pro" id="post_tips">This email address has not been registered.</p>
         <div class="fogetareaBtn">
           <button class="sub">Submit</button>
           <a href="#" class="cancel">
-            < Cancel</a>
+            &lt; Cancel</a>
         </div>
 
       </form>
@@ -317,7 +317,7 @@
   </footer>
   <!--import footer end  -->
   <script src="../js/jquery.js"></script>
-
+  <script src="../js/forgotPwd.js"></script>
 </body>
 
 </html>
