@@ -1,0 +1,276 @@
+/*
+ * @Author: Robyn 
+ * @Date: 2018-02-01 18:33:51 
+ * @Last Modified by: Robyn
+ * @Last Modified time: 2018-02-09 17:30:00
+ */
+
+/* main-header */
+
+.tc {
+  margin-top: 80px;
+}
+
+/* tc-header */
+
+.tc-header {
+  width: 100%;
+}
+
+.tc-header img {
+  width: 100%;
+  height: auto;
+}
+
+/* tc-header end */
+
+/* tc-middle-top */
+
+.tc .solve {
+  margin-top: 28px;
+  background-color: #fff;
+}
+
+.tc .solve {
+  margin-bottom: 29px;
+  padding: 24px 0px 20px 30px;
+}
+
+.tc .solve p,
+.tc .solve li {
+  color: #666;
+}
+
+.tc .solve .tit {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.tc .solve .tit2 {
+  margin-bottom: 8px;
+}
+
+.tc .solve .par {
+  margin-bottom: 24px;
+}
+
+.tc .solve .par2 {
+  margin-bottom: 16px;
+}
+
+.tc .solve .par3 {
+  margin-bottom: 0px;
+}
+
+/* tc-middle-top end */
+
+/* tc-middle */
+
+.tc .products {
+  overflow: hidden;
+}
+
+.tc .products .main {
+  float: left;
+  width: 100%;
+}
+
+.tc .products .main ul {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tc .products .main li {
+  position: relative;
+  float: left;
+  width: 19%;
+  /* height: 286px; */
+  padding: 33px;
+  margin: 0 1% 19px 0;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.tc .products .main li img {
+  width: 100%;
+  height: auto;
+}
+
+.tc .products .main li .hideBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 70px 0 0 40px;
+  display: none;
+}
+
+.tc .apply-btn {
+  position: absolute;
+  z-index: 3;
+  width: 60%;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  border-radius: 2px;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d53333;
+  text-align: center;
+}
+
+.tc .products .main li .hideBox .tit {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.tc .products .main li .hideBox a {
+  display: block;
+  width: 100%;
+}
+
+.tc .products .main li .hideBox a p {
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
+  width: 84%;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.tc .products .main li .hideBox a:hover {
+  text-decoration: none;
+}
+
+.tc .products .main li:hover .hideBox {
+  display: block;
+}
+
+
+
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 2.4em;
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: left;
+  /* */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  width: 1em;
+  /* set width and height */
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+
+.tc .loadMoreBox {
+  width: 170px;
+  padding-top: 52px;
+  margin: 0 auto 119px;
+  /* margin-bottom: 119px; */
+}
+
+.tc .loadMore {
+  width: 170px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #262626;
+  text-align: center;
+  background-color: #d53333;
+  color: #fff;
+}
+
+/* tc-middle end */
+
+.ts-pop {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.ts-grey {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.7);
+  z-index: 998;
+}
+
+.ts-content {
+  position: absolute;
+  width: 22%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #fff;
+  padding: 18px;
+}
+
+.ts-content p {
+  width: 90%;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ts-content .ok {
+  width: 41%;
+  margin: 0 auto;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  background-color: #d53333;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* M端 */
+
+@media screen and (max-width: 780px) {
+  .tc .products .main li {
+    width: 100%;
+  }
+  .ts-content {
+    width: 70%;
+  }
+}

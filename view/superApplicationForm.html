@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-
   <link rel="stylesheet" href="../css/basic.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/registerSuccess.css">
+  <link rel="stylesheet" href="../css/jquery.searchableSelect.css">
+  <link rel="stylesheet" href="../css/superApplicationForm.css">
 </head>
 
 <body>
-  <!-- import header -->
+  <!-- header -->
   <nav class="header_box other_header wrap">
     <section class="wrap">
       <a href="/" class="logo fl">
@@ -224,31 +224,161 @@
       </section>
     </section>
   </nav>
-  <!-- import header end -->
+  <!-- header end -->
 
-<!-- main area -->
-  <main class="regSucModule wrap">
-    <div class="regSucArea">
-      <p class="tit">Activate Your Account</p>
-      <div class="actContent">
-        <p class="par1">Thank you for registering with us.</p>
-        <p class="par2">Email verfication link has been sent to
-          <span class="email">anny@banggood.com</span>
-          <br> please click on the verification link recevied in your email to active your account
-        </p>
-        <p class="par3">Note: Check your spam folder to make sure it didn't end up there</p>
+  <!-- form-top -->
+  <form action="" id="super-app-form">
+    <div class="form-super wrap">
+      <div class="top">
+        <h2>Super User Application</h2>
+        <!-- first name -->
+        <div class="form-group clearfix">
+          <label for="First_Name">First Name
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="first_name" id="First_name" placeholder="">
+          </div>
+        </div>
+        <!-- last name -->
+        <div class="form-group clearfix">
+          <label for="Last_Name">Last Name
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="last_name" id="Last_name" placeholder="">
+          </div>
+        </div>
+        <!-- address -->
+        <div class="form-group clearfix">
+          <label for="Address">Address
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="Address" id="Address" placeholder="">
+          </div>
+        </div>
+        <!-- City -->
+        <div class="form-group clearfix">
+          <label for="City">City
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="City" id="City" placeholder="">
+          </div>
+        </div>
+        <!-- country -->
+        <div class="form-group clearfix">
+          <label for="Country" class="m-w">Country / Region
+            <i>*</i>
+          </label>
+          <select class="super-form-country">
+            <option value="Robyn">Country</option>
+            <option value="China">China</option>
+            <option value="Germany">Germany</option>
+            <option value="Canada">Canada</option>
+            <option value="Italy">Italy</option>
+          </select>
+
+        </div>
+        <!-- province -->
+        <div class="form-group clearfix">
+          <label for="State" class="m-w">State / Province / Region
+            <i>*</i>
+          </label>
+          <select class="super-form-pro">
+            <option value="Country">Country</option>
+            <option value="China">China</option>
+            <option value="Germany">Germany</option>
+            <option value="Canada">Canada</option>
+            <option value="Italy">Italy</option>
+          </select>
+
+        </div>
+        <!-- ZIP/Post Code -->
+        <div class="form-group clearfix">
+          <label for="Code" class="m-w">ZIP / Post Code
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="zip_code" id="Code" placeholder="">
+          </div>
+        </div>
+        <!-- phone -->
+        <div class="form-group clearfix">
+          <label for="City">Phone
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="superFormPhone" id="superFormPhone" placeholder="">
+          </div>
+        </div>
       </div>
+      <!-- line -->
+      <div class="line"></div>
+      <!-- form-bottom  -->
+      <div class="bottom">
+        <!-- Im -->
+        <div class="form-group clearfix">
+          <label for="Im">I'm
+            <i>*</i>
+          </label>
+          <select class="super-form-Im">
+            <option value="Please Select">Please Select</option>
+            <option value="Customer">Customer</option>
+            <option value="Potential Customer">Potential Customer</option>
+            <option value="Professional Reviewer">Professional Reviewer</option>
+          </select>
+        </div>
+        <!-- Amazon -->
+        <div class="form-group clearfix">
+          <label for="Link">Amazon Profile Link
+            <i>*</i>
+          </label>
+          <div class="right_input">
+            <input type="text" name="amazon_link" id="Link" placeholder="http://">
+          </div>
+        </div>
+        <!-- reviewer -->
+        <div class="form-group clearfix Reviewer">
+          <label for="Reviewer">My External Reviewer Profile
+          </label>
+          <div class="right_sel pr">
+            <select class="selBox">
+              <option>Please select</option>
+              <option>Youtube</option>
+              <option>Facebook</option>
+              <option>Twitter</option>
+              <option>Blog</option>
+              <option>Website</option>
+              <option>slickdeals and any other discount forums</option>
+              <option>BBS</option>
+              <option>Other</option>
+            </select>
+            <input class="right_sel_input" type="text" name="reviewer_profile_link[]" id="Link0" placeholder="http://">
+            <span class="addMore"></span>
 
-      <div class="click">
-        <p class="pro">dfasf</p>
-        <button class="sub">Resend the Email</button>
-        <button class="sign"><a href="javascript:;">Sign In</a></button>
+          </div>
+
+        </div>
+        <!-- checkbox -->
+        <div class="form-group clearfix lastone">
+          <label for="" class="m-hide"></label>
+          <input type="checkbox" name="is_notice" value="1" checked>Be the first to know our latest product
+        </div>
+        <!-- submit -->
+        <div class="form-group clearfix">
+          <label for="" class="m-hide"></label>
+          <input type="hidden" name="">
+          <button type="submit" class="btn">
+            Submit
+          </button>
+        </div>
       </div>
     </div>
-  </main>
-<!-- main area end -->
+  </form>
 
-  <!--import footer   -->
+  <!-- footer -->
   <footer class="footer">
     <section class="wrap">
       <section class="clearfix">
@@ -315,10 +445,11 @@
       <p class="copy_right">Copyright © 2017 xxx All Rights Reserved</p>
     </section>
   </footer>
-  <!--import footer end  -->
+  <!-- footer end -->
   <script src="../js/jquery.js"></script>
-  <script src="../js/registerSuccess.js"></script>
-
+  <script src="../js/jquery-validate.js"></script>
+  <script src="../js/jquery.searchableSelect.js"></script>
+  <script src="../js/superApplicationForm.js"></script>
 </body>
 
 </html>

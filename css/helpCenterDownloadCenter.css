@@ -1,72 +1,96 @@
-.downloadproShow {
-  width: 1920px;
-  height: 320px;
+/*
+ * @Author: Robyn 
+ * @Date: 2018-02-01 15:44:24 
+ * @Last Modified by: Robyn
+ * @Last Modified time: 2018-02-06 09:36:21
+ */
+
+/***** 组件化 *****/
+
+body {
+  background-color: #fff;
 }
+
+.hcdc {
+  margin-top: 80px;
+}
+
+.border-bottom-colorD533 {
+  border-bottom: 2px solid #d53333 !important;
+}
+
+/***** 组件化结束 *****/
+
+/***** 下载中心头 *****/
+
+.downloadProShow {
+  width: 100%;
+}
+
+.downloadProShow img {
+  width: 100%;
+  height: auto;
+}
+
 .downloadArt {
   position: relative;
-  width: 1920px;
-  padding: 42px 0px 0px 210px;
+  padding-top: 42px;
 }
+
 .downloadArt .tab {
   overflow: hidden;
   color: #333;
-  font: 14px "ArialMT";
   margin-bottom: 45px;
 }
+
 .downloadArt .tab li {
   float: left;
-  width: 100px;
-  height: 20px;
+  /* width: 8%; */
+  height: 24px;
   margin-right: 48px;
   cursor: pointer;
   border-bottom: 3px solid #fff;
   position: relative;
   text-align: center;
 }
-.downloadArt .tab li span {
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 5px;
-  background-color: #d53333;
-  display: none;
-}
-.downloadArt .tab li.active span {
+
+.downloadArt .tab li>a {
   display: block;
+  width: 100%;
+  height: 100%;
+  color: #333;
 }
-.downloadArt .tab li:nth-child(1) {
-  width: 36px;
-}
-.downloadArt .tab li:nth-child(1) span {
-  left: 0px;
-  transform: translateX(0%);
-}
+
 .downloadArt .products {
   overflow: hidden;
 }
+
 .downloadArt .products .main {
   float: left;
   display: none;
 }
+
 .downloadArt .products .main ul {
   overflow: hidden;
+  width: 100%;
 }
+
 .downloadArt .products .main li {
   position: relative;
   float: left;
-  width: 286px;
-  height: 286px;
+  width: 19%;
+  /* height: 286px; */
   padding: 33px;
-  margin: 0 19px 19px 0;
+  margin: 0 1% 19px 0;
   border: 1px solid #e9e9e9;
-  cursor: pointer;
+ 
 }
+
 .downloadArt .products .main li img {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: auto;
 }
+
 .downloadArt .products .main li .hideBox {
   position: absolute;
   top: 0;
@@ -75,68 +99,137 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  font: 14px "ArialMT";
   padding: 70px 0 0 40px;
   display: none;
 }
+
 .downloadArt .products .main li .hideBox .tit {
   color: #fff;
-  font: 14px "Arial-BoldMT";
+  font-weight: bold;
   margin-bottom: 30px;
 }
+
 .downloadArt .products .main li .hideBox a {
   display: block;
-  width: 210px;
+  width: 90%;
+  color: #fff;
 }
+
 .downloadArt .products .main li .hideBox a p {
-  white-space: nowrap;
+  /* white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: hidden; */
   margin-bottom: 10px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
+
 .downloadArt .products .main li .hideBox a:hover {
   text-decoration: underline;
 }
+
 .downloadArt .products .main li:hover .hideBox {
   display: block;
 }
+
+.downloadArt .products .main li .pro-tit {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
 .downloadArt .products .main.selected {
+  width: 100%;
   display: block;
 }
-.downloadArt .main:nth-child(2) {
+
+.block-with-text {
+  text-align: left !important;
+  width: 90%;
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 24px;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 72px;
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  /* */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  width: 1em;
+  /* set width and height */
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+
+/* .downloadArt .main:nth-child(2) {
   background-color: skyblue;
 }
+
 .downloadArt .main:nth-child(3) {
   background-color: orange;
 }
+
 .downloadArt .main:nth-child(4) {
   background-color: hotpink;
 }
+
 .downloadArt .main:nth-child(5) {
   background-color: purple;
-}
+} */
+
 .downloadArt .demo {
   width: 1710px;
   padding-top: 20%;
   padding-bottom: 20%;
   text-align: center;
-  font: 36px "ArialMT";
+  font-size: 36px;
 }
+
 .downloadArt .searchBox {
   position: absolute;
-  top: 42px;
-  right: 210px;
-  width: 286px;
+  top: 38px;
+  right: 0px;
+  width: 20%;
   height: 28px;
+  line-height: 28px;
   border: 1px solid #e0e0e0;
 }
+
 .downloadArt .searchBox input {
   display: block;
   width: 100%;
   height: 100%;
   color: #d7d7d7;
-  font: 13px "ArialMT";
+  padding-left: 8px;
 }
+
 .downloadArt .searchBox .search {
   display: block;
   position: absolute;
@@ -144,22 +237,47 @@
   right: 10px;
   width: 18px;
   height: 18px;
-  background: url("../images/search03.svg") no-repeat;
+  background: url("../images/downloadSearch.png") no-repeat;
   background-size: 100%;
 }
+
 .downloadArt .loadMoreBox {
-  width: 1710px;
+  width: 170px;
   padding-top: 52px;
-  padding-left: 674px;
-  margin-bottom: 119px;
+  margin: 0 auto 119px;
+  /* margin-bottom: 119px; */
 }
+
 .downloadArt .loadMore {
   width: 170px;
   height: 38px;
-  padding-top: 14px;
+  line-height: 38px;
+  border-radius: 2px;
   cursor: pointer;
   color: #262626;
   text-align: center;
-  font: 14px "ArialMT", "SimSun";
   border: 1px solid #333;
+}
+
+/* M端 */
+
+@media screen and (max-width: 780px) {
+  .downloadArt .products .main li {
+    width: 100%;
+  }
+  .downloadArt .tab li {
+    width: 100%;
+  }
+  .downloadArt .searchBox {
+    top: 5px;
+    width: 70%;
+  }
+}
+
+/* PC端 */
+
+@media screen and (min-width: 1280px) {
+  .downloadArt .tab li:hover {
+    border-bottom: 2px solid #d53333;
+  }
 }

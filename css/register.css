@@ -132,7 +132,8 @@
   background-color: #fff;
   color: #d53333;
   border: 1px solid #d53333;
-  margin-bottom: 68px;
+  line-height: 38px;
+  margin : 0 auto 68px;
 }
 
 .registerArea .sign>a {
@@ -141,6 +142,11 @@
   height: 100%;
   line-height: 40px;
   color: #d53333;
+}
+
+/* 提示语 */
+.error {
+  color : #d53333;
 }
 
 /* M端 */

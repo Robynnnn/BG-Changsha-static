@@ -1,33 +1,59 @@
-.proShow {
-  width: 1920px;
+/*
+ * @Author: Robyn 
+ * @Date: 2018-02-05 17:08:32 
+ * @Last Modified by: Robyn
+ * @Last Modified time: 2018-02-05 17:11:07
+ */
+/* .proShow {
+  width: 100%
   height: 320px;
-}
-.content {
-  width: 1920px;
-  height: 524px;
+} */
+body {
   background-color: #fff;
-  padding: 59px 0px 0px 208px;
+}
+
+.hca {
+  margin-top : 80px;
+}
+
+.proShow img {
+  width: 100%;
+  height: auto;
+}
+
+
+.content {
+  width: 100%;
+  background-color: #fff;
+  padding-top : 59px;
+  padding-bottom: 160px;
+  /* padding: 59px 0px 0px 208px; */
 }
 .content .contentShow {
-  width: 1500px;
-  height: 306px;
+  width: 90%;
+  
+  margin : 0px auto ;
   border: 1px solid #ddd;
-  padding: 36px 0px 0px 24px;
+  padding: 36px 0px 36px 24px;
   color: #666;
-  font: 14px "ArialMT";
-  overflow: hidden;
+  
 }
 .content .contentShow .left {
-  width: 820px;
+  width: 61%;
   float: left;
 }
 .content .contentShow .tit {
   color: #333;
-  font: 14px "Arial-BoldMT";
+  font-weight: bold;
   margin-bottom: 24px;
 }
+
+.content .contentShow .par {
+  line-height: 24px;
+}
+
 .content .contentShow .right {
-  width: 244px;
+  width: 34%;
   height: 244px;
   float: left;
   border-left: 1px solid #f0f0f0;
@@ -36,3 +62,21 @@
 .content .contentShow .right p {
   margin-bottom: 20px;
 }
+
+
+/* M端 */
+@media screen and (max-width: 780px) {
+  .content .contentShow .left {
+    width: 100%;
+  }
+
+  .content .contentShow .right {
+
+    width: 100%;  
+    margin-top : 10px;
+    padding-left : 0;
+    border : none;  
+  }
+
+  
+ }

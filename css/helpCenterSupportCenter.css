@@ -1,52 +1,108 @@
-.supportProShow {
-  width: 1920px;
-  height: 320px;
+/*
+ * @Author: Robyn 
+ * @Date: 2018-02-01 17:18:08 
+ * @Last Modified by: Robyn
+ * @Last Modified time: 2018-02-06 10:14:01
+ */
+
+.hcsc {
+  margin-top: 80px;
 }
+
+.supportProShow {
+  width: 100%;
+}
+
+.colorD533 {
+  color: #d53333 !important;
+}
+
+.supportProShow img {
+  width: 100%;
+  height: auto;
+}
+
 .supportContent {
-  width: 1920px;
-  padding: 60px 0 0 210px;
+  width: 100%;
+  padding: 60px 0 0 0px;
   margin-bottom: 160px;
 }
+
 .supportContent .detail {
-  width: 1500px;
   overflow: hidden;
   color: #666;
-  font: 14px "ArialMT";
 }
+
 .supportContent .detail .left {
   float: left;
-  width: 220px;
+  width: 15%;
   height: 306px;
   border: 1px solid #ddd;
   padding: 38px 0 0 28px;
-  margin-right: 16px;
+  margin-right: 8px;
 }
+
 .supportContent .detail .left li {
   margin-bottom: 14px;
 }
+
+.supportContent .detail .left li>a {
+  display: block;
+  width: 100%;
+  color: #666;
+}
+
 .supportContent .detail .left .tit {
   color: #333;
-  font: 14px "Arial-BoldMT";
+  font-weight: bold;
   margin-bottom: 18px;
 }
+
 .supportContent .detail .left .lastone {
   margin-bottom: 0;
 }
+
 .supportContent .detail .left .last {
   margin-bottom: 66px;
 }
+
 .supportContent .detail .right {
   float: left;
-  width: 1264px;
-  height: 305px;
+  width: 84%;
   border: 1px solid #ddd;
   padding: 38px 0 0 30px;
 }
+
 .supportContent .detail .right li {
   margin-bottom: 22px;
 }
+
 .supportContent .detail .right .tit {
   color: #333;
-  font: 16px "Arial-BoldMT";
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 38px;
+}
+
+.supportContent .detail .right .right-des {
+  line-height: 18px;
+}
+
+/* M端 */
+
+@media screen and (max-width: 780px) {
+  .supportContent .detail .left {
+    width: 100%;
+  }
+  .supportContent .detail .right {
+    width: 100%;
+  }
+}
+
+/* PC端 */
+
+@media screen and (min-width: 1280px) {
+  .supportContent .detail .left {
+    margin-right : 15px;
+  }
 }

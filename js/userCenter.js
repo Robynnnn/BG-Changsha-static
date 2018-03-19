@@ -76,7 +76,7 @@ $("#file1").hover(function () {
   $(".grayUpload").show();
   },function () {
     $(".grayUpload").hide();
-    })
+    });
   // upload Img
   // $(".btn_1 :button").click(function () {
   //   ajaxFileUpload();

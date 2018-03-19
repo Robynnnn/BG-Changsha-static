@@ -1,0 +1,242 @@
+/*
+ * @Author: Robyn 
+ * @Date: 2018-02-03 15:36:50 
+ * @Last Modified by: Robyn
+ * @Last Modified time: 2018-02-12 21:34:10
+ */
+
+/* top */
+
+.form-super {
+  margin-top: 110px;
+  margin-bottom: 120px;
+  padding: 66px 0 96px 28px;
+  background-color: #fff;
+}
+
+.form-super .top h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 58px;
+  color: #333;
+}
+
+.form-super .form-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-super .form-group label {
+  float: left;
+  display: block;
+  width: 13%;
+  color: #666;
+  text-align: right;
+}
+
+.form-super .form-group label i {
+  font-size: 18px;
+  color: #d53333;
+}
+
+.right_input {
+  float: left;
+  width: 26%;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  margin-left: 3%;
+}
+
+.right_sel {
+  float: left;
+  width: 26%;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 3%;
+}
+
+.right_sel .selBox {
+  float: left;
+  width: 35%;
+  height: 38px;
+  padding-left: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  /* 清除选择的默认样式 */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../images/selectdown_03.png") no-repeat center;
+  background-position-x: 93%;
+}
+
+.form-super .right_sel .right_sel_input {
+  margin-left: 10px;
+  float: left;
+  width: 60%;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.addMore,
+.removeIcon {
+  position: absolute;
+  top: 8px;
+  right: -30px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.addMore {
+  background: url(../images/icon_list.png) no-repeat -1px -249px;
+}
+
+.addMore:hover {
+  background: url(../images/icon_list.png) no-repeat -22px -249px;
+}
+
+.removeIcon {
+  background: url(../images/icon_list.png) no-repeat -1px -271px;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+.removeIcon:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.searchable-select-holder {
+  width: 100%;
+  height: 38px;
+  /* margin-left : 3%; */
+  line-height: 38px;
+  padding: 0 0 0 8px;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+}
+
+.searchable-select-dropdown {
+  z-index: 3;
+}
+
+.searchable-select-caret {
+  width: 10px;
+  height: 6px;
+  border: none;
+  background: url("../images/selectdown_03.png") no-repeat;
+}
+
+.searchable-select {
+  margin-left: 3%;
+  width: 26%;
+}
+
+.form-super .form-group input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 12px;
+}
+
+/* line */
+
+.form-super .line {
+  width: 96%;
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 0 auto 30px;
+}
+
+/* bottom */
+
+.form-super .lastone input {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 3%;
+  margin-right: 16px
+}
+
+.form-super .btn,
+.form-super .btn-default {
+  float: left;
+  display: block;
+  width: 26%;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  border-radius: 2px;
+  margin-left: 3%;
+  cursor: pointer;
+  background-color: #d53333;
+}
+
+.form-super .submitForm {
+  background-color: #d53333;
+}
+
+/* error信息 */
+.error {
+  color : #d53333;
+}
+/* M端 */
+
+@media screen and (max-width: 780px) {
+  .form-super .form-group label {
+    width: 27%;
+  }
+  .right_sel {
+    width: 56%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .form-super .form-group label {
+    width: 25%;
+  }
+  .form-super .form-group .m-w {
+    width: 57%;
+    text-align: left;
+  }
+  .right_input {
+    width: 58%;
+  }
+  .form-super .form-group .m-hide {
+    display: none;
+  }
+  .form-super .btn,
+  .form-super .btn-default {
+    width: 82%;
+  }
+  .right_sel {
+    width: 54%;
+  }
+  .right_sel .selBox {
+    width: 107%;
+  }
+  .form-super .right_sel .right_sel_input {
+    margin-left: 0;
+    width: 105%;
+  }
+  .addMore, 
+  .removeIcon {
+    right: -42px;
+  }
+
+  .spec-rev {
+    height: 63px;
+  }
+}
+
+/* PC端 */
+
+@media screen and (min-width: 1024px) {
+  .form-super .form-group label {
+    height: 38px;
+    line-height: 38px;
+  }
+}

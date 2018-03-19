@@ -1,9 +1,10 @@
 /*
  * @Author: Robyn 
- * @Date: 2017-12-20 15:34:19 
+ * @Date: 2018-02-01 19:06:58 
  * @Last Modified by: Robyn
- * @Last Modified time: 2018-02-01 16:19:24
+ * @Last Modified time: 2018-02-09 17:26:47
  */
+
 $(function () {
 
   // // 加载更多
@@ -38,6 +39,11 @@ $(function () {
     });
   })();
   // end
+
+  // 弹框
+  $('.ts-grey').on('click',function () {
+    $('.ts-pop').hide();
+    })
 
 
 });

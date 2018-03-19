@@ -143,7 +143,7 @@ body {
 }
 
 .infoSelect .selected {
-  border-left: 1px solid #d53333;
+  border-left: 2px solid #d53333;
   color: #d53333;
 }
 
@@ -633,7 +633,7 @@ input[type="radio"].radio:checked + .radio {
   border-radius: 2px;
   min-height: 38px;
   line-height: 38px;
-  border: 1px solid #999;
+  border: 1px solid #e5e5e5;
 }
 
 .searchable-select-caret {
@@ -1236,12 +1236,12 @@ input[type="radio"].radio:checked + .radio {
 
 }
 
-/* 屏幕小于1024时 */
+/* 屏幕大于1024时 */
 
-@media screen and (width: 1024px) {
+@media screen and (min-width: 1024px) {
   /* 左侧 */
   .leftTop .info {
-    padding: 0 11%;
+    padding: 0 8%;
   }
 
 }
@@ -1262,7 +1262,7 @@ input[type="radio"].radio:checked + .radio {
   }
 
   .infoSelect li:hover {
-    border-left: 1px solid #d53333;
+    
     color: #d53333;
   }
 
@@ -1290,6 +1290,10 @@ input[type="radio"].radio:checked + .radio {
   /* 左侧 */
 
   .leftTop .info li:nth-child(1) {
-    margin-right: 27%;
+    margin-right: 58px;
+  }
+
+  .leftTop .info {
+    padding: 0 36px;
   }
 }
